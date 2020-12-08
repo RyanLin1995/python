@@ -1,0 +1,9 @@
+# *_* coding:utf8 *_*
+
+# 引号前面的u告诉解析器这是一个utf8编码格式的字符串
+hello_str = u'hello世界'
+
+print(hello_str)
+
+for c in hello_str:
+    print(c)

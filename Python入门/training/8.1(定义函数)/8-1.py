@@ -1,0 +1,5 @@
+#coding:gbk
+def display_message():
+    print('¶¨Òåº¯Êı')
+
+display_message()
