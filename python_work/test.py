@@ -1,36 +1,53 @@
-def levenshtein_dist(word1, word2, display=False):
-    ''' Return the minimum edit distance between two words, word1 and word2.
-    The optional display parameter displays the full calculation matrix when
-    set to True, and hides it otherwise.
+def flatten_list(l):
+    """
+    Returns a list of values, where each element in the returned list is
+    a non-list.
 
-    The minimum edit distance is the minimum number of {swaps, inserts, deletes}
-    needed to change word1 to word2 and vice versa.
+    The returned list is a flattened version of l, i.e. removing any
+    level of nesting and storing the elements in the order which they appear.
 
-    levenshtein_dist('capybara', 'llama')
-    6
-    levenshtein_dist('apple', 'bapple')
-    1
-    '''
+    For example:
 
-    dist_array = [None] * (len(word1) + 1)
-    for i in range(len(word1) + 1):
-        dist_array[i] = [0] * (len(word2) + 1)
+    # >>> l = [[["wow"], \
+    #     [1, "hello", [1, 2, 100, 999, "weldo"]], \
+    #      1, \
+    #      2]]
+    # >>> flatten_list(l) == ["wow", 1, "hello", 1, 2, 100, 999, "weldo", 1, 2]
+    # True
+    #
+    # >>> l = ["llama", [1, 2, 999, [55, 5]]]
+    # >>> flatten_list(l) == ["llama", 1, 2, 999, 55, 5]
+    True
 
-    for i in range(0, len(word1) + 1):
-        for j in range(0, len(word2) + 1):
-            if min(i, j) == 0:
-                dist_array[i][j] = max(i, j)
-            else:
-                (val1, val2, val3) = (dist_array[i][j - 1] + 1, dist_array[i - 1][j] + 1, dist_array[i - 1][j - 1] + (word1[i - 1] != word2[j - 1]))
+    """
+    is_flat = True
+    for i in range(len(l)):
+        if type(l[i]) == list:
+            is_flat = False
+            return l[0:i] + flatten_list(l[i]) + flatten_list(l[i + 1:len(l)])
 
-                dist_array[i][j] = min(val1, val2, val3)
-
-    if display:
-        for item in dist_array:
-            print(item)
-
-    return dist_array[-1][-1]
+    if is_flat:
+        return l[:]
 
 
-ret = levenshtein_dist("hi", "hello", True)
-print(ret)
+# ---------- end provided functions
+
+# --------- add your functions here
+l = [[["wow"], [1, "hello", [1, 2, 100, 999, "WELDO"]], 1, 2]]
+word = "Weldo"
+
+
+def check_word_from_list(l, word):
+    for char in flatten_list(l):
+        if type(char) is str and char.lower() == word.lower():
+            word = char
+            return word and True
+    else:
+        return ()
+
+
+result = check_word_from_list(l, word)
+
+if result:
+    for list_index_number in (l):
+        print(l.index(list_index_number))
