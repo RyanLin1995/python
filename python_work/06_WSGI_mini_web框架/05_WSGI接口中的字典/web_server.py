@@ -46,7 +46,7 @@ class WSGIServer(object):
                 client_socket.send(html_content)
         else:
 
-            env = []
+            env = {"PATH_INFO": file_name}
 
             body = mini_frame.application(env, self.start_response)
             header = "HTTP/1.1 {}\r\n".format(self.status)
@@ -63,7 +63,8 @@ class WSGIServer(object):
 
     def start_response(self, status, headers):
         self.status = status
-        self.headers = headers
+        self.headers = [("Server", "mini_frame V8.8")]
+        self.headers += headers
 
     def run_forever(self):
 
