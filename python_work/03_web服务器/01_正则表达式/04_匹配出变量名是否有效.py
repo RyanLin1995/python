@@ -17,3 +17,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# 要匹配的项为 GET /index.html HTTP/1.1
+# ret = re.match(r'[^/]+(/[^ ]*)', request_lines[0])  # [^/]+ 表示匹配不是 / 的所有内容
