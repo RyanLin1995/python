@@ -8,7 +8,7 @@ def login():
     return "这是登录界面"
 
 
-# environ 接收来自浏览器的 request header信息
+# application 中的第一个形参(这里是environ)接收来自浏览器的 request 信息，如 'GET /classic.css HTTP/1.1'
 def application(environ, start_response):
     start_response('200 OK', [('Content-Type', 'text/html;charset=utf-8')])
     file_name = environ["PATH_INFO"]

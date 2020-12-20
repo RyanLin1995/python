@@ -1,0 +1,17 @@
+marker_2nd = {"ns": "green", "ew": "red"}
+mission_16th = {"ns": "red", "ew": "green"}
+
+
+def switchLights(stoplight):
+    for key in stoplight.keys():
+        if stoplight[key] == "green":
+            stoplight[key] = "yellow"
+        if stoplight[key] == "yellow":
+            stoplight[key] = "red"
+        if stoplight[key] == "red":
+            stoplight[key] = 'green'
+
+    assert "red" in stoplight.values(), "Neither light is red in {}".format(str(stoplight))
+
+
+switchLights(marker_2nd)
