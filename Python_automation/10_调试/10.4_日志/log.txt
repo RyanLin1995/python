@@ -1,0 +1,7 @@
+20201223 - DEBUG - Start a program
+20201223 - DEBUG - i is 1, total is 1
+20201223 - DEBUG - i is 2, total is 2
+20201223 - DEBUG - i is 3, total is 6
+20201223 - DEBUG - i is 4, total is 24
+20201223 - DEBUG - i is 5, total is 120
+20201223 - DEBUG - End of program
