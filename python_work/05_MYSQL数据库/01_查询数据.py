@@ -5,18 +5,18 @@ class GetData(object):
 
     def __init__(self):
         self.connect = pymysql.connect(host ="localhost", user="root", password="a12345",
-                                  database="jingdong", charset="utf8")
-        self.cursor = self.connect.cursor()
+                                  database="jingdong", charset="utf8")  # 连接数据库
+        self.cursor = self.connect.cursor()  # 建立游标
 
     def __del__(self):
 
-        self.cursor.close()
-        self.connect.cursor()
+        self.cursor.close()  # 关闭游标
+        self.connect.close()  # 关闭链接
 
     def execute_sql(self, sql_command):
 
-        self.cursor.execute(sql_command)
-        for item in self.cursor.fetchall():
+        self.cursor.execute(sql_command)  # 执行命令
+        for item in self.cursor.fetchall():  # 获取数据库得到的信息，fetchall()：获取所有；fetchone()：获取一个；fetchmany(num)：获取 num 个
             print(item)
 
     def show_all_items(self):
