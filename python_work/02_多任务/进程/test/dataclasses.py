@@ -215,7 +215,7 @@ class InitVar(metaclass=_InitVarMeta):
 # They're not known at the time this class is instantiated, but it's
 # convenient if they're available later.
 #
-# When cls._FIELDS is filled in with a list of Field objects, the name
+# When mcs._FIELDS is filled in with a list of Field objects, the name
 # and type fields will have been populated.
 class Field:
     __slots__ = ('name',
@@ -421,7 +421,7 @@ def _field_init(f, frozen, globals, self_name):
 
             # For a field initialized with a default=defaultvalue, the
             # class dict just has the default value
-            # (cls.fieldname=defaultvalue).  But that won't work for a
+            # (mcs.fieldname=defaultvalue).  But that won't work for a
             # default factory, the factory must be called in __init__
             # and we must assign that to self.fieldname.  We can't
             # fall back to the class dict's value, both because it's
@@ -534,8 +534,8 @@ def _repr_fn(fields, globals):
     return _recursive_repr(fn)
 
 
-def _frozen_get_del_attr(cls, fields, globals):
-    locals = {'cls': cls,
+def _frozen_get_del_attr(mcs, fields, globals):
+    locals = {'mcs': cls,
               'FrozenInstanceError': FrozenInstanceError}
     if fields:
         fields_str = '(' + ','.join(repr(f.name) for f in fields) + ',)'
@@ -544,16 +544,16 @@ def _frozen_get_del_attr(cls, fields, globals):
         fields_str = '()'
     return (_create_fn('__setattr__',
                       ('self', 'name', 'value'),
-                      (f'if type(self) is cls or name in {fields_str}:',
+                      (f'if type(self) is mcs or name in {fields_str}:',
                         ' raise FrozenInstanceError(f"cannot assign to field {name!r}")',
-                       f'super(cls, self).__setattr__(name, value)'),
+                       f'super(mcs, self).__setattr__(name, value)'),
                        locals=locals,
                        globals=globals),
             _create_fn('__delattr__',
                       ('self', 'name'),
-                      (f'if type(self) is cls or name in {fields_str}:',
+                      (f'if type(self) is mcs or name in {fields_str}:',
                         ' raise FrozenInstanceError(f"cannot delete field {name!r}")',
-                       f'super(cls, self).__delattr__(name)'),
+                       f'super(mcs, self).__delattr__(name)'),
                        locals=locals,
                        globals=globals),
             )
@@ -595,7 +595,7 @@ def _is_initvar(a_type, dataclasses):
     return a_type is dataclasses.InitVar
 
 
-def _is_type(annotation, cls, a_module, a_type, is_type_predicate):
+def _is_type(annotation, mcs, a_module, a_type, is_type_predicate):
     # Given a type annotation string, does it refer to a_type in
     # a_module?  For example, when checking that annotation denotes a
     # ClassVar, then a_module is typing, and a_type is
@@ -606,7 +606,7 @@ def _is_type(annotation, cls, a_module, a_type, is_type_predicate):
     # the caller already knows a_module.
 
     # - annotation is a string type annotation
-    # - cls is the class that this annotation was found in
+    # - mcs is the class that this annotation was found in
     # - a_module is the module we want to match
     # - a_type is the type in that module we want to match
     # - is_type_predicate is a function called with (obj, a_module)
@@ -654,7 +654,7 @@ def _is_type(annotation, cls, a_module, a_type, is_type_predicate):
     return False
 
 
-def _get_field(cls, a_name, a_type):
+def _get_field(mcs, a_name, a_type):
     # Return a Field object for this field name and type.  ClassVars
     # and InitVars are also returned, but marked as such (see
     # f._field_type).
@@ -691,7 +691,7 @@ def _get_field(cls, a_name, a_type):
 
     # If typing has not been imported, then it's impossible for any
     # annotation to be a ClassVar.  So, only look for ClassVar if
-    # typing has been imported by any module (not necessarily cls's
+    # typing has been imported by any module (not necessarily mcs's
     # module).
     typing = sys.modules.get('typing')
     if typing:
@@ -736,7 +736,7 @@ def _get_field(cls, a_name, a_type):
     return f
 
 
-def _set_new_attribute(cls, name, value):
+def _set_new_attribute(mcs, name, value):
     # Never overwrites an existing attribute.  Returns True if the
     # attribute already exists.
     if name in cls.__dict__:
@@ -750,14 +750,14 @@ def _set_new_attribute(cls, name, value):
 # take.  The common case is to do nothing, so instead of providing a
 # function that is a no-op, use None to signify that.
 
-def _hash_set_none(cls, fields, globals):
+def _hash_set_none(mcs, fields, globals):
     return None
 
-def _hash_add(cls, fields, globals):
+def _hash_add(mcs, fields, globals):
     flds = [f for f in fields if (f.compare if f.hash is None else f.hash)]
     return _hash_fn(flds, globals)
 
-def _hash_exception(cls, fields, globals):
+def _hash_exception(mcs, fields, globals):
     # Raise an exception.
     raise TypeError(f'Cannot overwrite attribute __hash__ '
                     f'in class {cls.__name__}')
@@ -792,7 +792,7 @@ _hash_action = {(False, False, False, False): None,
 # version of this table.
 
 
-def _process_class(cls, init, repr, eq, order, unsafe_hash, frozen):
+def _process_class(mcs, init, repr, eq, order, unsafe_hash, frozen):
     # Now that dicts retain insertion order, there's no reason to use
     # an ordered dict.  I am leveraging that ordering here, because
     # derived class fields overwrite base class fields, but the order
@@ -803,7 +803,7 @@ def _process_class(cls, init, repr, eq, order, unsafe_hash, frozen):
         globals = sys.modules[cls.__module__].__dict__
     else:
         # Theoretically this can happen if someone writes
-        # a custom string to cls.__module__.  In which case
+        # a custom string to mcs.__module__.  In which case
         # such dataclass won't be fully introspectable
         # (w.r.t. typing.get_type_hints) but will still function
         # correctly.
@@ -998,7 +998,7 @@ def dataclass(_cls=None, *, init=True, repr=True, eq=True, order=False,
     not be assigned to after instance creation.
     """
 
-    def wrap(cls):
+    def wrap(mcs):
         return _process_class(cls, init, repr, eq, order, unsafe_hash, frozen)
 
     # See if we're being called as @dataclass or @dataclass().

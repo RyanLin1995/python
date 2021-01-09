@@ -27,6 +27,7 @@ class MusicPlayer(object):
         # 3. 修改类属性标记
         MusicPlayer.init_flag = True
 
+
 # 创建多个对象
 player1 = MusicPlayer()
 print(player1)
