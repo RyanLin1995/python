@@ -1,0 +1,2 @@
+动态资源通过/dynamic/mini_frame读取templates中的文件进行处理
+静态资源则在/static中
