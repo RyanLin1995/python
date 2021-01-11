@@ -1,3 +1,0 @@
-def tset():
-
-    print("test")

@@ -1,6 +1,0 @@
-1.每行可以放几多星星
-available_space_x = screen_width - 2 * star_width  # 屏幕总长减去两边留空， 得出可用空间
-number_star_x = available_space_x / (2 * star_width)  # 屏幕可用空间除以每个星星所需空间，得出可以放多少个
-2.可以放几多列
-available_space_y = screen_height - 2 * star_height
-number_star_y = available_space_y / (2 * star_height)

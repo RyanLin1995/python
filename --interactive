@@ -1,0 +1,21 @@
+2021-01-11T22:41:43,985 Using pip 20.3.3 from /home/ryan/anaconda3/envs/learing/lib/python3.7/site-packages/pip (python 3.7)
+2021-01-11T22:41:43,986 Non-user install because site-packages writeable
+2021-01-11T22:41:44,017 Created temporary directory: /tmp/pip-ephem-wheel-cache-m8um286o
+2021-01-11T22:41:44,017 Created temporary directory: /tmp/pip-req-tracker-gxnjteun
+2021-01-11T22:41:44,018 Initialized build tracking at /tmp/pip-req-tracker-gxnjteun
+2021-01-11T22:41:44,018 Created build tracker: /tmp/pip-req-tracker-gxnjteun
+2021-01-11T22:41:44,018 Entered build tracker: /tmp/pip-req-tracker-gxnjteun
+2021-01-11T22:41:44,018 Created temporary directory: /tmp/pip-install-x2n3ue3z
+2021-01-11T22:41:44,018 ERROR: You must give at least one requirement to install (see "pip help install")
+2021-01-11T22:41:44,018 Exception information:
+2021-01-11T22:41:44,018 Traceback (most recent call last):
+2021-01-11T22:41:44,018   File "/home/ryan/anaconda3/envs/learing/lib/python3.7/site-packages/pip/_internal/cli/base_command.py", line 224, in _main
+2021-01-11T22:41:44,018     status = self.run(options, args)
+2021-01-11T22:41:44,018   File "/home/ryan/anaconda3/envs/learing/lib/python3.7/site-packages/pip/_internal/cli/req_command.py", line 180, in wrapper
+2021-01-11T22:41:44,018     return func(self, options, args)
+2021-01-11T22:41:44,018   File "/home/ryan/anaconda3/envs/learing/lib/python3.7/site-packages/pip/_internal/commands/install.py", line 291, in run
+2021-01-11T22:41:44,018     reqs = self.get_requirements(args, options, finder, session)
+2021-01-11T22:41:44,018   File "/home/ryan/anaconda3/envs/learing/lib/python3.7/site-packages/pip/_internal/cli/req_command.py", line 393, in get_requirements
+2021-01-11T22:41:44,018     '(see "pip help {name}")'.format(**opts))
+2021-01-11T22:41:44,018 pip._internal.exceptions.CommandError: You must give at least one requirement to install (see "pip help install")
+2021-01-11T22:41:44,025 Removed build tracker: '/tmp/pip-req-tracker-gxnjteun'

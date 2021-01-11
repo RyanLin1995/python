@@ -1,5 +1,0 @@
-2021-01-04 22:32:32,501 - logging().py[line:27] - DEBUG:This is a debug
-2021-01-04 22:32:32,501 - logging().py[line:28] - INFO:This is a info
-2021-01-04 22:32:32,501 - logging().py[line:29] - WARNING:This is a warning
-2021-01-04 22:32:32,502 - logging().py[line:30] - ERROR:This is a error
-2021-01-04 22:32:32,502 - logging().py[line:31] - CRITICAL:This is a critical

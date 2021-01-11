@@ -1,1 +1,0 @@
-print("You are a single dog")
