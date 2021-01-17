@@ -1,3 +1,5 @@
+# 可以通过 BeautifulSoup 模块从 HTML 页面中提取信息
+
 import requests
 import bs4
 
