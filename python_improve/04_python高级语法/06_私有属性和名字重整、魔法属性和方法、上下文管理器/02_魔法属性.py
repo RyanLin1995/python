@@ -18,7 +18,7 @@ print("----------------------")
 # 2. __module__ 和__class__
 # __module__ 表示当前操作的对象在那个模块
 # __class__ 表示当前操作的对象的类是什么
-# test.py
+# flatten.py
 
 
 class Person(object):
