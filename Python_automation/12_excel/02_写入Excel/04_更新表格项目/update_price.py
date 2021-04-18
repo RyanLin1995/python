@@ -16,4 +16,4 @@ for row_num in range(2, ws.max_row + 1):
     if produce_name in update_price:
         ws.cell(row=row_num, column=2).value = update_price[produce_name]
 
-wb.save("(new)produceSales.xlsx")
+wb.save("(new)1.xlsx")
