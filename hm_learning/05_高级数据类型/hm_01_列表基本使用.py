@@ -28,3 +28,16 @@ name_list.pop(0)
 name_list.clear()
 
 print(name_list)
+
+# 5. 复制和取值
+# 取最后一个值
+print(name_list_2[-1])
+
+# 取除了最后一个值以外的值
+print(name_list_2[:-1])
+
+# 取列表反
+print(name_list_2[::-1])
+
+# 从索引为 2 的值开始取反
+print(name_list_2[1::-1])
