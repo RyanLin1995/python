@@ -94,7 +94,7 @@ from
           <port value="" />
           <database value="" />
           <files>
-            <file path="$PROJECT_DIR$/django/django_learning/test1/db.sqlite3" schema="main" />
+            <file path="$PROJECT_DIR$/django/django_learning/base_learning/db.sqlite3" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
