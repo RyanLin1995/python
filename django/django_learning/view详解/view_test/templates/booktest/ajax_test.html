@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script src="/static/js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            // 绑定 btnAjax 的 click 事件
+            $('#btnAjax').click(function(){
+                $.ajax({
+                    'url': '/ajax_handle',
+                    'datatype': 'json',
+                    <!--'async': 'false',  同步的 ajax 请求-->
+                }).success(function(data){
+                    // 进行处理
+                    if (data.ret == 1){
+                        $('#message').show().html('提示信息')
+                    }
+                })
+            })
+        })
+    </script>
+    <style>
+        #message{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="ajax请求" id="btnAjax">
+<div id="message"></div>
+</body>
+</html>
