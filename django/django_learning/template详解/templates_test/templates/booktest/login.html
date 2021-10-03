@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<body>
+    <form method="post" action="/login_check">
+        {% csrf_token %}
+        <span>用户名: </span><input type="text" name="username" value="{{ username }}"><br>
+        <span>密码: </span><input type="password" name="password"><br>
+        <span>验证码： </span><input type="text" name="vcode"><br>
+        <img src="/verify_code" alt=""><br>
+        <input type="checkbox" name="remember"><span>记住用户名</span><br>
+        <input type="submit" value="登录">
+    </form>
+</body>
+</html>

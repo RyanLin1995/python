@@ -2,7 +2,7 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/django/django_learning/template详解/templates_test" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/django/django_learning/django其他设置/other_test" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8 (learning)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

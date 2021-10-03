@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('booktest.urls'))
+    path('', include(('booktest.urls', 'booktest')))  # django 2.0将namespace融入了include( ) 中形成一个元组
 ]
