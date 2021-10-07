@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="/static/js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function () {
+			// 发起一个 ajax 请求，使 /prov 获取所有省级地区信息
+			// 使用 get 获取信息，以下是 ajax 的 get 简写
+			$.get('/prov', function(data) {
+				// 回调函数
+				// 获取返回的 json 数据
+				ret = data.data
+
+				// 获取 prov 下拉列表框
+				prov = $('#prov')
+
+				// 遍历 ret 数组，获取每一个元素
+				/*
+				for (var i = 0; i < ret.length; i++) {
+					var id = ret[i]['id']
+					var atitle = ret[i]['atitle']
+
+					var option_str = '<option value="' + id + '">' + atitle + '</option>'
+
+					// 向下拉列表框中追加元素
+					prov.append(option_str)
+				}*/
+
+				// 另一种遍历的写法
+				$.each(ret, function(index, val) {
+					 /* iterate through array or object */
+					 id = val['id']
+					 atitle = val['atitle']
+					 var option_str = '<option value="' + id + '">' + atitle + '</option>'
+					 prov.append(option_str)
+				});
+			});
+
+			// 	ajax post 简写
+			//$.post('/path/to/file', {param1: 'value1'}, function(data, textStatus, xhr) {
+				/*optional stuff to do after success */
+			//});		
+		});
+	</script>
+	<title>省市县选择案例</title>
+</head>
+<body>
+	<div>
+		<select name="" id="prov">
+			<option>---请选择省---</option>
+		</select>
+		<select name="" id="city">
+			<option>---请选择市---</option>
+		</select>
+		<select name="" id="dis">
+			<option>---请选择县---</option>
+		</select>
+	</div>
+</body>
+</html>
