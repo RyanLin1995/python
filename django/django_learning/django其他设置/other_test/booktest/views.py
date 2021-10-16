@@ -62,9 +62,9 @@ def upload_pic_handle(request):
 def show_area(request, pindex):
     """分页"""
     # 1. 查询出所有省级地区的信息
-    areas = models.AreaInfo.objects.filter(aParent__isnull=True).order_by('id')  # 因为 Paginator 要求 query_set 是有序的，所以需要对 object_list 进行排序
+    area_list = models.AreaInfo.objects.filter(aParent__isnull=True).order_by('id')  # 因为 Paginator 要求 query_set 是有序的，所以需要对 object_list 进行排序
     # 2. 分页
-    paginator_object = Paginator(areas, 10)
+    paginator_object = Paginator(area_list, 10)
     # 3. 获取第 pindex 页的内容
     if pindex == '':
         # 默认取第一页的内容
@@ -87,6 +87,17 @@ def areas(request):
 def prov(request):
     """获取所有省级地区的信息"""
     # 1. 查询出所有省级地区的信息，并将 queryset 转化为 json
-    areas = list(models.AreaInfo.objects.filter(aParent__isnull=True).order_by('id').values())  # values() 方法返回一组表示模型实例的字典
+    area_list = list(models.AreaInfo.objects.filter(aParent__isnull=True).order_by('id').values())  # values() 方法返回一组表示模型实例的字典
     # 2. 返回数据
-    return JsonResponse({'data': areas}, safe=False)
+    return JsonResponse({'data': area_list}, safe=False)
+
+
+def city(request, pid):
+    """获取 pid 地区下级地区的信息"""
+    # 1. 获取 pid 对应地区的下级地区
+    # area = models.AreaInfo.objects.get(id=pid)
+    # area_list = area.areainfo_set.all()
+    area_list = list(models.AreaInfo.objects.filter(aParent=pid).order_by('id').values())
+
+    # 2. 返回数据
+    return JsonResponse({'data': area_list}, safe=False)

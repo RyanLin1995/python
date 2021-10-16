@@ -9,4 +9,6 @@ urlpatterns = [
     re_path(r'^show_area(?P<pindex>\d*)', views.show_area),
     path(r'areas/', views.areas),
     path(r'prov/', views.prov),
+    re_path(r'^city(\d+)', views.city),
+    re_path(r'^dis(\d+)', views.city),  # 因为 city 跟 dis 获取内容的过程一致，所以可以直接使用 city 的 views
 ]
