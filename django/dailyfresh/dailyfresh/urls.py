@@ -1,4 +1,4 @@
-"""test1 URL Configuration
+"""dailyfresh URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -14,11 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 
-# 项目的 urls 文件
 urlpatterns = [
-    path('admin/', admin.site.urls),  # 配置项
-    path(r'', include('booktest.urls'))  # 包含 booktest 应用的 urls 文件。使用 path 后，第一个 router 参数应该是URL 模式，是一个字符串，旧版 jdango
-    # 中的 url 函数第一个参数传入的是正则表达式。 如果想要在新版中使用正则表达式，可以用 re_path 函数
+    path('admin/', admin.site.urls),
+    path('tinymce/', include('tinymce.urls')),  # 增加富文本编辑器 url
+    path(r'cart/', include(('apps.cart.urls', 'cart'))),
+    path(r'order/', include(('apps.order.urls', 'order'))),
+    path(r'user/', include(('apps.user.urls', 'user'))),
+    re_path(r'^', include(('apps.goods.urls', 'goods'))),  # 因为是第一个匹配的所以要放在最后边
 ]

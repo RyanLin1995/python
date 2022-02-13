@@ -27,6 +27,7 @@ class BookInfoManager(models.Manager):
     # 其实 models.Manager 类已经封装了一个 create 函数，通过关键字参数传参
     # BookInfo.objects.create(btitle='test3', bpub_date='1990-10-10')
 
+
 # 一类
 class BookInfo(models.Model):
     """图书模型类"""
