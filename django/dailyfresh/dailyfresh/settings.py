@@ -168,3 +168,10 @@ SESSION_CACHE_ALIAS = "default"
 
 # 配置登录页面的地址
 LOGIN_URL = '/user/login'
+
+# 修改 django 文件存储类
+DEFAULT_FILE_STORAGE = 'utils.fdfs.storage.FDFSStorage'
+
+# 设置 fdfs 配置文件路径和 Nginx 服务器地址
+FDFS_CLIENT_CONF = '/etc/fdfs/client.conf'
+FDFS_URL = 'http://192.168.1.5:8888'
