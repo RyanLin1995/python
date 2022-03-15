@@ -18,8 +18,8 @@ print(list(filter(is_int, a)))
 # 2. filter 练习
 # 回数是指从左向右读和从右向左读都是一样的数，例如12321，909。请利用filter()筛选出回数
 def is_palindrome(n):
-    n = str(n)
-    return n == n[::-1]  # 判断 n 取反值后是否与原来相同
+    b = str(n)
+    return b == b[::-1]  # 判断 n 取反值后是否与原来相同
 
 
 print(list(filter(is_palindrome, range(1, 1000))))

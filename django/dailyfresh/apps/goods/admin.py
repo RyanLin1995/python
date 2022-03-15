@@ -53,6 +53,12 @@ class IndexPromotionBannerAdmin(BaseModelAdmin):
     pass
 
 
+class GoodsSKUAdmin(BaseModelAdmin):
+    """商品SKU模型管理类"""
+    pass
+
+
+admin.site.register(GoodsSKU, GoodsSKUAdmin)
 admin.site.register(GoodsType, GoodsTypeAdmin)
 admin.site.register(IndexGoodsBanner, IndexGoodsBannerAdmin)
 admin.site.register(IndexTypeGoodsBanner, IndexTypeGoodsBannerAdmin)

@@ -59,8 +59,8 @@ def generate_static_index_html():
         title_banners = apps.goods.models.IndexTypeGoodsBanner.objects.filter(type=type, display_type=0).order_by('index')
 
         # 动态给type增加属性，分别保存首页分类商品的图片展示信息和文字展示信息，因为 Python 是可以动态添加属性的，所以这里可以直接给 type 增加属性
-        type.image_banner = image_banners
-        type.title_banner = title_banners
+        type.image_banners = image_banners
+        type.title_banners = title_banners
 
     # 组织模板上下文
     context = {'types': types, 'goods_banners': goods_banners, 'promotion_banners': promotion_banners}
