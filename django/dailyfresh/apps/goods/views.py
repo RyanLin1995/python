@@ -1,14 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.views.generic import View
 from django.core.cache import cache
 
 from apps.goods.models import *
+from apps.order.models import OrderGoods
 from django_redis import get_redis_connection
 
 
 # Create your views here.
-# def index(request):
-#     return render(request, 'index.html')
 class IndexView(View):
     def get(self, request):
 
@@ -56,3 +55,46 @@ class IndexView(View):
 
         # 返回模板
         return render(request, 'index.html', context=context)
+
+
+class DetailVIew(View):
+    def get(self, request, goods_id):
+        """显示商品详情页"""
+        try:
+            sku = GoodsSKU.objects.get(id=goods_id)
+        except GoodsSKU.DoesNotExist:
+            # 商品不存在
+            return redirect(reverse('goods:index'))
+
+        # 获取商品的分类信息
+        types = GoodsType.objects.all()
+
+        # 获取商品的评论信息
+        sku_orders = OrderGoods.objects.filter(sku=sku).exclude(comment='')
+
+        # 获取新品信息
+        new_skus = GoodsSKU.objects.filter(type=sku.type).order_by('-create_time')[:2]  # 根据创建时间排序，取前两个， -create_time 为降序排列
+
+        # 获取购物车商品数目
+        user = request.user
+        cart_count = 0
+        if user.is_authenticated:
+            r = get_redis_connection('default')
+            cart_key = f'cart_{user.id}'
+            cart_count = r.hlen(cart_key)
+
+            # 添加用户历史记录
+            # 用户浏览记录是以用户的 id 作为 key，以商品的 id 组成 list 保存到 redis 中
+            history_key = f'history_{user.id}'
+            r = get_redis_connection('default')
+            # 移除列表中存在的 goods_id，如果没有该 key 或该 id ，则不作任何操作
+            r.lrem(history_key, 0, goods_id)
+            # 从左侧插入用户浏览的商品的 goods_id
+            r.lpush(history_key, goods_id)
+            # 只保存用户最新浏览的5条信息
+            r.ltrim(history_key, 0, 4)
+
+        # 组织模板上下文
+        context = {'sku': sku, 'types': types, 'sku_orders': sku_orders, 'new_skus': new_skus, 'cart_count': cart_count}
+
+        return render(request, 'detail.html', context=context)
