@@ -16,7 +16,7 @@
 		<div class="goods_detail_list fr">
 			<h3>{{ sku.name }}</h3>
 			<p>{{ sku.desc }}</p>
-			<div class="prize_bar">
+			<div class="price_bar">
 				<span class="show_pirce">¥<em>{{ sku.price }}</em></span>
 				<span class="show_unit">单  位：{{ sku.unite }}</span>
 			</div>
@@ -27,6 +27,14 @@
 					<a href="javascript:;" class="add fr">+</a>
 					<a href="javascript:;" class="minus fr">-</a>	
 				</div> 
+			</div>
+			<div>
+				<p>其他规格:</p>
+				<ul>
+					{% for sku in same_spu_skus %}
+						<li><a href="{% url 'goods:detail' sku.id %}">{{ sku.name }}</a></li>
+					{% endfor %}
+				</ul>
 			</div>
 			<div class="total">总价：<em>16.80元</em></div>
 			<div class="operate_btn">

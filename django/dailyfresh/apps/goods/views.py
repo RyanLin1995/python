@@ -75,6 +75,9 @@ class DetailVIew(View):
         # 获取新品信息
         new_skus = GoodsSKU.objects.filter(type=sku.type).order_by('-create_time')[:2]  # 根据创建时间排序，取前两个， -create_time 为降序排列
 
+        # 获取同一 SPU 其他规格的商品
+        same_spu_skus = GoodsSKU.objects.filter(goods=sku.goods).exclude(id=goods_id)
+
         # 获取购物车商品数目
         user = request.user
         cart_count = 0
@@ -95,6 +98,12 @@ class DetailVIew(View):
             r.ltrim(history_key, 0, 4)
 
         # 组织模板上下文
-        context = {'sku': sku, 'types': types, 'sku_orders': sku_orders, 'new_skus': new_skus, 'cart_count': cart_count}
+        context = {'sku': sku, 'types': types, 'sku_orders': sku_orders, 'new_skus': new_skus, 'cart_count': cart_count, 'same_spu_skus': same_spu_skus}
 
         return render(request, 'detail.html', context=context)
+
+
+class ListView(View):
+    """列表页显示"""
+    def get(self, request):
+        return render(request, 'list.html')
