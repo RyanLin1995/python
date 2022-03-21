@@ -105,5 +105,31 @@ class DetailVIew(View):
 
 class ListView(View):
     """列表页显示"""
-    def get(self, request):
+    def get(self, request, type_id, page):
+        # 先获取种类信息
+        try:
+            type = GoodsType.objects.get(id=type_id)
+        except GoodsType.DoesNotExist:
+            return redirect(reverse('goods:index'))
+
+        # 获取商品分类信息
+        types = GoodsType.objects.all().order_by('id')
+
+        # 获取排序的方式
+        # sort=default 按照默认 id 排序
+        # sort=price 按照价格排序
+        # sort=hot 按照销量排序
+
+        sort = request.GET.get('sort')
+
+        # 按排序获取分类商品的信息
+        if sort == 'price':
+            skus = GoodsSKU.objects.filter(type=type).order_by('price')  # 升序，从小到大
+        elif sort == 'hot':
+            skus = GoodsSKU.objects.filter(type=type).order_by('-sales')
+        else:
+            skus = GoodsSKU.objects.filter(type=type).order_by('-id')  # 降序
+
+        # 对数据进行分页
+
         return render(request, 'list.html')
