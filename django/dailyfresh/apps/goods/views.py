@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.views.generic import View
 from django.core.cache import cache
+from django.core.paginator import Paginator
 
 from apps.goods.models import *
 from apps.order.models import OrderGoods
@@ -73,7 +74,8 @@ class DetailVIew(View):
         sku_orders = OrderGoods.objects.filter(sku=sku).exclude(comment='')
 
         # 获取新品信息
-        new_skus = GoodsSKU.objects.filter(type=sku.type).order_by('-create_time')[:2]  # 根据创建时间排序，取前两个， -create_time 为降序排列
+        new_skus = GoodsSKU.objects.filter(type=sku.type).order_by('-create_time')[
+                   :2]  # 根据创建时间排序，取前两个， -create_time 为降序排列
 
         # 获取同一 SPU 其他规格的商品
         same_spu_skus = GoodsSKU.objects.filter(goods=sku.goods).exclude(id=goods_id)
@@ -98,13 +100,15 @@ class DetailVIew(View):
             r.ltrim(history_key, 0, 4)
 
         # 组织模板上下文
-        context = {'sku': sku, 'types': types, 'sku_orders': sku_orders, 'new_skus': new_skus, 'cart_count': cart_count, 'same_spu_skus': same_spu_skus}
+        context = {'sku': sku, 'types': types, 'sku_orders': sku_orders, 'new_skus': new_skus, 'cart_count': cart_count,
+                   'same_spu_skus': same_spu_skus}
 
         return render(request, 'detail.html', context=context)
 
 
 class ListView(View):
     """列表页显示"""
+
     def get(self, request, type_id, page):
         # 先获取种类信息
         try:
@@ -128,8 +132,54 @@ class ListView(View):
         elif sort == 'hot':
             skus = GoodsSKU.objects.filter(type=type).order_by('-sales')
         else:
+            sort = 'default'
             skus = GoodsSKU.objects.filter(type=type).order_by('-id')  # 降序
 
         # 对数据进行分页
+        paginator = Paginator(skus, 1)  # Django 分页方法，第一个参数是可迭代对象或查询集，第二个对象为每页显示数量
 
-        return render(request, 'list.html')
+        # 获取对应 page 内容
+        try:
+            page = int(page)
+        except Exception as e:
+            page = 1
+
+        # 如果传入的页面大于分页的总页码数，页码数为1
+        if page > paginator.num_pages:
+            page = 1
+
+        # 获取对应页面的 Page 实例对象
+        skus_page = paginator.page(page)
+
+        # 进行页码精准控制，页面上最多显示5个页码
+        # 1. 总页数小于5，显示所有页码
+        # 2. 如果当前页为前三页，显示前5页
+        # 3. 如果当前页是后三页，显示后5页
+        # 4. 其他情况，显示当前页的前2页，当前页，当前页的后2页
+        num_pages = paginator.num_pages
+        if num_pages < 5:
+            pages = range(1, num_pages + 1)
+        elif page <= 3:
+            pages = range(1, 6)
+        elif num_pages - page <= 2:
+            pages = range(num_pages - 4, num_pages + 1)
+        else:
+            pages = range(page - 2, page + 3)
+
+        # 获取新品信息
+        new_skus = GoodsSKU.objects.filter(type=type).order_by('-create_time')[
+                   :2]
+
+        # 获取购物车商品数目
+        user = request.user
+        cart_count = 0
+        if user.is_authenticated:
+            r = get_redis_connection('default')
+            cart_key = f'cart_{user.id}'
+            cart_count = r.hlen(cart_key)
+
+        # 组织模板上下文
+        context = {'type': type, 'types': types, 'skus_page': skus_page, 'new_skus': new_skus, 'cart_count': cart_count,
+                   'sort': sort, 'pages': pages}
+
+        return render(request, 'list.html', context=context)
