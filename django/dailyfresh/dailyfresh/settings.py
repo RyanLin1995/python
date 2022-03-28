@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinymce',
+    'haystack',  # 注册全文检索框架
     'apps.cart',  # 购物车模块
     'apps.goods',  # 商品模块
     'apps.order',  # 订单模块
@@ -175,3 +176,19 @@ DEFAULT_FILE_STORAGE = 'utils.fdfs.storage.FDFSStorage'
 # 设置 fdfs 配置文件路径和 Nginx 服务器地址
 FDFS_CLIENT_CONF = '/etc/fdfs/client.conf'
 FDFS_URL = 'http://192.168.1.5:8888'
+
+# 全文检索框架的配置
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        # 使用 whoosh 引擎
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',  # 原始的设置，
+        # 实际上是 haystack 安装路径下 backeds 文件夹中 whoosh_backend.py 文件的实例对象
+
+        # 'ENGINE': 'haystack.backends.whoosh_cn_backend.WhooshEngine',
+        # 设置索引文件生成的路径
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+    }
+}
+
+# 当添加、修改、删除数据时，自动生成索引
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
