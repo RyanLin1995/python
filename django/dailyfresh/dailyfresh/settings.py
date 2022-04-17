@@ -181,10 +181,12 @@ FDFS_URL = 'http://192.168.1.5:8888'
 HAYSTACK_CONNECTIONS = {
     'default': {
         # 使用 whoosh 引擎
-        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',  # 原始的设置，
+        # 'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',  # 原始的设置，
         # 实际上是 haystack 安装路径下 backeds 文件夹中 whoosh_backend.py 文件的实例对象
 
-        # 'ENGINE': 'haystack.backends.whoosh_cn_backend.WhooshEngine',
+        # 因为 haystack 默认对中文分词支持不友好，所以我们使用 jieba 替换默认词语分析类
+        'ENGINE': 'haystack.backends.whoosh_cn_backend.WhooshEngine',
+
         # 设置索引文件生成的路径
         'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
     }
@@ -192,3 +194,6 @@ HAYSTACK_CONNECTIONS = {
 
 # 当添加、修改、删除数据时，自动生成索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+# 指定每页显示搜索结果的数量
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 1

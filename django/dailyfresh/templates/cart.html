@@ -1,0 +1,279 @@
+{% extends 'base_search_bar_no_car.html' %}
+{% load static %}
+{% block title %}天天生鲜-购物车{% endblock title %}
+{% block page_title %}购物车{% endblock page_title %}
+{% block body %}
+	<div class="total_count">全部商品<em>{{ total_num }}</em>件</div>
+	<ul class="cart_list_th clearfix">
+		<li class="col01">商品名称</li>
+		<li class="col02">商品单位</li>
+		<li class="col03">商品价格</li>
+		<li class="col04">数量</li>
+		<li class="col05">小计</li>
+		<li class="col06">操作</li>
+	</ul>
+	{% for sku in skus %}
+	<ul class="cart_list_td clearfix">
+		<li class="col01"><input type="checkbox" name="" checked></li>
+		<li class="col02"><img src="{{ sku.image.url }}"></li>
+		<li class="col03">{{ sku.name }}<br><em>{{ sku.price }}元/{{ sku.unite }}</em></li>
+		<li class="col04">{{ sku.unite }}</li>
+		<li class="col05">{{ sku.price }}元</li>
+		<li class="col06">
+			<div class="num_add">
+				<a href="javascript:;" class="add fl">+</a>
+				<input type="text" sku_id={{ sku.id }} class="num_show fl" value="{{ sku.num }}">
+				<a href="javascript:;" class="minus fl">-</a>	
+			</div>
+		</li>
+		<li class="col07">{{ sku.amount }}元</li>
+		<li class="col08"><a href="javascript:;">删除</a></li>
+	</ul>
+	{% endfor %}
+	
+
+	<ul class="settlements">
+		{% csrf_token %}
+		<li class="col01"><input type="checkbox" name="" checked=""></li>
+		<li class="col02">全选</li>
+		<li class="col03">合计(不含运费)：<span>¥</span><em>{{ total_price }}</em><br>共计<b>{{ total_num }}</b>件商品</li>
+		<li class="col04"><a href="place_order.html">去结算</a></li>
+	</ul>
+{% endblock body %}
+{% block bottomfiles %}
+	<script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+	<script>
+		// 计算被选中的商品的总件数和总价格
+		function update_page_info() {
+			var total_num = 0;
+			var total_amount = 0;
+			$('.cart_list_td').find(':checked').parents('ul').each(function () {  // 先获取所有被选中的商品的 checkbox，再获取他们的父级 ul 元素
+				var num = $(this).find('.num_show').val();  // 获取被选中商品的数量
+				var amount = $(this).children('.col07').text();  // 获取被选中商品的小计
+				// 累加被选中商品的数量和小计
+				num = parseInt(num);
+				amount = parseFloat(amount);
+				total_num += num;
+				total_amount += amount;
+			})
+			// 设置页面上的商品总数和总价格
+			$('.settlements').find('em').text(total_amount.toFixed(2));
+			$('.settlements').find('b').text(total_num);
+		};
+
+		// 计算商品的小计
+		function update_goods_amount(sku_ul) {
+			// 获取当前商品的单价和数量
+			var num = sku_ul.find('.num_show').val();  
+			var price = sku_ul.children('.col05').text();
+
+			// 计算小计
+			amount = parseInt(num) * parseFloat(price);
+
+			// 设置小计
+			sku_ul.children('.col07').text(amount.toFixed(2) + "元");
+		}
+
+		// 商品的全选和全不选
+		$('.settlements').find(':checkbox').change(function () {  // 'find':寻找所有的子元素 ；':checkbox':选取所有带有 type="checkbox" 的 <input> 元素
+			// 获取全选的checkedbox状态
+			var is_checked = $(this).prop('checked');
+			// 遍历对应商品的CheckBox，设置其状态与全选的CheckBox状态一致
+			$('.cart_list_td').find(':checkbox').each(function () {
+				$(this).prop('checked', is_checked);
+			});
+			// 更新页面上的商品总数和总价格
+			update_page_info();
+		});
+
+		// 对应商品的CheckBox的状态改变时，更新全选状态
+		is_checked = true;
+		$('.cart_list_td').find(':checkbox').change(function () {
+
+			// 获取页面上所有商品数目
+			var all_len = $('.cart_list_td').length;
+			// 获取页面上所有被选中的商品的数目
+			var checked_len = $('.cart_list_td').find(':checked').length;
+
+			// 如果被选中的商品数目小于商品总数，则全选按钮为未选中状态
+			if (checked_len < all_len) {
+				is_checked = false;
+			}
+
+			$('.settlements').find(':checkbox').prop('checked', is_checked);
+
+			// 更新页面上的商品总数和总价格
+			update_page_info();
+		});
+
+		// 更新购物车商品数量
+		var err_update = false;
+		var total = 0;
+		function update_cart_info (sku_id, num) {
+			var csrf = $('input[name="csrfmiddlewaretoken"]').val();
+			var params = {
+				'num': num,
+				'sku_id': sku_id,
+				'csrfmiddlewaretoken': csrf
+			};
+			// 设置 ajax 请求为同步请求（为什么要设置同步请求，是因为异步影响 total 的获取）
+			$.ajaxSetup({
+				async: false
+			});
+			// 发送 ajax 请求
+			$.post('/cart/update', params, function (data) {
+				if ( data.res != 0 ) {
+					// 更新成功
+					err_update = false;
+					total = data.total_count;
+				}
+				else {
+					// 更新失败
+					err_update = true;
+					alert(data.errmsg)
+				}
+			})
+			// 设置 ajax 请求为异步请求（该设置为全局设置，需要将其还原）
+			$.ajaxSetup({
+				async: true
+			});
+		}
+		// 购物车商品数量的增加
+		$('.add').click(function () {
+			// 获取商品的 id 和数量
+			var num = $(this).next().val();
+			var sku_id = $(this).next().attr('sku_id');
+
+			// 组织参数
+			num = parseInt(num) + 1;
+
+			// 更新购物车记录
+			update_cart_info(sku_id, num);
+
+			// 判断更新是否成功
+			if (err_update == false) {
+				// 重新设置商品数目
+				$(this).next().val(num);
+				// 计算商品的小计
+				update_goods_amount($(this).parents('ul'));
+				// 获取商品对应的CheckBox状态，如果为选中，则更新页面上的商品总数和总价格
+				is_checked = $(this).parents('ul').find(':checkbox').prop('checked');
+				if (is_checked) {
+					// 更新页面上的商品总数和总价格
+					update_page_info();
+				}
+				// 更新页面上的商品总件数
+				$('.total_count').children('em').text(total);
+			}
+		})
+
+		// 购物车商品数量的减少
+		$('.minus').click(function () {
+			// 获取商品的 id 和数量
+			var num = $(this).prev().val();
+			var sku_id = $(this).prev().attr('sku_id');
+
+			// 校验参数
+			num = parseInt(num) - 1;
+			if (num <= 0) {
+				return;
+			}
+
+			// 更新购物车记录
+			update_cart_info(sku_id, num);
+
+			// 判断更新是否成功
+			if (err_update == false) {
+				// 重新设置商品数目
+				$(this).prev().val(num);
+				// 计算商品的小计
+				update_goods_amount($(this).parents('ul'));
+				// 获取商品对应的CheckBox状态，如果为选中，则更新页面上的商品总数和总价格
+				is_checked = $(this).parents('ul').find(':checkbox').prop('checked');
+				if (is_checked) {
+					// 更新页面上的商品总数和总价格
+					update_page_info();
+				}
+				// 更新页面上的商品总件数
+				$('.total_count').children('em').text(total);
+			}
+		})
+
+		// 手动输入购物车商品数量
+		// 记录用户之前输入的数量
+		var pre_num = 0;
+		$('.num_show').focus(function () {
+			pre_num = $(this).val();
+		})
+		$('.num_show').blur(function () {
+			// 获取商品的 id 和数量
+			var num = $(this).val();
+			var sku_id = $(this).attr('sku_id');
+
+			// 校验参数
+			if (isNaN(num) || num.trim().length == 0 || parseInt(num) <= 0) {
+				// 设置商品的数量为用户之前输入的数量
+				$(this).val(pre_num);
+				return;
+			}
+
+			// 更新购物车记录
+			num = parseInt(num);
+			update_cart_info(sku_id, num);
+
+			// 判断更新是否成功
+			if (err_update == false) {
+				// 重新设置商品数目
+				$(this).val(num);
+				// 计算商品的小计
+				update_goods_amount($(this).parents('ul'));
+				// 获取商品对应的CheckBox状态，如果为选中，则更新页面上的商品总数和总价格
+				is_checked = $(this).parents('ul').find(':checkbox').prop('checked');
+				if (is_checked) {
+					// 更新页面上的商品总数和总价格
+					update_page_info();
+				}
+				// 更新页面上的商品总件数
+				$('.total_count').children('em').text(total);
+			}
+			else {
+				// 设置商品的数量为用户之前输入的数量
+				$(this).val(pre_num);
+			}
+		})
+
+		// 删除购物车商品
+		$('.cart_list_td').children('.col08').children('a').click(function(){
+			var sku_id = $(this).parents('ul').find('.num_show').attr('sku_id');
+			var csrf = $('input[name="csrfmiddlewaretoken"]').val();
+			// 组织参数
+			var params = {
+				'sku_id': sku_id,
+				'csrfmiddlewaretoken': csrf
+			};
+			// 获取商品所在 ul 元素
+			var sku_ul = $(this).parents('ul')
+			// 发送ajax请求
+			$.post('/cart/delete', params, function(data){
+				if (data.res != 0) {
+					// 删除成功，移除页面上的商品所在的 ul 元素
+					sku_ul.remove();  // remove() 方法移除被选元素及子元素
+					// sku_ul.empty();  // empty() 方法清空被选元素内的所有子元素
+
+					// 获取 sku_ul 中商品的 CheckBox 状态
+					var is_checked = sku_ul.find(':checkbox').prop('checked');
+					if (is_checked){
+						// 更新页面信息
+						update_page_info();
+					}
+					// 更新页面上的商品总件数
+					$('.total_count').children('em').text(data.total_count);
+				}
+				else {
+					alert(data.errmsg);
+				}
+			})
+		})
+
+	</script>
+{% endblock bottomfiles %}

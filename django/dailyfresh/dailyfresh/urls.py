@@ -23,4 +23,5 @@ urlpatterns = [
     path(r'order/', include(('apps.order.urls', 'order'))),
     path(r'user/', include(('apps.user.urls', 'user'))),
     re_path(r'^', include(('apps.goods.urls', 'goods'))),  # 因为是第一个匹配的所以要放在最后边
+    path('search/', include('haystack.urls')),  # 增加搜索功能
 ]
