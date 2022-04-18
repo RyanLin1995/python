@@ -12,6 +12,11 @@ print(ret.group())
 ret = re.findall(r'\d+', 'python = 9999, c = 1357, c++ = 2468')
 print(ret)
 
+# 2.1 re.finditer: 匹配出所有符合表达式的非重复文本，返回的是迭代器
+all_matchs = re.finditer(r'\d+', 'one1two2three3four4one1two2three3four4')
+for match in all_matchs:
+    print(match.span())  # span([group])返回一个二元组 (m.start(group), m.end(group)), 注意如果 group 没有在这个匹配中，就返回 (-1, -1) 。group 默认为0，即整个匹配
+
 # 3. re.sub
 # re.sub用法一: 将匹配到的结果替换为中间的
 ret = re.sub(r'\d+', '996', '上班时间985')
