@@ -27,3 +27,17 @@ def normalize(name):  # 如果是用于 map 函数，这里的 name 其实不是
 
 
 print(list(map(normalize, name)))
+
+# 数字的相加与相乘
+def multiply(x):
+    return x * x
+
+
+def add(x):
+    return x + x
+
+
+funcs = [multiply, add]
+for i in range(5):
+    value = map(lambda x: x(i), funcs)
+    print(list(value))
