@@ -1,4 +1,7 @@
+from functools import warps
+
 def set_func(func):
+    @warps(func)  # 装饰器装饰后的函数还拥有原来的属性
     def call_func():
         print("这是一个装饰器")
         func()
