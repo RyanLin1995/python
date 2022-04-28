@@ -66,6 +66,14 @@ class File:
 
 
 # 因为File 类实现了上下文管理器，现在就可以使用with 语句了。
+# 上下文管理器执行顺序
+# 1. with语句先暂存了File类的__exit__方法
+# 2. 然后它调用File类的__enter__方法
+# 3. __enter__方法打开文件并返回给with语句
+# 4. 打开的文件句柄被传递给opened_file参数
+# 5. 使用.write()来写文件
+# 6. with语句调用之前暂存的__exit__方法
+# 7. __exit__方法关闭了文件
 
 with File('out.txt', 'w') as f:
     print("writing")
