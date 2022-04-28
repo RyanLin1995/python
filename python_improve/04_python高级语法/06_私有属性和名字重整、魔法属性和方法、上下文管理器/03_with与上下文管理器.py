@@ -75,6 +75,12 @@ class File:
 # 6. with语句调用之前暂存的__exit__方法
 # 7. __exit__方法关闭了文件
 
+# 当异常发生时，with语句会采取以下步骤：
+# 1. 把异常的type,value和traceback传递给__exit__方法
+# 2. 让__exit__方法来处理异常
+# 3. 如果__exit__返回的是True，那么这个异常就被优雅地处理了
+# 4. 如果__exit__返回的是True以外的任何东西，那么这个异常将被with语句抛出
+
 with File('out.txt', 'w') as f:
     print("writing")
     f.write('hello, python')
