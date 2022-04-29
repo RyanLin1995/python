@@ -62,7 +62,7 @@ class CartAddView(View):
         return JsonResponse({'res': 1, 'message': '添加成功', 'total_num': total_num})
 
 
-class CartInfoView(View, LoginRequiredMixin):
+class CartInfoView(LoginRequiredMixin, View):
     """购物车页面显示"""
 
     def get(self, request):
