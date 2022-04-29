@@ -23,3 +23,7 @@ def is_palindrome(n):
 
 
 print(list(filter(is_palindrome, range(1, 1000))))
+
+# 3. filter 的一个小应用
+a = 'hello----world'
+filter(None, a.split("-"))  # 传入 None 时会返回第二个参数（可迭代对象）中非空的值
