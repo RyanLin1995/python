@@ -37,7 +37,7 @@ class OrderInfo(BaseModel):
         2: '待发货',
         3: '待收货',
         4: '待评价',
-        5: '已完成'
+        5: '已完成',
     }
 
     ORDER_STATUS_CHOICES = (

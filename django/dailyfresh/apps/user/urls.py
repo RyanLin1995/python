@@ -16,7 +16,7 @@ urlpatterns = [
     # path('address', login_required(AddressView.as_view()), name="address"),  # 用户中心-地址页面
     # 但是在类视图中继承了 LoginRequiredMixin 类，所以不需要再加上装饰器了 login_required 装饰器.
     path('', UserInfoView.as_view(), name="user"),  # 用户中心-信息页面
-    path('order', UserOrderView.as_view(), name="order"),  # 用户中心-订单页面
+    re_path(r'^order/(?P<page>\d+)$', UserOrderView.as_view(), name="order"),  # 用户中心-订单页面
     path('address', AddressView.as_view(), name="address"),  # 用户中心-地址页面
 
 

@@ -8,10 +8,12 @@ from django.views.generic import View
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin  # 用于类视图中验证用户是否登录，功能与login_required 装饰器一样
+from django.core.paginator import Paginator
 
 from dailyfresh import settings
 from apps.user.models import User, Address
 from apps.goods.models import GoodsSKU
+from apps.order.models import OrderInfo, OrderGoods
 from celery_tasks.tasks import send_activate_mail
 from django_redis import get_redis_connection
 
@@ -290,10 +292,65 @@ class UserInfoView(LoginRequiredMixin, View):
 class UserOrderView(LoginRequiredMixin, View):
     """用户中心-订单页"""
 
-    def get(self, request):
+    def get(self, request, page):
         # 获取用户订单信息
+        user = request.user
+        orders = OrderInfo.objects.filter(user=user).order_by('-create_time')
 
-        return render(request, 'user_center_order.html', {'page': 'order'})
+        # 遍历获取订单商品的信息
+        for order in orders:
+            # 根据 order id 查询订单商品信息
+            order_skus = OrderGoods.objects.filter(order_id=order.order_id)
+
+            # 遍历计算商品小计
+            for order_sku in order_skus:
+                amount = order_sku.count * order_sku.price
+                # 动态给 order_sku 增加小计属性 amount
+                order_sku.amount = amount
+
+            # 获取订单状态标题
+            order.status_name = OrderInfo.ORDER_STATUS[order.order_status]
+            # 动态给 order 增加属性以保存订单商品的信息
+            order.order_skus = order_skus
+
+        # 分页 orders
+        paginator = Paginator(orders, 1)
+
+        # 判断页码是否合法
+        # 获取对应 page 内容
+        try:
+            page = int(page)
+        except Exception as e:
+            page = 1
+
+        # 如果传入的页面大于分页的总页码数，页码数为1
+        if page > paginator.num_pages:
+            page = 1
+
+        # 获取对应页面的 Page 实例对象
+        order_page = paginator.page(page)
+
+        # 进行页码精准控制，页面上最多显示5个页码
+        # 1. 总页数小于5，显示所有页码
+        # 2. 如果当前页为前三页，显示前5页
+        # 3. 如果当前页是后三页，显示后5页
+        # 4. 其他情况，显示当前页的前2页，当前页，当前页的后2页
+        num_pages = paginator.num_pages
+        if num_pages < 5:
+            pages = range(1, num_pages + 1)
+        elif page <= 3:
+            pages = range(1, 6)
+        elif num_pages - page <= 2:
+            pages = range(num_pages - 4, num_pages + 1)
+        else:
+            pages = range(page - 2, page + 3)
+
+        # 组织上下文
+        context = {'order_page': order_page,
+                   'pages': pages,
+                   'page': 'order'}
+
+        return render(request, 'user_center_order.html', context=context)
 
 
 # /user/address
