@@ -1,6 +1,10 @@
+import json
+
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.template import loader, RequestContext
+from django.views import View
+
 from booktest.models import BookInfo
 
 
@@ -53,3 +57,33 @@ def detail(request, bid):
 
     # 3. 使用模板
     return render(request, 'booktest/detail.html', {'book': book, 'heros': heros})
+
+
+class AxiosShow(View):
+    def get(self, request):
+        return render(request, 'booktest/09_axios.html')
+
+
+class AxiosText(View):
+    def get(self, request):
+        username = request.GET.get('username')
+        password = request.GET.get('password')
+
+        if username == '123' and password == '123':
+            return JsonResponse({'code': 200, 'msg': 'OK', 'username': username})
+        else:
+            return JsonResponse({'code': 400, 'msg': 'Fail'})
+
+    def post(self, request):
+        print(request.body)
+        # 因为 post 传过来的是 json，所以需要 decode 并用 json 读取
+        data = json.loads(request.body.decode())
+        username = data.get('username')
+        password = data.get('password')
+        print(username)
+        print(password)
+
+        if username == '123' and password == '123':
+            return JsonResponse({'code': 200, 'msg': 'OK', 'username': username})
+        else:
+            return JsonResponse({'code': 400, 'msg': 'Fail'})

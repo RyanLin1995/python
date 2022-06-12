@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- 因为 vue 不支持 ajax，所有要用到 axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <a href="javascript:;">登录</a><br>
+        <a href="javascript:;" @click='login'>login-GET</a>
+        <a href="javascript:;" @click='login2'>login-POST</a>
+        <hr>
+        <span>[[ message ]]</span>
+    </div>
+</body>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        // delimiters 可以指定参数标签的开始和结束符，因为 Django 模板跟 Vue 的冲突，所以 Vue 的需要改为 [[]]
+        delimiters: ['[[', ']]'],
+        data: {
+            message: '',
+        },
+        methods: {
+            login: function() {
+                let url = 'http://127.0.0.1:8000/axiostest/?username=123&password=123';
+                // ()=>{} 是 es6 的语法，可以把函数写在 () 中，然后用 () 来调用函数
+                axios.get(url).then((response)=>{
+                    if(response.data.code == '200' ){
+                        this.message = response.data.username;
+                    }
+                    else if(response.data.code == '400'){
+                        this.message = response.data.msg;
+                    }
+                }).catch((error)=>{
+                    console.log(error);
+                });
+            },
+            login2: function() {
+                let url = 'http://127.0.0.1:8000/axiostest/';
+                axios.post(url, {
+                    'username': '123',
+                    'password': '123'
+                }).then((response)=>{
+                    if(response.data.code == '200'){
+                        this.message = response.data.username;
+                    }
+                    else{
+                        console.log(response.data.msg);
+                    }
+                }).catch((error)=>{
+                    console.log(error);
+                })
+        }
+    }
+    })
+</script>
+</html>
