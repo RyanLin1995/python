@@ -102,3 +102,50 @@ invalid request block size: 21573 (max 4096)...skip
 [pid: 298295|app: 0|req: 9/11] 127.0.0.1 () {56 vars in 1011 bytes} [Sun May 15 15:44:41 2022] GET /1 => generated 179 bytes in 1 msecs (HTTP/1.1 404) 5 headers in 158 bytes (1 switches on core 0)
 [pid: 298291|app: 0|req: 2/12] 127.0.0.1 () {56 vars in 1023 bytes} [Sun May 15 15:44:44 2022] GET /goods/5 => generated 8683 bytes in 27 msecs (HTTP/1.1 200) 7 headers in 349 bytes (1 switches on core 1)
 [pid: 298293|app: 0|req: 2/13] 127.0.0.1 () {58 vars in 1112 bytes} [Sun May 15 15:44:57 2022] GET /goods/2 => generated 8789 bytes in 27 msecs (HTTP/1.1 200) 7 headers in 349 bytes (1 switches on core 0)
+...brutally killing workers...
+Gracefully killing worker 4 (pid: 298295)...
+Gracefully killing worker 1 (pid: 298290)...
+Gracefully killing worker 3 (pid: 298293)...
+Gracefully killing worker 2 (pid: 298291)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ryan/learning/python/django/dailyfresh
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:8080)
+running /home/ryan/anaconda3/envs/learning/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sat Jun 18 16:24:15 2022] ***
+compiled with version: 9.3.0 on 02 March 2021 12:42:23
+os: Linux-5.10.101-amd64-desktop #20.00.05.06-release SMP Mon Mar 14 09:34:55 CST 2022
+nodename: deepin
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/ryan/learning/python/django/dailyfresh
+detected binary path: /home/ryan/anaconda3/envs/learning/bin/uwsgi
+chdir() to /home/ryan/learning/python/django/dailyfresh
+your processes number limit is 31356
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 127.0.0.1:8080 fd 3
+Python version: 3.8.8 | packaged by conda-forge | (default, Feb 20 2021, 16:22:27)  [GCC 9.3.0]
+Set PythonHome to /home/ryan/anaconda3/envs/learning
+Python main interpreter initialized at 0x561c7cf24eb0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x561c7cf24eb0 pid: 298286 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 298286)
+spawned uWSGI worker 1 (pid: 547870, cores: 2)
+spawned uWSGI worker 2 (pid: 547871, cores: 2)
+spawned uWSGI worker 3 (pid: 547872, cores: 2)
+spawned uWSGI worker 4 (pid: 547874, cores: 2)
