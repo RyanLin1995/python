@@ -1,6 +1,6 @@
-from django.urls import path, re_path
-from books import genericapiview_view, childmixin_view, viewset_view, genericaviewset_view, modelviewset_view
-from rest_framework.routers import SimpleRouter, DefaultRouter
+from rest_framework.routers import SimpleRouter
+
+from books import modelviewset_view
 
 urlpatterns = [
     # path('books/', genericapiview_view.BooksView.as_view()),
@@ -28,12 +28,12 @@ urlpatterns = [
     # re_path(r'^books/(?P<pk>\d+)$',
     #         modelviewset_view.BooksView.as_view({'put': 'update', 'get': 'retrieve', 'delete': 'destroy'})),
 ]
+
 # 自动生成路由（只适用于结合视图集使用，且自定义方法需要在方法中使用 action 装饰器生成url）
 # 1. 先定义一个 SimpleRouter 的实例对象
 router = SimpleRouter()
 # router = DefaultRouter()  # DefaultRouter 继承于 SimpleRouter，只不过 DefaultRouter 有对首页的路由而 SimpleRouter 没有
 # 2. 调用 router 的 register 方法
 router.register('books', modelviewset_view.BooksView, basename='books')  # 第一个参数为 url , 第二个参数为 view， 第三个参数为 反向代理名称
-print(router.urls)
 # 3. 添加路由到 urlpatterns
 urlpatterns += router.urls
