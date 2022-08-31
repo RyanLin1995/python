@@ -3,7 +3,7 @@ def sum2num(num1, num2):
 
     result = num1 + num2
 
-    print('%d + %d = %d' % (num1, num2, result))
+    print(f'{num1}' + f'{num2}')
 
 
 sum2num(20, 30)
