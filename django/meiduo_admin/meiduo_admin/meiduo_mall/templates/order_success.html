@@ -37,7 +37,7 @@
     </div>
 
     <div class="search_bar clearfix">
-        <a href="index.html" class="logo fl"><img src="/static/images/logo.png"></a>
+        <a class="logo fl" href="/"><img src="/static/images/logo.png"></a>
         <div class="search_wrap fl">
             <form method="get" action="/search/" class="search_con">
                 <input type="text" class="input_text fl" name="q" placeholder="搜索商品">
@@ -61,9 +61,9 @@
     </div>
 
     {% if pay_method != '1' %}
-        <div class="order_submit clearfix">
-            <a href="javascript:;" @click="order_payment">确认支付</a>
-        </div>
+    <div class="order_submit clearfix">
+        <a href="javascript:;" @click="order_payment">确认支付</a>
+    </div>
     {% endif %}
 
     <div class="footer">

@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
+import datetime
 import os  # 操作系统ubuntu模块
 import sys  # python模块
 
@@ -52,16 +53,16 @@ INSTALLED_APPS = [
 
     # 完整导包路径
     # 'meiduo_mall.apps.users.apps.UsersConfig',
-    'users.apps.UsersConfig',
-    'verifycations.apps.VerifycationsConfig',
-    'contents.apps.ContentsConfig',
-    'oauth.apps.OauthConfig',
-    'areas.apps.AreasConfig',
-    'goods.apps.GoodsConfig',
-    'carts.apps.CartsConfig',
-    'orders.apps.OrdersConfig',
-    'payments.apps.PaymentsConfig',
-    'meiduo_admin.apps.MeiduoAdminConfig',
+    'meiduo_mall.apps.users.apps.UsersConfig',
+    'meiduo_mall.apps.verifycations.apps.VerifycationsConfig',
+    'meiduo_mall.apps.contents.apps.ContentsConfig',
+    'meiduo_mall.apps.oauth.apps.OauthConfig',
+    'meiduo_mall.apps.areas.apps.AreasConfig',
+    'meiduo_mall.apps.goods.apps.GoodsConfig',
+    'meiduo_mall.apps.carts.apps.CartsConfig',
+    'meiduo_mall.apps.orders.apps.OrdersConfig',
+    'meiduo_mall.apps.payments.apps.PaymentsConfig',
+    'meiduo_mall.apps.meiduo_admin.apps.MeiduoAdminConfig',
     'corsheaders',  # 跨域模块
 
     # 'haystack',
@@ -187,42 +188,42 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 CACHES = {
     "default": {  # 默认
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/0",  # 可改：ip、port、db
+        "LOCATION": "redis://192.168.1.5:6379/0",  # 可改：ip、port、db
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
     "session": {  # session
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
+        "LOCATION": "redis://192.168.1.5:6379/1",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
     "image_code": {  # 图形验证码
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/2",
+        "LOCATION": "redis://192.168.1.5:6379/2",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
     "sms_code": {  # 图形验证码
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/3",
+        "LOCATION": "redis://192.168.1.5:6379/3",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
     "history": {  # 浏览记录
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/4",
+        "LOCATION": "redis://192.168.1.5:6379/4",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
     "cart": {  # 购物车
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/5",
+        "LOCATION": "redis://192.168.1.5:6379/5",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -341,3 +342,20 @@ CORS_ORIGIN_WHITELIST = (
 CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# JWT 设置
+REST_FRAMEWORK = {
+    # 指定 JWT 认证
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
+JWT_AUTH = {
+    # 指定 JWT 有效时间
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),
+    # 指定 JWT 返回方法
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'meiduo_admin.utils.jwt_response_payload_handler',
+}

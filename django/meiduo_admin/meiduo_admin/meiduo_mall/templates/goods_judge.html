@@ -37,7 +37,7 @@
     </div>
 
     <div class="search_bar clearfix">
-        <a href="index.html" class="logo fl"><img src="/static/images/logo.png"></a>
+        <a class="logo fl" href="/"><img src="/static/images/logo.png"></a>
         <div class="search_wrap fl">
             <form method="get" action="/search/" class="search_con">
                 <input type="text" class="input_text fl" name="q" placeholder="搜索商品">
@@ -66,11 +66,16 @@
             <div class="judge_item">
                 <label>商品满意度</label>
                 <div class="stars fl">
-                    <a @mouseover="on_stars_mouseover(index, 1)" @mouseout="on_stars_mouseout(index)" @click="on_stars_click(index, 1)" class="star_off" :class="sku.score>=1?'light':''"></a>
-					<a @mouseover="on_stars_mouseover(index, 2)" @mouseout="on_stars_mouseout(index)" @click="on_stars_click(index, 2)" class="star_off" :class="sku.score>=2?'light':''"></a>
-					<a @mouseover="on_stars_mouseover(index, 3)" @mouseout="on_stars_mouseout(index)" @click="on_stars_click(index, 3)" class="star_off" :class="sku.score>=3?'light':''"></a>
-					<a @mouseover="on_stars_mouseover(index, 4)" @mouseout="on_stars_mouseout(index)" @click="on_stars_click(index, 4)" class="star_off" :class="sku.score>=4?'light':''"></a>
-					<a @mouseover="on_stars_mouseover(index, 5)" @mouseout="on_stars_mouseout(index)" @click="on_stars_click(index, 5)" class="star_off" :class="sku.score>=5?'light':''"></a>
+                    <a @mouseover="on_stars_mouseover(index, 1)" @mouseout="on_stars_mouseout(index)"
+                       @click="on_stars_click(index, 1)" class="star_off" :class="sku.score>=1?'light':''"></a>
+                    <a @mouseover="on_stars_mouseover(index, 2)" @mouseout="on_stars_mouseout(index)"
+                       @click="on_stars_click(index, 2)" class="star_off" :class="sku.score>=2?'light':''"></a>
+                    <a @mouseover="on_stars_mouseover(index, 3)" @mouseout="on_stars_mouseout(index)"
+                       @click="on_stars_click(index, 3)" class="star_off" :class="sku.score>=3?'light':''"></a>
+                    <a @mouseover="on_stars_mouseover(index, 4)" @mouseout="on_stars_mouseout(index)"
+                       @click="on_stars_click(index, 4)" class="star_off" :class="sku.score>=4?'light':''"></a>
+                    <a @mouseover="on_stars_mouseover(index, 5)" @mouseout="on_stars_mouseout(index)"
+                       @click="on_stars_click(index, 5)" class="star_off" :class="sku.score>=5?'light':''"></a>
                 </div>
                 <div class="score">[[ sku.display_score ]]分</div>
             </div>
@@ -101,6 +106,7 @@
 </div>
 <script>
     var skus = {{ skus|safe }};
+
 </script>
 <script type="text/javascript" src="/static/js/common.js"></script>
 <script type="text/javascript" src="/static/js/goods_judge.js"></script>

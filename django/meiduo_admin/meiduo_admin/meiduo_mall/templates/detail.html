@@ -37,7 +37,7 @@
     </div>
 
     <div class="search_bar clearfix">
-        <a href="index.html" class="logo fl"><img src="/static/images/logo.png"></a>
+        <a class="logo fl" href="/"><img src="/static/images/logo.png"></a>
         <div class="search_wrap fl">
             <form method="get" action="/search/" class="search_con">
                 <input type="text" class="input_text fl" name="q" placeholder="搜索商品">
@@ -75,25 +75,25 @@
                 <h1 class="fl">商品分类</h1>
                 <ul class="sub_menu">
                     {% for category in categories.values() %}
-                        <li>
-                            <div class="level1">
-                                {% for channel in category.channels %}
-                                    <a href="{{ channel.url }}">{{ channel.name }}</a>
-                                {% endfor %}
+                    <li>
+                        <div class="level1">
+                            {% for channel in category.channels %}
+                            <a href="{{ channel.url }}">{{ channel.name }}</a>
+                            {% endfor %}
+                        </div>
+                        <div class="level2">
+                            {% for sub_cat in category.sub_cats %}
+                            <div class="list_group">
+                                <div class="group_name fl">{{ sub_cat.name }} &gt;</div>
+                                <div class="group_detail fl">
+                                    {% for sub_cat3 in sub_cat.sub_cats %}
+                                    <a href="/list/{{ sub_cat3.id }}/1/">{{ sub_cat3.name }}</a>
+                                    {% endfor %}
+                                </div>
                             </div>
-                            <div class="level2">
-                                {% for sub_cat in category.sub_cats %}
-                                    <div class="list_group">
-                                        <div class="group_name fl">{{ sub_cat.name }} &gt;</div>
-                                        <div class="group_detail fl">
-                                            {% for sub_cat3 in sub_cat.sub_cats %}
-                                                <a href="/list/{{ sub_cat3.id }}/1/">{{ sub_cat3.name }}</a>
-                                            {% endfor %}
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        </li>
+                            {% endfor %}
+                        </div>
+                    </li>
                     {% endfor %}
                 </ul>
             </div>
@@ -135,32 +135,31 @@
             </div>
 
             {% for spec in specs %}
-                <div class="type_select">
-                    <label>{{ spec.name }}:</label>
+            <div class="type_select">
+                <label>{{ spec.name }}:</label>
 
-                    {% for option in spec.option_list %}
-{#                        开发阶段#}
-{#                        #}
-{#                        {% if option.sku_id == sku.id %}#}
-{#                            <a href="/detail/{{ option.sku_id }}/" class="select">{{ option.value }}</a>#}
-{#                        {% elif option.sku_id == 0 %}#}
-{#                            <a href="#">{{ option.value }}</a>#}
-{#                        {% else %}#}
-{#                            <a href="/detail/{{ option.sku_id }}/">{{ option.value }}</a>#}
-{#                        {% endif %}#}
+                {% for option in spec.option_list %}
+                {# 开发阶段#}
+                {# #}
+                {# {% if option.sku_id == sku.id %}#}
+                {# <a href="/detail/{{ option.sku_id }}/" class="select">{{ option.value }}</a>#}
+                {# {% elif option.sku_id == 0 %}#}
+                {# <a href="#">{{ option.value }}</a>#}
+                {# {% else %}#}
+                {# <a href="/detail/{{ option.sku_id }}/">{{ option.value }}</a>#}
+                {# {% endif %}#}
 
-{#                        上线阶段#}
-                        {% if option.sku_id == sku.id %}
-                            <a href="/detail/{{ option.sku_id }}.html" class="select">{{ option.value }}</a>
-                        {% elif option.sku_id == 0 %}
-                            <a href="#">{{ option.value }}</a>
-                        {% else %}
-                            <a href="/detail/{{ option.sku_id }}.html">{{ option.value }}</a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+                {# 上线阶段#}
+                {% if option.sku_id == sku.id %}
+                <a href="/detail/{{ option.sku_id }}.html" class="select">{{ option.value }}</a>
+                {% elif option.sku_id == 0 %}
+                <a href="#">{{ option.value }}</a>
+                {% else %}
+                <a href="/detail/{{ option.sku_id }}.html">{{ option.value }}</a>
+                {% endif %}
+                {% endfor %}
+            </div>
             {% endfor %}
-
 
 
             <div class="total">总价：<em>[[ sku_amount ]]元</em></div>
@@ -188,7 +187,9 @@
             <ul class="detail_tab clearfix">
                 <li @click="on_tab_content('detail')" :class="tab_content['detail']==true?'active':''">商品详情</li>
                 <li @click="on_tab_content('pack')" :class="tab_content['pack']==true?'active':''">规格与包装</li>
-                <li @click="on_tab_content('comment')" :class="tab_content['comment']==true?'active':''">商品评价([[comments.length]])</li>
+                <li @click="on_tab_content('comment')" :class="tab_content['comment']==true?'active':''">
+                    商品评价([[comments.length]])
+                </li>
                 <li @click="on_tab_content('service')" :class="tab_content['service']==true?'active':''">售后服务</li>
             </ul>
             <div class="tab_content current" v-show="tab_content['detail']">
@@ -244,6 +245,7 @@
     var price = {{ sku.price }};
     var category_id = {{ category_id }};
     var sku_id = {{ sku.id }};
+
 </script>
 <script type="text/javascript" src="/static/js/common.js"></script>
 <script type="text/javascript" src="/static/js/detail.js"></script>

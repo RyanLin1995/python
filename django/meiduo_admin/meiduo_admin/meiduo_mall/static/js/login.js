@@ -14,7 +14,7 @@ var vm = new Vue({
     },
     methods: {
         // 检查账号
-        check_username: function(){
+        check_username() {
         	var re = /^[a-zA-Z0-9_-]{5,20}$/;
 			if (re.test(this.username)) {
                 this.error_username = false;
@@ -23,7 +23,7 @@ var vm = new Vue({
             }
         },
 		// 检查密码
-        check_pwd: function(){
+        check_pwd() {
         	var re = /^[0-9A-Za-z]{8,20}$/;
 			if (re.test(this.password)) {
                 this.error_pwd = false;
@@ -32,13 +32,13 @@ var vm = new Vue({
             }
         },
         // 表单提交
-        on_submit: function(){
+        on_submit() {
             this.check_username();
             this.check_pwd();
 
             if (this.error_username == true || this.error_pwd == true) {
                 // 不满足登录条件：禁用表单
-				window.event.returnValue = false
+				e.returnValue = false
             }
         },
         // qq登录

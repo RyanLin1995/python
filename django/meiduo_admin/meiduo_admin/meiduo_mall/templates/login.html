@@ -7,13 +7,13 @@
     <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
     <script type="text/javascript" src="../static/js/host.js"></script>
-    <script type="text/javascript" src="../static/js/vue-2.5.16.js"></script>
-    <script type="text/javascript" src="../static/js/axios-0.18.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
 <div id="app" v-cloak>
     <div class="login_top clearfix">
-        <a href="index.html" class="login_logo"><img src="../static/images/logo02.png"></a>
+        <a class="login_logo" href="/"><img src="../static/images/logo02.png"></a>
     </div>
     <div class="login_form_bg">
         <div class="login_form_wrap clearfix">
@@ -39,7 +39,7 @@
                             </div>
                             <input type="submit" value="登 录" class="input_submit">
                             {% if loginerror %}
-                                <span class="error_tip2">{{ loginerror }}</span>
+                            <span class="error_tip2">{{ loginerror }}</span>
                             {% endif %}
                         </form>
                     </div>
