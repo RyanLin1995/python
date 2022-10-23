@@ -55,7 +55,7 @@ export default {
           }
       })
       .then(dat=>{
-          this.aPicturesList = dat.data.list;
+          this.aPicturesList = dat.data.lists;
           this.page = dat.data.page;
           this.pages = dat.data.pages;
       }).catch(err=>{

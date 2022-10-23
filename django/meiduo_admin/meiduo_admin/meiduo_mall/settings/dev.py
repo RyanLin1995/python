@@ -300,7 +300,12 @@ EMAIL_FROM = '美多商城<hmmeiduo@163.com>'  # 发件人抬头
 EMAIL_VERIFY_URL = 'http://www.meiduo.site:8000/emails/verification/'
 
 # fdfs的访问域名
-FDFS_URL = 'http://image.meiduo.site:8888/'
+# FDFS_URL = 'http://image.meiduo.site:8888/'
+FDFS_URL = 'http://192.168.1.5:8888/'
+
+# fdfs 配置文件目录
+FDFS_PATH = os.path.join(BASE_DIR, 'utils/fdfs/client.conf')
+
 # 指定文件存储类型
 DEFAULT_FILE_STORAGE = 'meiduo_mall.utils.fdfs.storage.FdfsStorage'
 

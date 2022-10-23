@@ -16416,3 +16416,1508 @@ INFO 2022-09-18 11:40:41,782 autoreload 637 Watching for file changes with StatR
 INFO 2022-09-18 11:40:43,381 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
 INFO 2022-09-18 13:05:12,607 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/statistical.py changed, reloading.
 INFO 2022-09-18 13:05:13,015 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-24 08:33:10,633 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/statistical.py changed, reloading.
+INFO 2022-09-24 08:33:11,158 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-24 08:34:15,694 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-09-24 08:34:16,140 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-24 08:34:27,886 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-09-24 08:34:28,325 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-09-24 08:34:32,232 log 224 Unauthorized: /meiduo_admin/statistical/month_increment/
+WARNING 2022-09-24 08:34:32,233 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 401 35
+INFO 2022-09-24 08:35:15,109 basehttp 161 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 31
+WARNING 2022-09-24 08:35:15,159 log 224 Not Found: /meiduo_admin/statistical/goods_day_views/
+WARNING 2022-09-24 08:35:15,162 basehttp 161 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 404 9488
+INFO 2022-09-24 08:35:15,167 basehttp 161 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:35:15,192 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:35:15,194 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:35:15,225 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:35:15,227 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:35:15,271 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+WARNING 2022-09-24 08:35:43,842 log 224 Unauthorized: /meiduo_admin/statistical/month_increment/
+WARNING 2022-09-24 08:35:43,842 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 401 35
+INFO 2022-09-24 08:36:14,869 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2022-09-24 08:47:34,052 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/statistical.py changed, reloading.
+INFO 2022-09-24 08:47:35,102 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-24 08:50:24,644 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-09-24 08:50:25,108 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-24 08:52:27,744 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/statistical.py changed, reloading.
+INFO 2022-09-24 08:52:28,191 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-24 08:53:27,244 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/statistical.py changed, reloading.
+INFO 2022-09-24 08:53:27,606 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-24 08:54:53,832 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-09-24 08:54:54,371 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-24 08:55:05,081 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-09-24 08:55:05,615 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-24 08:55:07,672 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 0
+INFO 2022-09-24 08:55:07,678 basehttp 161 "OPTIONS /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 0
+INFO 2022-09-24 08:55:07,679 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-09-24 08:55:07,682 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-09-24 08:55:07,686 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-09-24 08:55:07,686 basehttp 161 "OPTIONS /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 0
+INFO 2022-09-24 08:55:07,690 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-09-24 08:55:07,720 basehttp 161 "OPTIONS /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 0
+WARNING 2022-09-24 08:55:07,735 log 224 Unauthorized: /meiduo_admin/statistical/day_increment/
+WARNING 2022-09-24 08:55:07,736 basehttp 161 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 401 35
+WARNING 2022-09-24 08:55:07,736 log 224 Unauthorized: /meiduo_admin/statistical/goods_day_views/
+WARNING 2022-09-24 08:55:07,737 log 224 Unauthorized: /meiduo_admin/statistical/total_count/
+WARNING 2022-09-24 08:55:07,739 basehttp 161 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 401 35
+WARNING 2022-09-24 08:55:07,741 basehttp 161 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 401 35
+WARNING 2022-09-24 08:55:07,748 log 224 Unauthorized: /meiduo_admin/statistical/day_active/
+WARNING 2022-09-24 08:55:07,748 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 401 35
+WARNING 2022-09-24 08:55:07,749 log 224 Unauthorized: /meiduo_admin/statistical/day_orders/
+WARNING 2022-09-24 08:55:07,751 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 401 35
+WARNING 2022-09-24 08:55:07,756 log 224 Unauthorized: /meiduo_admin/statistical/month_increment/
+WARNING 2022-09-24 08:55:07,760 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 401 35
+WARNING 2022-09-24 08:55:07,779 log 224 Unauthorized: /meiduo_admin/statistical/day_active/
+WARNING 2022-09-24 08:55:07,782 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 401 35
+WARNING 2022-09-24 08:55:07,781 log 224 Unauthorized: /meiduo_admin/statistical/day_orders/
+WARNING 2022-09-24 08:55:07,784 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 401 35
+INFO 2022-09-24 08:55:14,753 basehttp 161 "OPTIONS /meiduo_admin/authorizations/ HTTP/1.1" 200 0
+WARNING 2022-09-24 08:55:14,830 log 224 Bad Request: /meiduo_admin/authorizations/
+WARNING 2022-09-24 08:55:14,831 basehttp 161 "POST /meiduo_admin/authorizations/ HTTP/1.1" 400 68
+INFO 2022-09-24 08:55:16,752 basehttp 161 "POST /meiduo_admin/authorizations/ HTTP/1.1" 200 202
+INFO 2022-09-24 08:55:16,805 basehttp 161 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:16,842 basehttp 161 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 2
+INFO 2022-09-24 08:55:16,850 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:16,851 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:16,860 basehttp 161 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:16,873 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:16,878 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:16,896 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2022-09-24 08:55:35,545 basehttp 161 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:35,562 basehttp 161 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:35,566 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:35,573 basehttp 161 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 69
+INFO 2022-09-24 08:55:35,581 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:35,586 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:35,600 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:55:35,621 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2022-09-24 08:56:00,299 basehttp 161 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:56:00,306 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:56:00,307 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:56:00,318 basehttp 161 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:56:00,325 basehttp 161 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 69
+INFO 2022-09-24 08:56:00,333 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:56:00,342 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-09-24 08:56:00,363 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2022-09-25 11:43:00,529 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-09-25 11:43:00,985 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-25 11:43:16,794 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-09-25 11:43:17,261 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-25 11:43:59,243 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-09-25 11:43:59,745 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-25 11:44:00,652 basehttp 161 "OPTIONS /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+INFO 2022-09-25 11:44:00,673 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 176
+INFO 2022-09-25 11:44:10,060 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 176
+INFO 2022-09-25 11:45:32,175 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/utils.py changed, reloading.
+INFO 2022-09-25 11:45:32,704 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-25 11:47:05,035 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/utils.py changed, reloading.
+INFO 2022-09-25 11:47:05,581 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-09-25 11:47:06,226 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 226
+INFO 2022-09-25 11:47:11,744 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 226
+INFO 2022-09-25 11:47:19,051 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 226
+WARNING 2022-09-25 11:48:12,857 log 224 Unauthorized: /meiduo_admin/users/
+WARNING 2022-09-25 11:48:12,858 basehttp 161 "GET /meiduo_admin/users/ HTTP/1.1" 401 35
+INFO 2022-09-25 11:48:32,636 basehttp 161 "GET /meiduo_admin/users/ HTTP/1.1" 200 176
+INFO 2022-10-01 11:40:12,899 basehttp 161 "GET /static/js/host.js HTTP/1.1" 304 0
+INFO 2022-10-01 11:40:13,079 basehttp 161 "GET /static/js/login.js HTTP/1.1" 304 0
+WARNING 2022-10-01 11:40:14,196 log 224 Not Found: /favicon.ico
+WARNING 2022-10-01 11:40:14,197 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 8395
+INFO 2022-10-01 11:52:29,830 basehttp 161 "OPTIONS /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+WARNING 2022-10-01 11:52:30,347 log 224 Unauthorized: /meiduo_admin/users/
+WARNING 2022-10-01 11:52:30,348 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 401 35
+INFO 2022-10-01 11:54:33,999 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/utils.py changed, reloading.
+INFO 2022-10-01 12:01:19,290 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-01 12:02:15,705 log 224 Unauthorized: /meiduo_admin/users/
+WARNING 2022-10-01 12:02:15,705 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 401 35
+INFO 2022-10-01 12:03:29,780 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-10-01 12:03:30,540 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-01 12:04:27,509 log 224 Unauthorized: /meiduo_admin/users/
+WARNING 2022-10-01 12:04:27,509 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 401 35
+INFO 2022-10-01 12:04:45,286 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-10-01 12:04:46,039 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-01 12:04:55,454 basehttp 161 "OPTIONS /meiduo_admin/authorizations/ HTTP/1.1" 200 0
+INFO 2022-10-01 12:04:55,777 basehttp 161 "POST /meiduo_admin/authorizations/ HTTP/1.1" 200 202
+INFO 2022-10-01 12:04:56,378 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 0
+INFO 2022-10-01 12:04:56,379 basehttp 161 "OPTIONS /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 0
+INFO 2022-10-01 12:04:56,383 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-10-01 12:04:56,384 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-10-01 12:04:56,384 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-10-01 12:04:56,385 basehttp 161 "OPTIONS /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 0
+INFO 2022-10-01 12:04:56,438 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-10-01 12:04:56,444 basehttp 161 "OPTIONS /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 0
+INFO 2022-10-01 12:04:58,613 basehttp 161 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 31
+INFO 2022-10-01 12:04:58,679 basehttp 161 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 2
+INFO 2022-10-01 12:04:58,680 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-01 12:04:58,681 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-10-01 12:04:58,684 basehttp 161 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 31
+INFO 2022-10-01 12:04:58,722 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-01 12:04:58,731 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2022-10-01 12:04:58,983 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+ERROR 2022-10-01 12:04:59,874 log 224 Internal Server Error: /meiduo_admin/users/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 178, in get_paginated_response
+    return self.paginator.get_paginated_response(data)
+  File "/home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/utils.py", line 30, in get_paginated_response
+    'pages': self.page.paginator.num_pageees,
+AttributeError: 'Paginator' object has no attribute 'num_pageees'
+ERROR 2022-10-01 12:04:59,875 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 500 121968
+ERROR 2022-10-01 12:05:05,081 log 224 Internal Server Error: /meiduo_admin/users/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 178, in get_paginated_response
+    return self.paginator.get_paginated_response(data)
+  File "/home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/utils.py", line 30, in get_paginated_response
+    'pages': self.page.paginator.num_pageees,
+AttributeError: 'Paginator' object has no attribute 'num_pageees'
+ERROR 2022-10-01 12:05:05,164 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 500 121968
+INFO 2022-10-01 12:05:31,738 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/utils.py changed, reloading.
+INFO 2022-10-01 12:05:32,388 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-01 12:05:35,354 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 229
+INFO 2022-10-01 12:07:49,991 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/users.py changed, reloading.
+INFO 2022-10-01 12:07:50,741 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-01 12:07:56,446 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/users.py changed, reloading.
+INFO 2022-10-01 12:07:56,945 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-01 12:08:16,115 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 229
+INFO 2022-10-01 12:09:03,821 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 229
+INFO 2022-10-01 12:29:56,906 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/users.py changed, reloading.
+INFO 2022-10-01 12:30:03,027 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-01 12:30:14,940 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/users.py changed, reloading.
+INFO 2022-10-01 12:30:15,489 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-01 12:32:02,979 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/users.py changed, reloading.
+INFO 2022-10-01 12:32:03,606 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-01 12:32:13,030 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 229
+INFO 2022-10-01 12:32:36,317 basehttp 161 "OPTIONS /meiduo_admin/users/?page=1&pagesize=10&keyword=python HTTP/1.1" 200 0
+INFO 2022-10-01 12:32:36,559 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=python HTTP/1.1" 200 106
+INFO 2022-10-01 12:33:02,885 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/users.py changed, reloading.
+INFO 2022-10-01 12:33:03,412 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-01 12:33:06,734 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=python HTTP/1.1" 200 106
+INFO 2022-10-01 12:33:14,307 basehttp 161 "OPTIONS /meiduo_admin/users/?page=1&pagesize=10&keyword=admin HTTP/1.1" 200 0
+INFO 2022-10-01 12:33:14,361 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=admin HTTP/1.1" 200 106
+INFO 2022-10-01 12:33:21,751 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 229
+INFO 2022-10-01 12:39:00,486 basehttp 161 "OPTIONS /meiduo_admin/users/?page=1&pagesize=10&keyword=n HTTP/1.1" 200 0
+INFO 2022-10-01 12:39:00,498 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=n HTTP/1.1" 200 55
+INFO 2022-10-01 12:39:21,474 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/users.py changed, reloading.
+INFO 2022-10-01 12:39:21,934 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-01 12:39:23,370 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=n HTTP/1.1" 200 158
+INFO 2022-10-01 12:39:56,807 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/users.py changed, reloading.
+INFO 2022-10-01 12:39:57,235 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-02 11:58:12,716 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/users.py changed, reloading.
+INFO 2022-10-02 11:58:13,318 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-02 11:58:22,873 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 229
+INFO 2022-10-02 11:58:26,004 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=n HTTP/1.1" 200 158
+INFO 2022-10-02 11:58:28,182 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 229
+INFO 2022-10-02 11:59:23,684 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/users.py changed, reloading.
+INFO 2022-10-02 11:59:24,195 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-02 11:59:25,879 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=n HTTP/1.1" 200 158
+INFO 2022-10-02 11:59:27,403 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 229
+INFO 2022-10-02 12:00:36,992 basehttp 161 "OPTIONS /meiduo_admin/users/ HTTP/1.1" 200 0
+INFO 2022-10-02 12:00:37,042 basehttp 161 "POST /meiduo_admin/users/ HTTP/1.1" 201 69
+INFO 2022-10-02 12:00:37,062 basehttp 161 "OPTIONS /meiduo_admin/users/?page=1&pagesize=10&keyword=test2 HTTP/1.1" 200 0
+INFO 2022-10-02 12:00:37,080 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=test2 HTTP/1.1" 200 124
+INFO 2022-10-04 11:04:30,932 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/users.py changed, reloading.
+INFO 2022-10-04 11:04:46,306 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-04 11:04:50,089 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 229
+INFO 2022-10-04 11:05:23,183 basehttp 161 "POST /meiduo_admin/users/ HTTP/1.1" 201 69
+INFO 2022-10-04 11:05:23,214 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=test2 HTTP/1.1" 200 124
+INFO 2022-10-04 11:12:20,617 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/users.py changed, reloading.
+INFO 2022-10-04 11:12:21,153 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-04 11:12:31,568 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=test2 HTTP/1.1" 200 55
+INFO 2022-10-04 11:12:34,624 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 229
+ERROR 2022-10-04 11:12:54,054 log 224 Internal Server Error: /meiduo_admin/users/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 242, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 213, in save
+    assert self.instance is not None, (
+AssertionError: `create()` did not return an object instance.
+ERROR 2022-10-04 11:12:54,055 basehttp 161 "POST /meiduo_admin/users/ HTTP/1.1" 500 122438
+INFO 2022-10-04 11:15:07,419 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/users.py changed, reloading.
+INFO 2022-10-04 11:15:07,770 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-04 11:15:09,028 log 224 Bad Request: /meiduo_admin/users/
+WARNING 2022-10-04 11:15:09,029 basehttp 161 "POST /meiduo_admin/users/ HTTP/1.1" 400 58
+ERROR 2022-10-04 11:15:26,233 log 224 Internal Server Error: /meiduo_admin/users/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 242, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 213, in save
+    assert self.instance is not None, (
+AssertionError: `create()` did not return an object instance.
+ERROR 2022-10-04 11:15:26,235 basehttp 161 "POST /meiduo_admin/users/ HTTP/1.1" 500 122438
+INFO 2022-10-04 11:15:43,810 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/users.py changed, reloading.
+INFO 2022-10-04 11:15:44,283 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-04 11:16:08,060 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/users.py changed, reloading.
+INFO 2022-10-04 11:16:08,509 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-04 11:16:09,425 basehttp 161 "POST /meiduo_admin/users/ HTTP/1.1" 201 69
+INFO 2022-10-04 11:16:09,468 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=test2 HTTP/1.1" 200 124
+INFO 2022-10-04 11:21:30,933 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/users.py changed, reloading.
+INFO 2022-10-04 11:21:31,502 autoreload 637 Watching for file changes with StatReloader
+ERROR 2022-10-04 11:21:49,329 log 224 Internal Server Error: /meiduo_admin/users/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 242, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "/home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/users.py", line 23, in create
+    user = super(UserSerializer, self).create(**validated_data)  # create_user 创建用户的时候自动加密密码
+TypeError: create() got an unexpected keyword argument 'username'
+ERROR 2022-10-04 11:21:49,343 basehttp 161 "POST /meiduo_admin/users/ HTTP/1.1" 500 128196
+INFO 2022-10-04 11:22:35,908 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/users.py changed, reloading.
+INFO 2022-10-04 11:22:36,420 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-04 11:22:47,150 basehttp 161 "POST /meiduo_admin/users/ HTTP/1.1" 201 69
+INFO 2022-10-04 11:22:47,171 basehttp 161 "OPTIONS /meiduo_admin/users/?page=1&pagesize=10&keyword=test3 HTTP/1.1" 200 0
+INFO 2022-10-04 11:22:47,194 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=test3 HTTP/1.1" 200 124
+INFO 2022-10-04 11:22:49,118 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword=test3 HTTP/1.1" 200 124
+INFO 2022-10-04 11:22:51,372 basehttp 161 "OPTIONS /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+INFO 2022-10-04 11:22:51,382 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 369
+INFO 2022-10-05 12:45:33,057 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-10-05 12:45:33,060 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-10-05 12:45:33,064 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-05 12:45:33,105 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 12:45:33,105 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 9803
+WARNING 2022-10-05 12:45:33,121 log 224 Not Found: /meiduo_admin/goods/specs/
+WARNING 2022-10-05 12:45:33,121 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 404 9823
+WARNING 2022-10-05 12:45:33,128 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 12:45:33,128 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 9803
+INFO 2022-10-05 12:55:14,903 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-10-05 12:55:15,882 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-05 12:56:12,965 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-05 12:56:29,214 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 12:56:29,221 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 12:56:29,233 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 12:56:29,239 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+ERROR 2022-10-05 12:56:29,296 log 224 Internal Server Error: /meiduo_admin/goods/specs/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/mixins.py", line 45, in list
+    serializer = self.get_serializer(queryset, many=True)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 122, in get_serializer_class
+    assert self.serializer_class is not None, (
+AssertionError: 'SpecsView' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+ERROR 2022-10-05 12:56:29,301 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 500 118134
+INFO 2022-10-05 12:57:31,282 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-10-05 12:57:31,675 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-05 12:57:46,345 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-10-05 12:57:46,708 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-05 12:57:50,706 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 12:57:50,707 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 12:57:50,714 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 12:57:50,716 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+ERROR 2022-10-05 12:57:50,779 log 224 Internal Server Error: /meiduo_admin/goods/specs/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/mixins.py", line 45, in list
+    serializer = self.get_serializer(queryset, many=True)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 122, in get_serializer_class
+    assert self.serializer_class is not None, (
+AssertionError: 'SpecsView' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+ERROR 2022-10-05 12:57:50,781 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 500 118134
+INFO 2022-10-05 12:58:36,739 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/specs.py changed, reloading.
+INFO 2022-10-05 12:58:37,161 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-05 12:59:20,576 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-05 12:59:23,789 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 12:59:23,789 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 12:59:23,805 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 12:59:23,806 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 12:59:23,806 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 993
+INFO 2022-10-05 13:00:34,875 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/specs.py changed, reloading.
+INFO 2022-10-05 13:00:35,371 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-05 13:00:41,298 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:00:41,299 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:00:41,313 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:00:41,317 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:00:41,323 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+INFO 2022-10-05 13:00:42,902 basehttp 161 "OPTIONS /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-05 13:00:42,923 log 224 Not Found: /meiduo_admin/goods/
+WARNING 2022-10-05 13:00:42,923 basehttp 161 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 404 11078
+WARNING 2022-10-05 13:00:43,439 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:00:43,440 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:00:43,450 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:00:43,454 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:00:43,453 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+INFO 2022-10-05 13:01:13,545 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/specs.py changed, reloading.
+INFO 2022-10-05 13:01:14,148 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-05 13:03:34,344 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:03:34,344 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:03:34,362 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:03:34,366 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:03:34,372 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+INFO 2022-10-05 13:03:43,220 basehttp 161 "OPTIONS /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-05 13:03:43,221 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/simple/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:03:43,222 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/simple/ HTTP/1.1" 200 0
+WARNING 2022-10-05 13:03:43,236 log 224 Not Found: /meiduo_admin/specs/options/
+WARNING 2022-10-05 13:03:43,238 basehttp 161 "GET /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 404 11102
+WARNING 2022-10-05 13:03:43,244 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:03:43,244 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:03:43,253 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:03:43,254 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:03:48,271 log 224 Not Found: /meiduo_admin/specs/options/
+WARNING 2022-10-05 13:03:48,272 basehttp 161 "GET /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 404 11102
+WARNING 2022-10-05 13:03:48,274 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:03:48,274 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:03:48,281 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:03:48,281 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:04:07,862 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:04:07,863 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:04:07,870 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:04:07,871 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:04:07,879 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:04:10,986 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:04:10,986 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:04:10,995 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:04:10,996 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:04:11,001 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+INFO 2022-10-05 13:05:34,239 basehttp 161 "OPTIONS /meiduo_admin/authorizations/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:05:34,317 basehttp 161 "POST /meiduo_admin/authorizations/ HTTP/1.1" 200 202
+INFO 2022-10-05 13:05:34,424 basehttp 161 "OPTIONS /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:05:34,435 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:05:34,437 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:05:34,438 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:05:34,439 basehttp 161 "OPTIONS /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:05:34,440 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:05:34,443 basehttp 161 "OPTIONS /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:05:34,444 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:05:34,465 basehttp 161 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 31
+INFO 2022-10-05 13:05:34,495 basehttp 161 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 2
+INFO 2022-10-05 13:05:34,509 basehttp 161 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 31
+INFO 2022-10-05 13:05:34,511 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-05 13:05:34,513 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-10-05 13:05:34,526 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-05 13:05:34,532 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-10-05 13:05:34,565 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+WARNING 2022-10-05 13:05:36,978 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:05:36,979 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:05:36,987 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:05:36,988 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:05:36,991 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:06:12,093 log 224 Not Found: /meiduo_admin/goods/
+WARNING 2022-10-05 13:06:12,093 basehttp 161 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 404 11078
+INFO 2022-10-05 13:06:12,633 basehttp 161 "OPTIONS /meiduo_admin/skus/categories/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:06:12,636 basehttp 161 "OPTIONS /meiduo_admin/skus/categories/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:06:12,638 basehttp 161 "OPTIONS /meiduo_admin/skus/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+WARNING 2022-10-05 13:06:12,641 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:06:12,641 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:06:12,649 log 224 Not Found: /meiduo_admin/skus/categories/
+WARNING 2022-10-05 13:06:12,658 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:06:12,661 log 224 Not Found: /meiduo_admin/skus/
+WARNING 2022-10-05 13:06:12,663 basehttp 161 "GET /meiduo_admin/skus/categories/ HTTP/1.1" 404 11085
+WARNING 2022-10-05 13:06:12,663 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:06:12,670 log 224 Not Found: /meiduo_admin/skus/categories/
+WARNING 2022-10-05 13:06:12,670 basehttp 161 "GET /meiduo_admin/skus/categories/ HTTP/1.1" 404 11085
+WARNING 2022-10-05 13:06:12,671 basehttp 161 "GET /meiduo_admin/skus/?page=1&pagesize=10&keyword= HTTP/1.1" 404 11088
+WARNING 2022-10-05 13:06:13,397 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:06:13,398 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:06:13,405 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:06:13,407 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:06:13,410 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+INFO 2022-10-05 13:09:38,790 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:09:38,793 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:09:38,795 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-05 13:09:38,824 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:09:38,826 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:09:38,827 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:09:38,828 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:09:38,832 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:09:40,958 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:09:40,958 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:09:40,968 log 224 Not Found: /meiduo_admin/specs/options/
+WARNING 2022-10-05 13:09:40,969 basehttp 161 "GET /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 404 11102
+WARNING 2022-10-05 13:09:40,971 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:09:40,971 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:09:41,468 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:09:41,468 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:09:41,474 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:09:41,475 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:09:41,480 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+INFO 2022-10-05 13:10:12,953 basehttp 161 "GET /meiduo_admin/users/?page=1&pagesize=10&keyword= HTTP/1.1" 200 369
+WARNING 2022-10-05 13:10:19,010 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:10:19,010 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:10:19,015 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:10:19,016 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:10:19,020 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:10:19,858 log 224 Not Found: /meiduo_admin/specs/options/
+WARNING 2022-10-05 13:10:19,860 basehttp 161 "GET /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 404 11102
+WARNING 2022-10-05 13:10:19,862 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:10:19,862 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:10:19,866 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:10:19,866 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:10:20,314 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:10:20,315 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:10:20,322 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:10:20,323 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:10:20,325 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:10:59,845 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:10:59,846 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:10:59,859 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:10:59,859 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:10:59,862 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:11:06,713 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:11:06,715 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:11:06,722 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:11:06,722 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:11:06,726 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:11:07,962 log 224 Not Found: /meiduo_admin/goods/
+WARNING 2022-10-05 13:11:07,963 basehttp 161 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 404 11078
+WARNING 2022-10-05 13:11:08,475 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:11:08,476 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:11:08,484 log 224 Not Found: /meiduo_admin/goods/simple/
+INFO 2022-10-05 13:11:08,487 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:11:08,488 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:11:19,766 log 224 Not Found: /meiduo_admin/goods/
+WARNING 2022-10-05 13:11:19,767 basehttp 161 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 404 11078
+WARNING 2022-10-05 13:11:21,021 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:11:21,022 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:11:21,030 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:11:21,032 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:11:21,037 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:11:22,825 log 224 Not Found: /meiduo_admin/goods/
+WARNING 2022-10-05 13:11:22,825 basehttp 161 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 404 11078
+WARNING 2022-10-05 13:11:24,442 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:11:24,444 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:11:24,451 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:11:24,452 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:11:24,456 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:11:46,286 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:11:46,293 log 224 Not Found: /meiduo_admin/specs/options/
+WARNING 2022-10-05 13:11:46,293 basehttp 161 "GET /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 404 11102
+WARNING 2022-10-05 13:11:46,294 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:11:46,300 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:11:46,300 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+INFO 2022-10-05 13:11:46,845 basehttp 161 "OPTIONS /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:11:46,849 basehttp 161 "OPTIONS /meiduo_admin/goods/categories/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:11:46,852 basehttp 161 "OPTIONS /meiduo_admin/goods/categories/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:11:46,852 basehttp 161 "OPTIONS /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:11:46,853 basehttp 161 "OPTIONS /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-05 13:11:46,868 log 224 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2022-10-05 13:11:46,869 basehttp 161 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11097
+WARNING 2022-10-05 13:11:46,893 log 224 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2022-10-05 13:11:46,894 basehttp 161 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11097
+WARNING 2022-10-05 13:11:46,896 log 224 Not Found: /meiduo_admin/goods/categories/
+WARNING 2022-10-05 13:11:46,896 basehttp 161 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11088
+WARNING 2022-10-05 13:11:46,906 log 224 Not Found: /meiduo_admin/goods/categories/
+WARNING 2022-10-05 13:11:46,909 log 224 Not Found: /meiduo_admin/goods/channels/
+WARNING 2022-10-05 13:11:46,909 basehttp 161 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 404 11105
+WARNING 2022-10-05 13:11:46,910 basehttp 161 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11088
+WARNING 2022-10-05 13:11:47,404 log 224 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2022-10-05 13:11:47,405 basehttp 161 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11097
+WARNING 2022-10-05 13:11:47,411 log 224 Not Found: /meiduo_admin/goods/categories/
+WARNING 2022-10-05 13:11:47,412 basehttp 161 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11088
+INFO 2022-10-05 13:11:47,416 basehttp 161 "OPTIONS /meiduo_admin/goods/brands/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-05 13:11:47,436 log 224 Not Found: /meiduo_admin/goods/brands/
+WARNING 2022-10-05 13:11:47,437 basehttp 161 "GET /meiduo_admin/goods/brands/?page=1&pagesize=10 HTTP/1.1" 404 11099
+INFO 2022-10-05 13:11:48,070 basehttp 161 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:11:48,071 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-05 13:11:48,073 basehttp 161 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+WARNING 2022-10-05 13:11:48,097 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-05 13:11:48,097 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 11073
+WARNING 2022-10-05 13:11:48,105 log 224 Not Found: /meiduo_admin/skus/images/
+WARNING 2022-10-05 13:11:48,106 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 404 11096
+WARNING 2022-10-05 13:11:48,150 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-05 13:11:48,150 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 11073
+WARNING 2022-10-05 13:11:48,525 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:11:48,529 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:11:48,536 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:11:48,538 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:11:48,540 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+INFO 2022-10-05 13:11:49,917 basehttp 161 "OPTIONS /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+WARNING 2022-10-05 13:11:49,925 log 224 Not Found: /meiduo_admin/orders/
+WARNING 2022-10-05 13:11:49,926 basehttp 161 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 404 11094
+WARNING 2022-10-05 13:12:12,417 log 224 Not Found: /meiduo_admin/orders/
+WARNING 2022-10-05 13:12:12,417 basehttp 161 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 404 11094
+WARNING 2022-10-05 13:12:16,477 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:12:16,478 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:12:16,484 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:12:16,484 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:12:16,488 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:12:28,246 log 224 Not Found: /meiduo_admin/goods/
+WARNING 2022-10-05 13:12:28,247 basehttp 161 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 404 11078
+WARNING 2022-10-05 13:12:28,885 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:12:28,886 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:12:28,902 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:12:34,948 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:12:34,950 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:12:35,170 log 224 Not Found: /meiduo_admin/specs/options/
+WARNING 2022-10-05 13:12:35,172 basehttp 161 "GET /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 404 11102
+WARNING 2022-10-05 13:12:35,173 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:12:35,173 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:12:35,181 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:12:35,181 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:12:35,679 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:12:35,679 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:12:35,687 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:12:35,688 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:12:35,700 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:12:58,118 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:12:58,121 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:12:58,130 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:12:58,130 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:12:58,133 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:15:57,056 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:15:57,057 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:19:37,713 log 224 Not Found: /meiduo_admin/goods/
+WARNING 2022-10-05 13:19:37,716 basehttp 161 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 404 11078
+WARNING 2022-10-05 13:19:40,358 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:19:40,358 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:19:40,382 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:19:40,387 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:19:40,446 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:20:53,625 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:20:53,626 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:20:53,635 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:20:53,638 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:20:53,691 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:20:56,050 log 224 Not Found: /meiduo_admin/specs/options/
+WARNING 2022-10-05 13:20:56,050 basehttp 161 "GET /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 404 11102
+WARNING 2022-10-05 13:20:56,053 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:20:56,054 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:20:56,063 log 224 Not Found: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-05 13:20:56,063 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 404 23
+WARNING 2022-10-05 13:20:56,823 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:20:56,824 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:20:56,832 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:20:56,833 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:20:56,838 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:21:43,229 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:21:43,230 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:21:43,237 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:21:43,239 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:21:43,243 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+WARNING 2022-10-05 13:21:43,454 log 224 Not Found: /meiduo_admin/goods/
+WARNING 2022-10-05 13:21:43,455 basehttp 161 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 404 11078
+WARNING 2022-10-05 13:21:44,021 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:21:44,022 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:21:44,033 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:21:44,034 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:21:44,039 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1046
+INFO 2022-10-05 13:26:23,456 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/specs.py changed, reloading.
+INFO 2022-10-05 13:26:24,216 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-05 13:26:30,426 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1275
+WARNING 2022-10-05 13:26:30,439 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:26:30,444 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:26:30,451 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:26:30,453 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:27:23,062 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/specs.py changed, reloading.
+INFO 2022-10-05 13:27:23,535 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-05 13:27:36,019 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:27:36,019 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:27:36,037 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:27:36,040 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:27:36,050 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1363
+WARNING 2022-10-05 13:28:11,812 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:28:11,812 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:28:11,826 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:28:11,830 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:28:11,846 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1363
+INFO 2022-10-05 13:28:41,956 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/specs.py changed, reloading.
+INFO 2022-10-05 13:28:42,348 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-05 13:29:10,471 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:29:10,471 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:29:10,482 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:29:10,483 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:29:10,500 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1363
+WARNING 2022-10-05 13:34:34,311 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:34:34,316 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:34:34,338 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:34:34,344 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:34:34,364 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1363
+INFO 2022-10-05 13:41:31,532 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-05 13:43:53,700 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:43:53,702 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-10-05 13:43:53,705 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-05 13:43:53,737 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:43:53,738 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-05 13:43:53,745 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-05 13:43:53,747 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-05 13:43:53,772 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1363
+INFO 2022-10-05 13:43:59,457 basehttp 161 "GET /static/js/host.js HTTP/1.1" 304 0
+INFO 2022-10-05 13:43:59,512 basehttp 161 "GET /static/js/login.js HTTP/1.1" 304 0
+WARNING 2022-10-05 13:44:00,333 log 224 Not Found: /favicon.ico
+WARNING 2022-10-05 13:44:00,333 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 8395
+WARNING 2022-10-06 12:00:29,043 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-06 12:00:29,044 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-22 08:13:17,318 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 08:13:32,560 basehttp 161 "GET /login/ HTTP/1.1" 200 3582
+INFO 2022-10-22 08:13:32,583 basehttp 161 "GET /static/js/host.js HTTP/1.1" 304 0
+INFO 2022-10-22 08:13:32,623 basehttp 161 "GET /static/js/login.js HTTP/1.1" 304 0
+WARNING 2022-10-22 08:13:33,121 log 224 Not Found: /favicon.ico
+WARNING 2022-10-22 08:13:33,122 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 8395
+INFO 2022-10-22 08:13:36,382 basehttp 161 "GET / HTTP/1.1" 200 126009
+INFO 2022-10-22 08:13:36,404 basehttp 161 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 304 0
+INFO 2022-10-22 08:13:36,407 basehttp 161 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 200 97163
+INFO 2022-10-22 08:13:36,411 basehttp 161 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2022-10-22 08:13:36,580 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-22 08:13:42,882 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-10-22 08:13:42,885 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-22 08:13:42,885 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+WARNING 2022-10-22 08:13:42,900 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 08:13:42,902 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 08:13:42,903 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 08:13:42,906 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 08:13:42,912 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 08:13:42,913 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-22 08:13:45,029 basehttp 161 "OPTIONS /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-22 08:13:45,044 log 224 Not Found: /meiduo_admin/goods/
+WARNING 2022-10-22 08:13:45,044 basehttp 161 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 404 11078
+WARNING 2022-10-22 08:13:45,860 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 08:13:45,861 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 08:13:45,863 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 08:13:45,864 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 08:13:45,869 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 08:13:45,870 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-22 08:22:45,536 basehttp 161 "GET / HTTP/1.1" 200 126009
+INFO 2022-10-22 08:22:46,047 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-22 08:33:27,232 basehttp 161 "GET / HTTP/1.1" 200 126009
+INFO 2022-10-22 08:33:27,449 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-22 08:40:29,623 basehttp 161 "GET / HTTP/1.1" 200 126009
+INFO 2022-10-22 08:40:29,648 basehttp 161 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2022-10-22 08:40:29,649 basehttp 161 "GET /static/css/main.css HTTP/1.1" 200 39722
+INFO 2022-10-22 08:40:29,655 basehttp 161 "GET /static/js/host.js HTTP/1.1" 200 120
+INFO 2022-10-22 08:40:29,656 basehttp 161 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2022-10-22 08:40:29,659 basehttp 161 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12906
+INFO 2022-10-22 08:40:29,667 basehttp 161 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 200 97163
+INFO 2022-10-22 08:40:29,734 basehttp 161 "GET /static/js/slide.js HTTP/1.1" 200 1822
+INFO 2022-10-22 08:40:29,740 basehttp 161 "GET /static/js/common.js HTTP/1.1" 200 891
+INFO 2022-10-22 08:40:29,762 basehttp 161 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2022-10-22 08:40:29,790 basehttp 161 "GET /static/images/icons.png HTTP/1.1" 200 7740
+INFO 2022-10-22 08:40:29,795 basehttp 161 "GET /static/js/index.js HTTP/1.1" 200 1418
+INFO 2022-10-22 08:40:29,948 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+WARNING 2022-10-22 08:41:48,649 log 224 Not Found: /favicon.ico
+WARNING 2022-10-22 08:41:48,650 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 8395
+INFO 2022-10-22 08:42:27,250 basehttp 161 "GET / HTTP/1.1" 200 126009
+INFO 2022-10-22 08:42:27,277 basehttp 161 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2022-10-22 08:42:27,280 basehttp 161 "GET /static/css/main.css HTTP/1.1" 200 39722
+INFO 2022-10-22 08:42:27,288 basehttp 161 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12906
+INFO 2022-10-22 08:42:27,289 basehttp 161 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 200 97163
+INFO 2022-10-22 08:42:27,289 basehttp 161 "GET /static/js/host.js HTTP/1.1" 200 120
+INFO 2022-10-22 08:42:27,290 basehttp 161 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2022-10-22 08:42:27,329 basehttp 161 "GET /static/js/slide.js HTTP/1.1" 200 1822
+INFO 2022-10-22 08:42:27,332 basehttp 161 "GET /static/js/common.js HTTP/1.1" 200 891
+INFO 2022-10-22 08:42:27,363 basehttp 161 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2022-10-22 08:42:27,385 basehttp 161 "GET /static/js/index.js HTTP/1.1" 200 1418
+INFO 2022-10-22 08:42:27,387 basehttp 161 "GET /static/images/icons.png HTTP/1.1" 200 7740
+INFO 2022-10-22 08:42:27,497 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-22 08:43:46,805 basehttp 161 "GET / HTTP/1.1" 200 126009
+INFO 2022-10-22 08:43:47,089 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-22 08:46:41,732 basehttp 161 "GET / HTTP/1.1" 200 126009
+INFO 2022-10-22 08:46:41,757 basehttp 161 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2022-10-22 08:46:41,766 basehttp 161 "GET /static/js/host.js HTTP/1.1" 200 120
+INFO 2022-10-22 08:46:41,772 basehttp 161 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2022-10-22 08:46:41,773 basehttp 161 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12906
+INFO 2022-10-22 08:46:41,773 basehttp 161 "GET /static/css/main.css HTTP/1.1" 200 39722
+INFO 2022-10-22 08:46:41,776 basehttp 161 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 200 97163
+INFO 2022-10-22 08:46:41,809 basehttp 161 "GET /static/js/slide.js HTTP/1.1" 200 1822
+INFO 2022-10-22 08:46:41,810 basehttp 161 "GET /static/js/common.js HTTP/1.1" 200 891
+INFO 2022-10-22 08:46:41,843 basehttp 161 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2022-10-22 08:46:41,856 basehttp 161 "GET /static/js/index.js HTTP/1.1" 200 1418
+INFO 2022-10-22 08:46:41,856 basehttp 161 "GET /static/images/icons.png HTTP/1.1" 200 7740
+INFO 2022-10-22 08:46:41,951 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+WARNING 2022-10-22 08:47:59,588 log 224 Not Found: /favicon.ico
+WARNING 2022-10-22 08:47:59,590 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 8395
+INFO 2022-10-22 08:48:02,745 basehttp 161 "GET / HTTP/1.1" 200 126009
+INFO 2022-10-22 08:48:02,770 basehttp 161 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2022-10-22 08:48:02,772 basehttp 161 "GET /static/css/main.css HTTP/1.1" 200 39722
+INFO 2022-10-22 08:48:02,783 basehttp 161 "GET /static/js/host.js HTTP/1.1" 200 120
+INFO 2022-10-22 08:48:02,784 basehttp 161 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 200 97163
+INFO 2022-10-22 08:48:02,784 basehttp 161 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12906
+INFO 2022-10-22 08:48:02,785 basehttp 161 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2022-10-22 08:48:02,834 basehttp 161 "GET /static/js/slide.js HTTP/1.1" 200 1822
+INFO 2022-10-22 08:48:02,839 basehttp 161 "GET /static/js/common.js HTTP/1.1" 200 891
+INFO 2022-10-22 08:48:02,861 basehttp 161 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2022-10-22 08:48:02,870 basehttp 161 "GET /static/js/index.js HTTP/1.1" 200 1418
+INFO 2022-10-22 08:48:02,885 basehttp 161 "GET /static/images/icons.png HTTP/1.1" 200 7740
+INFO 2022-10-22 08:48:02,995 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+WARNING 2022-10-22 08:49:23,674 log 224 Not Found: /favicon.ico
+WARNING 2022-10-22 08:49:23,674 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 8395
+INFO 2022-10-22 08:49:32,667 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-22 08:49:33,628 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-22 08:49:33,630 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-10-22 08:49:33,631 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+WARNING 2022-10-22 08:49:33,646 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 08:49:33,652 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 08:49:33,653 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 08:49:33,656 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 08:49:33,663 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 08:49:33,664 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-22 08:49:43,815 basehttp 161 "GET / HTTP/1.1" 200 126009
+WARNING 2022-10-22 08:52:37,312 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 08:52:37,316 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 08:52:37,317 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 08:52:37,317 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 08:52:37,322 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 08:52:37,323 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-22 08:52:40,030 basehttp 161 "GET / HTTP/1.1" 200 126009
+INFO 2022-10-22 08:52:40,291 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+WARNING 2022-10-22 08:53:57,704 log 224 Not Found: /favicon.ico
+WARNING 2022-10-22 08:53:57,705 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 8395
+INFO 2022-10-22 08:55:34,644 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2022-10-22 08:55:35,291 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 08:55:49,136 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/settings/dev.py changed, reloading.
+INFO 2022-10-22 08:55:49,716 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-22 08:55:54,189 log 224 Not Found: /favicon.ico
+WARNING 2022-10-22 08:55:54,190 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 8395
+INFO 2022-10-22 08:55:56,442 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-10-22 08:55:56,459 basehttp 161 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2022-10-22 08:55:56,460 basehttp 161 "GET /static/css/main.css HTTP/1.1" 200 39722
+INFO 2022-10-22 08:55:56,469 basehttp 161 "GET /static/js/host.js HTTP/1.1" 200 120
+INFO 2022-10-22 08:55:56,473 basehttp 161 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2022-10-22 08:55:56,475 basehttp 161 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12906
+INFO 2022-10-22 08:55:56,475 basehttp 161 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 200 97163
+INFO 2022-10-22 08:55:56,504 basehttp 161 "GET /static/js/slide.js HTTP/1.1" 200 1822
+INFO 2022-10-22 08:55:56,504 basehttp 161 "GET /static/js/common.js HTTP/1.1" 200 891
+INFO 2022-10-22 08:55:56,520 basehttp 161 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2022-10-22 08:55:56,533 basehttp 161 "GET /static/js/index.js HTTP/1.1" 200 1418
+INFO 2022-10-22 08:55:56,548 basehttp 161 "GET /static/images/icons.png HTTP/1.1" 200 7740
+INFO 2022-10-22 08:55:56,697 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+WARNING 2022-10-22 08:55:56,798 log 224 Not Found: /favicon.ico
+WARNING 2022-10-22 08:55:56,799 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 8395
+INFO 2022-10-22 09:04:29,879 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/?page=2&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-22 09:04:29,883 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 09:04:29,884 basehttp 161 "GET /meiduo_admin/goods/specs/?page=2&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 09:04:30,519 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 09:04:30,519 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 09:04:32,126 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 09:04:32,136 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:04:32,136 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:04:32,137 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 09:04:32,152 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:04:32,180 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:04:34,015 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 09:04:34,016 basehttp 161 "GET /meiduo_admin/goods/specs/?page=2&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 09:04:34,559 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 09:04:34,560 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+INFO 2022-10-22 09:04:49,214 basehttp 161 "OPTIONS /meiduo_admin/skus/categories/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:04:49,216 basehttp 161 "OPTIONS /meiduo_admin/skus/categories/ HTTP/1.1" 200 0
+WARNING 2022-10-22 09:04:49,219 log 224 Not Found: /meiduo_admin/goods/simple/
+INFO 2022-10-22 09:04:49,219 basehttp 161 "OPTIONS /meiduo_admin/skus/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+WARNING 2022-10-22 09:04:49,220 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:04:49,231 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:04:49,234 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:04:49,237 log 224 Not Found: /meiduo_admin/skus/categories/
+WARNING 2022-10-22 09:04:49,238 basehttp 161 "GET /meiduo_admin/skus/categories/ HTTP/1.1" 404 11085
+WARNING 2022-10-22 09:04:49,245 log 224 Not Found: /meiduo_admin/skus/categories/
+WARNING 2022-10-22 09:04:49,246 basehttp 161 "GET /meiduo_admin/skus/categories/ HTTP/1.1" 404 11085
+WARNING 2022-10-22 09:04:49,258 log 224 Not Found: /meiduo_admin/skus/
+WARNING 2022-10-22 09:04:49,259 basehttp 161 "GET /meiduo_admin/skus/?page=1&pagesize=10&keyword= HTTP/1.1" 404 11088
+INFO 2022-10-22 09:04:49,792 basehttp 161 "OPTIONS /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-22 09:04:49,802 log 224 Not Found: /meiduo_admin/goods/
+WARNING 2022-10-22 09:04:49,803 basehttp 161 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 404 11078
+WARNING 2022-10-22 09:04:50,539 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:04:50,541 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 09:04:50,541 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:04:50,542 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 09:04:50,547 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:04:50,548 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-22 09:04:51,048 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/simple/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:04:51,048 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/simple/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:04:51,048 basehttp 161 "OPTIONS /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-22 09:04:51,061 log 224 Unauthorized: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-22 09:04:51,067 log 224 Not Found: /meiduo_admin/specs/options/
+WARNING 2022-10-22 09:04:51,068 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 401 35
+WARNING 2022-10-22 09:04:51,068 basehttp 161 "GET /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 404 11102
+WARNING 2022-10-22 09:04:51,073 log 224 Unauthorized: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-22 09:04:51,074 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 401 35
+INFO 2022-10-22 09:04:51,594 basehttp 161 "OPTIONS /meiduo_admin/goods/categories/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:04:51,596 basehttp 161 "OPTIONS /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:04:51,596 basehttp 161 "OPTIONS /meiduo_admin/goods/channel_types/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:04:51,597 basehttp 161 "OPTIONS /meiduo_admin/goods/categories/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:04:51,596 basehttp 161 "OPTIONS /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-22 09:04:51,623 log 224 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2022-10-22 09:04:51,626 log 224 Not Found: /meiduo_admin/goods/categories/
+WARNING 2022-10-22 09:04:51,629 log 224 Not Found: /meiduo_admin/goods/channels/
+WARNING 2022-10-22 09:04:51,630 basehttp 161 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11088
+WARNING 2022-10-22 09:04:51,630 basehttp 161 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11097
+WARNING 2022-10-22 09:04:51,631 basehttp 161 "GET /meiduo_admin/goods/channels/?page=1&pagesize=10 HTTP/1.1" 404 11105
+WARNING 2022-10-22 09:04:51,637 log 224 Not Found: /meiduo_admin/goods/channel_types/
+WARNING 2022-10-22 09:04:51,637 basehttp 161 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11097
+WARNING 2022-10-22 09:04:51,680 log 224 Not Found: /meiduo_admin/goods/categories/
+WARNING 2022-10-22 09:04:51,680 basehttp 161 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11088
+WARNING 2022-10-22 09:04:51,983 log 224 Not Found: /meiduo_admin/goods/categories/
+WARNING 2022-10-22 09:04:51,986 log 224 Not Found: /meiduo_admin/goods/channel_types/
+INFO 2022-10-22 09:04:51,986 basehttp 161 "OPTIONS /meiduo_admin/goods/brands/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-22 09:04:51,989 basehttp 161 "GET /meiduo_admin/goods/categories/ HTTP/1.1" 404 11088
+WARNING 2022-10-22 09:04:51,991 basehttp 161 "GET /meiduo_admin/goods/channel_types/ HTTP/1.1" 404 11097
+WARNING 2022-10-22 09:04:51,994 log 224 Not Found: /meiduo_admin/goods/brands/
+WARNING 2022-10-22 09:04:51,994 basehttp 161 "GET /meiduo_admin/goods/brands/?page=1&pagesize=10 HTTP/1.1" 404 11099
+INFO 2022-10-22 09:04:52,386 basehttp 161 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:04:52,387 basehttp 161 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:04:52,387 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-22 09:04:52,407 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-22 09:04:52,412 log 224 Not Found: /meiduo_admin/skus/images/
+WARNING 2022-10-22 09:04:52,413 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 11073
+WARNING 2022-10-22 09:04:52,415 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 404 11096
+WARNING 2022-10-22 09:04:52,467 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-22 09:04:52,468 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 11073
+WARNING 2022-10-22 09:04:52,806 log 224 Unauthorized: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-22 09:04:52,806 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 401 35
+WARNING 2022-10-22 09:04:52,812 log 224 Not Found: /meiduo_admin/specs/options/
+WARNING 2022-10-22 09:04:52,813 log 224 Unauthorized: /meiduo_admin/goods/specs/simple/
+WARNING 2022-10-22 09:04:52,813 basehttp 161 "GET /meiduo_admin/goods/specs/simple/ HTTP/1.1" 401 35
+WARNING 2022-10-22 09:04:52,814 basehttp 161 "GET /meiduo_admin/specs/options/?page=1&pagesize=10 HTTP/1.1" 404 11102
+WARNING 2022-10-22 09:04:53,189 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 09:04:53,189 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 09:04:53,195 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:04:53,196 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:04:53,201 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:04:53,202 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:04:54,566 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:04:54,568 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 09:04:54,568 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 09:04:54,569 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:04:54,574 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:04:54,576 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:04:55,921 log 224 Not Found: /meiduo_admin/goods/
+WARNING 2022-10-22 09:04:55,923 basehttp 161 "GET /meiduo_admin/goods/?page=1&pagesize=10 HTTP/1.1" 404 11078
+WARNING 2022-10-22 09:04:56,836 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 09:04:56,839 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 09:04:56,842 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:04:56,843 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:04:56,850 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:04:56,850 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:05:01,818 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 09:05:01,818 basehttp 161 "GET /meiduo_admin/goods/specs/?page=2&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-22 09:05:02,515 log 224 Unauthorized: /meiduo_admin/goods/specs/
+WARNING 2022-10-22 09:05:02,515 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 401 35
+INFO 2022-10-22 09:05:13,562 basehttp 161 "OPTIONS /meiduo_admin/authorizations/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:05:13,638 basehttp 161 "POST /meiduo_admin/authorizations/ HTTP/1.1" 200 202
+INFO 2022-10-22 09:05:13,765 basehttp 161 "OPTIONS /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:05:13,766 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:05:13,767 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:05:13,769 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:05:13,774 basehttp 161 "OPTIONS /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:05:13,776 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:05:13,778 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:05:13,783 basehttp 161 "OPTIONS /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:05:13,832 basehttp 161 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:05:13,835 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:05:13,839 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:05:13,857 basehttp 161 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 2
+INFO 2022-10-22 09:05:13,859 basehttp 161 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:05:13,874 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:05:13,877 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:05:13,905 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+WARNING 2022-10-22 09:05:16,237 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:05:16,242 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+WARNING 2022-10-22 09:05:16,255 log 224 Not Found: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:05:16,257 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 404 11076
+INFO 2022-10-22 09:05:16,264 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1363
+INFO 2022-10-22 09:11:22,990 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-10-22 09:11:23,526 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 09:12:02,458 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/specs.py changed, reloading.
+INFO 2022-10-22 09:12:02,978 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 09:12:33,705 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/specs.py changed, reloading.
+INFO 2022-10-22 09:12:34,266 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 09:13:18,032 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/specs.py changed, reloading.
+INFO 2022-10-22 09:13:18,475 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 09:14:04,187 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/specs.py changed, reloading.
+INFO 2022-10-22 09:14:04,724 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 09:17:17,660 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 09:17:23,198 basehttp 161 "POST /meiduo_admin/authorizations/ HTTP/1.1" 200 202
+INFO 2022-10-22 09:17:23,342 basehttp 161 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:17:23,399 basehttp 161 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:17:23,405 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:17:23,417 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:17:23,427 basehttp 161 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 2
+INFO 2022-10-22 09:17:23,445 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:17:23,459 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-22 09:17:23,505 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+WARNING 2022-10-22 09:17:41,166 log 224 Unauthorized: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:17:41,168 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 401 38
+WARNING 2022-10-22 09:17:41,173 log 224 Unauthorized: /meiduo_admin/goods/simple/
+WARNING 2022-10-22 09:17:41,174 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 401 38
+INFO 2022-10-22 09:17:41,189 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1363
+INFO 2022-10-22 09:18:47,009 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1363
+ERROR 2022-10-22 09:18:47,058 log 224 Internal Server Error: /meiduo_admin/goods/simple/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/specs.py", line 27, in simple
+    return Response(ser.data)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1106, in get_field_names
+    raise TypeError(
+TypeError: The `fields` option must be a list or tuple or "__all__". Got str.
+ERROR 2022-10-22 09:18:47,092 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 500 160271
+ERROR 2022-10-22 09:18:47,133 log 224 Internal Server Error: /meiduo_admin/goods/simple/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/specs.py", line 27, in simple
+    return Response(ser.data)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1106, in get_field_names
+    raise TypeError(
+TypeError: The `fields` option must be a list or tuple or "__all__". Got str.
+ERROR 2022-10-22 09:18:47,136 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 500 160271
+INFO 2022-10-22 09:20:17,137 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/specs.py changed, reloading.
+INFO 2022-10-22 09:20:17,516 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 09:20:31,945 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:20:31,950 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:20:31,952 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-22 09:20:31,982 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 200 138
+INFO 2022-10-22 09:20:31,986 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 200 138
+INFO 2022-10-22 09:20:32,019 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1363
+INFO 2022-10-22 09:21:02,141 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:21:02,156 basehttp 161 "POST /meiduo_admin/goods/specs/ HTTP/1.1" 201 172
+INFO 2022-10-22 09:21:02,195 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1536
+INFO 2022-10-22 09:25:30,192 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/9/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:25:30,204 basehttp 161 "GET /meiduo_admin/goods/specs/9/ HTTP/1.1" 200 162
+INFO 2022-10-22 09:25:33,145 basehttp 161 "PUT /meiduo_admin/goods/specs/9/ HTTP/1.1" 200 160
+INFO 2022-10-22 09:25:33,178 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1534
+INFO 2022-10-22 09:25:35,814 basehttp 161 "OPTIONS /meiduo_admin/goods/specs/1/ HTTP/1.1" 200 0
+INFO 2022-10-22 09:25:35,827 basehttp 161 "GET /meiduo_admin/goods/specs/1/ HTTP/1.1" 200 187
+INFO 2022-10-22 09:25:38,611 basehttp 161 "PUT /meiduo_admin/goods/specs/1/ HTTP/1.1" 200 177
+INFO 2022-10-22 09:25:38,668 basehttp 161 "GET /meiduo_admin/goods/specs/?page=1&pagesize=10 HTTP/1.1" 200 1524
+WARNING 2022-10-22 09:26:07,802 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-22 09:26:07,805 log 224 Not Found: /meiduo_admin/skus/images/
+WARNING 2022-10-22 09:26:07,808 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 404 11272
+WARNING 2022-10-22 09:26:07,815 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 11249
+WARNING 2022-10-22 09:26:07,821 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-22 09:26:07,822 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 11249
+INFO 2022-10-22 09:34:47,888 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-10-22 09:34:48,343 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 09:35:42,171 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-10-22 09:35:42,643 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-22 09:35:48,847 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-22 09:35:48,850 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 12526
+WARNING 2022-10-22 09:35:48,874 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-22 09:35:48,894 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 12526
+ERROR 2022-10-22 09:35:48,904 log 224 Internal Server Error: /meiduo_admin/skus/images/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/paginator.py", line 76, in page
+    number = self.validate_number(number)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/paginator.py", line 54, in validate_number
+    if number > self.num_pages:
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/paginator.py", line 103, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/paginator.py", line 98, in count
+    return len(self.object_list)
+TypeError: object of type 'ModelBase' has no len()
+ERROR 2022-10-22 09:35:48,910 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 500 143814
+INFO 2022-10-22 09:38:31,888 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-22 09:38:32,484 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-22 09:38:33,671 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-22 09:38:33,673 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 12526
+WARNING 2022-10-22 09:38:33,687 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-22 09:38:33,688 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 12526
+INFO 2022-10-22 09:38:33,700 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 2082
+INFO 2022-10-22 10:06:21,500 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-10-22 10:06:22,056 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 10:07:00,963 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-22 10:07:01,399 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 10:07:19,108 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-22 10:07:19,493 autoreload 637 Watching for file changes with StatReloader
+WARNING 2022-10-22 10:07:37,217 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-22 10:07:37,228 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 12702
+INFO 2022-10-22 10:07:37,235 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 2082
+WARNING 2022-10-22 10:07:37,241 log 224 Not Found: /meiduo_admin/skus/simple/
+WARNING 2022-10-22 10:07:37,250 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 404 12702
+INFO 2022-10-22 10:08:15,754 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-10-22 10:08:16,475 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 10:08:17,512 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 2082
+ERROR 2022-10-22 10:08:17,559 log 224 Internal Server Error: /meiduo_admin/skus/simple/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py", line 26, in simple
+    return Response(ser.data)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `name` is not valid for model `SKUImage`.
+ERROR 2022-10-22 10:08:17,562 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 500 163542
+ERROR 2022-10-22 10:08:17,604 log 224 Internal Server Error: /meiduo_admin/skus/simple/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py", line 26, in simple
+    return Response(ser.data)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `name` is not valid for model `SKUImage`.
+ERROR 2022-10-22 10:08:17,615 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 500 163542
+INFO 2022-10-22 10:08:28,399 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 10:08:31,347 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 2082
+ERROR 2022-10-22 10:08:31,390 log 224 Internal Server Error: /meiduo_admin/skus/simple/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py", line 26, in simple
+    return Response(ser.data)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `name` is not valid for model `SKUImage`.
+ERROR 2022-10-22 10:08:31,408 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 500 163542
+ERROR 2022-10-22 10:08:31,468 log 224 Internal Server Error: /meiduo_admin/skus/simple/
+Traceback (most recent call last):
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py", line 26, in simple
+    return Response(ser.data)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    return [
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/ryan/anaconda3/envs/learning/lib/python3.8/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `name` is not valid for model `SKUImage`.
+ERROR 2022-10-22 10:08:31,470 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 500 163542
+INFO 2022-10-22 10:08:59,323 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-10-22 10:08:59,788 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 10:09:02,493 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 183
+INFO 2022-10-22 10:09:02,503 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 2082
+INFO 2022-10-22 10:09:02,509 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 183
+INFO 2022-10-22 10:09:49,906 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-10-22 10:09:50,450 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-22 10:09:51,926 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-22 10:09:51,949 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 2082
+INFO 2022-10-22 10:09:51,956 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-22 10:10:14,218 basehttp 161 "OPTIONS /meiduo_admin/skus/images/ HTTP/1.1" 200 0
+WARNING 2022-10-22 10:10:14,352 log 224 Bad Request: /meiduo_admin/skus/images/
+WARNING 2022-10-22 10:10:14,354 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 400 38
+WARNING 2022-10-23 09:45:11,763 log 224 Bad Request: /meiduo_admin/skus/images/
+WARNING 2022-10-23 09:45:11,765 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 400 38
+INFO 2022-10-23 09:47:29,897 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-10-23 09:47:30,621 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 09:47:34,488 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 09:47:34,504 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 09:47:34,510 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 09:47:38,953 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-23 09:47:38,965 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1790
+INFO 2022-10-23 09:47:41,346 basehttp 161 "OPTIONS /meiduo_admin/skus/images/44/ HTTP/1.1" 200 0
+INFO 2022-10-23 09:47:41,365 basehttp 161 "DELETE /meiduo_admin/skus/images/44/ HTTP/1.1" 204 0
+INFO 2022-10-23 09:47:41,387 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-23 09:47:41,406 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 09:47:42,995 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-10-23 09:47:44,700 basehttp 161 "OPTIONS /meiduo_admin/skus/images/46/ HTTP/1.1" 200 0
+INFO 2022-10-23 09:47:44,719 basehttp 161 "DELETE /meiduo_admin/skus/images/46/ HTTP/1.1" 204 0
+INFO 2022-10-23 09:47:44,736 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 09:47:46,563 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1406
+INFO 2022-10-23 09:47:57,923 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 201 118
+INFO 2022-10-23 09:47:57,964 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 09:48:03,469 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1525
+INFO 2022-10-23 09:50:58,340 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-23 09:50:59,072 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 09:54:14,388 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-23 09:54:15,085 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 09:54:25,672 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 09:54:28,214 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-10-23 09:54:28,829 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+WARNING 2022-10-23 09:54:29,081 log 224 Not Found: /favicon.ico
+WARNING 2022-10-23 09:54:29,082 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 8395
+INFO 2022-10-23 09:54:35,474 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-10-23 09:54:35,881 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-23 09:54:57,971 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 09:54:58,011 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 09:54:58,030 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 09:55:26,522 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 09:55:28,168 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-10-23 09:55:28,666 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-23 09:56:00,041 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 09:56:01,741 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-10-23 09:56:02,000 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-23 09:56:11,250 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 09:56:11,262 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 09:56:11,276 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 09:56:54,573 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 09:56:54,579 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 09:56:54,592 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 09:57:44,181 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 09:57:51,192 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 10:22:39,794 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 10:25:12,139 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 10:25:13,972 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-10-23 10:25:14,371 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-23 10:25:25,981 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1525
+INFO 2022-10-23 10:25:27,755 basehttp 161 "OPTIONS /meiduo_admin/skus/images/47/ HTTP/1.1" 200 0
+INFO 2022-10-23 10:25:27,776 basehttp 161 "DELETE /meiduo_admin/skus/images/47/ HTTP/1.1" 204 0
+INFO 2022-10-23 10:25:27,807 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 10:26:11,462 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 200 0
+INFO 2022-10-23 10:28:24,918 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-23 10:28:26,143 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 10:32:19,559 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-23 10:32:20,769 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 10:32:57,143 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-23 10:32:58,476 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 10:33:59,981 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 10:34:00,016 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 10:34:00,017 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 10:34:03,434 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1406
+INFO 2022-10-23 10:37:13,010 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-23 10:37:14,573 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 10:37:21,757 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 200 103
+INFO 2022-10-23 10:37:53,808 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 10:37:53,846 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 10:37:53,852 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 10:37:56,956 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-10-23 10:38:11,206 basehttp 161 "OPTIONS /meiduo_admin/skus/images/48/ HTTP/1.1" 200 0
+INFO 2022-10-23 10:38:11,232 basehttp 161 "DELETE /meiduo_admin/skus/images/48/ HTTP/1.1" 204 0
+INFO 2022-10-23 10:38:11,254 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 10:38:18,550 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 200 103
+INFO 2022-10-23 10:38:30,993 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 10:38:31,014 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 10:38:31,022 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-23 10:38:33,180 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-10-23 10:38:35,076 basehttp 161 "OPTIONS /meiduo_admin/skus/images/49/ HTTP/1.1" 200 0
+INFO 2022-10-23 10:38:35,093 basehttp 161 "DELETE /meiduo_admin/skus/images/49/ HTTP/1.1" 204 0
+INFO 2022-10-23 10:38:35,120 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 10:39:02,688 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-23 10:39:03,951 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-23 10:39:12,474 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 201 103
+INFO 2022-10-23 10:39:12,536 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 10:39:15,566 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-10-23 10:39:17,937 basehttp 161 "OPTIONS /meiduo_admin/skus/images/50/ HTTP/1.1" 200 0
+INFO 2022-10-23 10:39:17,956 basehttp 161 "DELETE /meiduo_admin/skus/images/50/ HTTP/1.1" 204 0
+INFO 2022-10-23 10:39:17,983 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-23 10:40:05,630 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.

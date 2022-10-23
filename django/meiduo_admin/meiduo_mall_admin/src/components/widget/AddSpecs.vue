@@ -6,8 +6,8 @@
           <el-form-item label="规格名称：" prop="name">
             <el-input type="text" v-model="specsForm.name" autocomplete="off" size="small"></el-input>
           </el-form-item>          
-          <el-form-item label="规格：" prop="goods_id">
-            <el-select v-model="specsForm.goods_id" size="small">
+          <el-form-item label="SPU商品：" prop="spu_id">
+            <el-select v-model="specsForm.spu_id" size="small">
               <el-option
                 v-for="item in goods_list"
                 :key="item.id"
@@ -43,7 +43,7 @@ export default {
       goods_list:[],
       specsForm:{
         name:'',
-        goods_id:''
+        spu_id:''
       },
       rulesSpecsForm:{
         name: [
@@ -56,7 +56,7 @@ export default {
     submitForm(){
         this.axios.post(cons.apis + '/goods/specs/', {
               "name":this.specsForm.name,
-              "goods_id":this.specsForm.goods_id
+              "spu_id":this.specsForm.spu_id
             }, {
             headers: {
               'Authorization': 'JWT ' + token
