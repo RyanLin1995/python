@@ -17921,3 +17921,255 @@ INFO 2022-10-23 10:39:17,937 basehttp 161 "OPTIONS /meiduo_admin/skus/images/50/
 INFO 2022-10-23 10:39:17,956 basehttp 161 "DELETE /meiduo_admin/skus/images/50/ HTTP/1.1" 204 0
 INFO 2022-10-23 10:39:17,983 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
 INFO 2022-10-23 10:40:05,630 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-10-23 10:40:10,080 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-29 12:42:28,241 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-29 12:42:31,504 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-10-29 12:42:31,663 basehttp 161 "GET /static/js/host.js HTTP/1.1" 304 0
+INFO 2022-10-29 12:42:31,676 basehttp 161 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 304 0
+INFO 2022-10-29 12:42:32,524 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-29 12:42:37,918 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-29 12:42:37,926 log 224 Unauthorized: /meiduo_admin/skus/images/
+WARNING 2022-10-29 12:42:37,928 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 401 35
+INFO 2022-10-29 12:42:40,666 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?page=3&pagesize=10 HTTP/1.1" 200 0
+WARNING 2022-10-29 12:42:40,672 log 224 Unauthorized: /meiduo_admin/skus/images/
+WARNING 2022-10-29 12:42:40,673 basehttp 161 "GET /meiduo_admin/skus/images/?page=3&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-29 12:42:41,396 log 224 Unauthorized: /meiduo_admin/skus/images/
+WARNING 2022-10-29 12:42:41,396 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 401 35
+INFO 2022-10-29 12:42:44,837 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-29 12:42:44,837 basehttp 161 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:42:44,837 basehttp 161 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+WARNING 2022-10-29 12:42:44,846 log 224 Unauthorized: /meiduo_admin/skus/images/
+WARNING 2022-10-29 12:42:44,849 log 224 Unauthorized: /meiduo_admin/skus/simple/
+WARNING 2022-10-29 12:42:44,851 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2022-10-29 12:42:44,852 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 401 35
+WARNING 2022-10-29 12:42:44,865 log 224 Unauthorized: /meiduo_admin/skus/simple/
+WARNING 2022-10-29 12:42:44,867 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+INFO 2022-10-29 12:42:54,175 basehttp 161 "OPTIONS /meiduo_admin/authorizations/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:42:54,256 basehttp 161 "POST /meiduo_admin/authorizations/ HTTP/1.1" 200 202
+INFO 2022-10-29 12:42:54,314 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:42:54,323 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:42:54,329 basehttp 161 "OPTIONS /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:42:54,332 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:42:54,340 basehttp 161 "OPTIONS /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:42:54,352 basehttp 161 "OPTIONS /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:42:54,352 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:42:54,366 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:42:54,430 basehttp 161 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 2
+INFO 2022-10-29 12:42:54,433 basehttp 161 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 31
+INFO 2022-10-29 12:42:54,461 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-10-29 12:42:54,463 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-29 12:42:54,467 basehttp 161 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 31
+INFO 2022-10-29 12:42:54,486 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-29 12:42:54,506 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-10-29 12:42:54,533 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+WARNING 2022-10-29 12:42:59,624 log 224 Unauthorized: /meiduo_admin/skus/simple/
+WARNING 2022-10-29 12:42:59,629 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+WARNING 2022-10-29 12:42:59,635 log 224 Unauthorized: /meiduo_admin/skus/simple/
+WARNING 2022-10-29 12:42:59,636 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 401 35
+INFO 2022-10-29 12:42:59,644 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-29 12:43:04,018 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1406
+INFO 2022-10-29 12:43:22,506 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-29 12:43:22,506 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-29 12:43:22,521 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-29 12:43:25,099 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1406
+INFO 2022-10-29 12:43:34,823 basehttp 161 "OPTIONS /meiduo_admin/skus/images/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:45:08,983 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-29 12:45:10,753 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-10-29 12:45:10,909 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-29 12:47:19,945 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 201 191
+INFO 2022-10-29 12:47:19,965 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-29 12:47:19,984 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-29 12:47:33,316 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-10-29 12:47:36,787 basehttp 161 "OPTIONS /meiduo_admin/skus/images/51/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:47:36,811 basehttp 161 "DELETE /meiduo_admin/skus/images/51/ HTTP/1.1" 204 0
+INFO 2022-10-29 12:47:36,897 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-29 12:51:06,805 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-10-29 12:51:08,286 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-29 12:51:10,418 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 201 118
+INFO 2022-10-29 12:51:10,450 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-29 12:51:18,196 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-10-29 12:51:19,651 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-29 12:51:23,494 basehttp 161 "GET /meiduo_admin/skus/images/?page=3&pagesize=10 HTTP/1.1" 200 1982
+INFO 2022-10-29 12:51:24,103 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1525
+INFO 2022-10-29 12:51:32,229 basehttp 161 "OPTIONS /meiduo_admin/skus/images/52/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:51:32,253 basehttp 161 "DELETE /meiduo_admin/skus/images/52/ HTTP/1.1" 204 0
+INFO 2022-10-29 12:51:32,293 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-29 12:51:58,977 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-29 12:52:00,711 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-10-29 12:52:01,171 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-29 12:52:05,773 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 201 118
+INFO 2022-10-29 12:52:05,815 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-29 12:52:50,065 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-10-29 12:52:51,302 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-29 12:56:47,980 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-29 12:56:49,329 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-29 12:56:50,670 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1525
+INFO 2022-10-29 12:56:52,696 basehttp 161 "OPTIONS /meiduo_admin/skus/images/53/ HTTP/1.1" 200 0
+INFO 2022-10-29 12:56:52,723 basehttp 161 "DELETE /meiduo_admin/skus/images/53/ HTTP/1.1" 204 0
+INFO 2022-10-29 12:56:52,766 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-29 12:57:55,945 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-29 12:57:57,535 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-10-29 12:57:57,810 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-10-29 13:00:31,357 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 201 191
+INFO 2022-10-29 13:00:31,398 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-29 13:00:35,767 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-10-29 13:00:37,103 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-29 13:00:40,678 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-29 13:00:40,709 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-29 13:00:40,725 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-29 13:00:42,962 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1790
+INFO 2022-10-29 13:00:44,749 basehttp 161 "OPTIONS /meiduo_admin/skus/images/55/ HTTP/1.1" 200 0
+INFO 2022-10-29 13:00:44,772 basehttp 161 "DELETE /meiduo_admin/skus/images/55/ HTTP/1.1" 204 0
+INFO 2022-10-29 13:00:44,799 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-29 13:00:46,361 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-10-29 13:00:47,888 basehttp 161 "OPTIONS /meiduo_admin/skus/images/54/ HTTP/1.1" 200 0
+INFO 2022-10-29 13:00:47,909 basehttp 161 "DELETE /meiduo_admin/skus/images/54/ HTTP/1.1" 204 0
+INFO 2022-10-29 13:00:47,935 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-30 13:53:47,913 basehttp 161 "OPTIONS /meiduo_admin/skus/images/16/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:53:48,062 basehttp 161 "GET /meiduo_admin/skus/images/16/ HTTP/1.1" 200 191
+INFO 2022-10-30 13:56:43,334 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-10-30 13:56:46,030 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-30 13:58:36,725 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-10-30 13:58:38,224 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-30 13:58:47,853 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-10-30 13:58:50,750 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-10-30 13:58:52,785 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?page=3&pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-30 13:58:52,824 basehttp 161 "GET /meiduo_admin/skus/images/?page=3&pagesize=10 HTTP/1.1" 200 1982
+INFO 2022-10-30 13:58:53,616 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-30 13:58:53,635 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1406
+INFO 2022-10-30 13:59:33,069 basehttp 161 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:33,087 basehttp 161 "OPTIONS /meiduo_admin/skus/simple/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:33,090 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:33,125 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-30 13:59:33,147 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-30 13:59:33,148 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-30 13:59:35,096 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1406
+INFO 2022-10-30 13:59:43,776 basehttp 161 "OPTIONS /meiduo_admin/authorizations/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:43,854 basehttp 161 "POST /meiduo_admin/authorizations/ HTTP/1.1" 200 202
+INFO 2022-10-30 13:59:43,969 basehttp 161 "OPTIONS /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:43,973 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:43,973 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:43,976 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:43,994 basehttp 161 "OPTIONS /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:44,004 basehttp 161 "OPTIONS /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:44,006 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:44,012 basehttp 161 "OPTIONS /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:44,037 basehttp 161 "GET /meiduo_admin/statistical/total_count/ HTTP/1.1" 200 31
+INFO 2022-10-30 13:59:44,052 basehttp 161 "GET /meiduo_admin/statistical/day_increment/ HTTP/1.1" 200 31
+INFO 2022-10-30 13:59:44,058 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-30 13:59:44,081 basehttp 161 "GET /meiduo_admin/statistical/goods_day_views/ HTTP/1.1" 200 2
+INFO 2022-10-30 13:59:44,089 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-10-30 13:59:44,095 basehttp 161 "GET /meiduo_admin/statistical/day_active/ HTTP/1.1" 200 31
+INFO 2022-10-30 13:59:44,108 basehttp 161 "GET /meiduo_admin/statistical/day_orders/ HTTP/1.1" 200 31
+INFO 2022-10-30 13:59:44,145 basehttp 161 "GET /meiduo_admin/statistical/month_increment/ HTTP/1.1" 200 961
+INFO 2022-10-30 13:59:45,526 basehttp 161 "OPTIONS /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+WARNING 2022-10-30 13:59:45,568 log 224 Not Found: /meiduo_admin/orders/
+WARNING 2022-10-30 13:59:45,570 basehttp 161 "GET /meiduo_admin/orders/?page=1&pagesize=10&keyword= HTTP/1.1" 404 12722
+INFO 2022-10-30 13:59:47,004 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-30 13:59:47,029 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-30 13:59:47,033 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-30 13:59:48,876 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1406
+INFO 2022-10-30 13:59:56,344 basehttp 161 "OPTIONS /meiduo_admin/skus/images/ HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:59,634 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 201 191
+INFO 2022-10-30 13:59:59,698 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 0
+INFO 2022-10-30 13:59:59,721 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-30 14:00:03,968 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-10-30 14:00:05,286 basehttp 161 "OPTIONS /meiduo_admin/skus/images/56/ HTTP/1.1" 200 0
+INFO 2022-10-30 14:00:05,309 basehttp 161 "GET /meiduo_admin/skus/images/56/ HTTP/1.1" 200 191
+INFO 2022-10-30 14:00:09,225 basehttp 161 "PUT /meiduo_admin/skus/images/56/ HTTP/1.1" 200 191
+INFO 2022-10-30 14:00:09,254 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-30 14:00:11,642 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-10-30 14:00:15,005 basehttp 161 "GET /meiduo_admin/skus/images/56/ HTTP/1.1" 200 191
+INFO 2022-10-30 14:00:18,885 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-30 14:00:18,910 basehttp 161 "GET /meiduo_admin/skus/images/?page=1&pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-30 14:00:18,911 basehttp 161 "GET /meiduo_admin/skus/simple/ HTTP/1.1" 200 1500
+INFO 2022-10-30 14:00:21,037 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-10-30 14:00:22,021 basehttp 161 "GET /meiduo_admin/skus/images/56/ HTTP/1.1" 200 191
+INFO 2022-10-30 14:00:26,509 basehttp 161 "PUT /meiduo_admin/skus/images/56/ HTTP/1.1" 200 191
+INFO 2022-10-30 14:00:26,538 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-30 14:00:32,143 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-10-30 14:00:39,098 basehttp 161 "GET /meiduo_admin/skus/images/56/ HTTP/1.1" 200 191
+INFO 2022-10-30 14:00:42,721 basehttp 161 "PUT /meiduo_admin/skus/images/56/ HTTP/1.1" 200 191
+INFO 2022-10-30 14:00:42,750 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-10-30 14:00:44,929 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-11-05 13:20:48,947 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-11-05 13:20:48,988 basehttp 161 "GET /static/js/host.js HTTP/1.1" 304 0
+INFO 2022-11-05 13:20:48,992 basehttp 161 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 304 0
+INFO 2022-11-05 13:20:49,358 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-11-05 13:21:07,608 basehttp 161 "GET /list/115/1/ HTTP/1.1" 200 103604
+INFO 2022-11-05 13:21:07,760 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-11-05 13:21:07,776 basehttp 161 "GET /hot/115/ HTTP/1.1" 200 576
+INFO 2022-11-05 13:21:09,521 basehttp 161 "GET /detail/6/ HTTP/1.1" 200 94137
+INFO 2022-11-05 13:21:09,574 basehttp 161 "GET /static/images/goods/goods001.jpg HTTP/1.1" 200 5391
+INFO 2022-11-05 13:21:09,575 basehttp 161 "GET /static/js/detail.js HTTP/1.1" 200 6412
+INFO 2022-11-05 13:21:09,586 basehttp 161 "GET /static/images/goods/goods002.jpg HTTP/1.1" 200 5377
+INFO 2022-11-05 13:21:09,588 basehttp 161 "GET /static/images/cat.jpg HTTP/1.1" 200 4333
+INFO 2022-11-05 13:21:09,639 basehttp 161 "POST /browse_histories/ HTTP/1.1" 200 96
+INFO 2022-11-05 13:21:09,660 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-11-05 13:21:09,674 basehttp 161 "GET /hot/115/ HTTP/1.1" 200 576
+INFO 2022-11-05 13:21:09,683 basehttp 161 "GET /static/images/selected.png HTTP/1.1" 200 1060
+INFO 2022-11-05 13:21:09,689 basehttp 161 "GET /comment/6/ HTTP/1.1" 200 55
+INFO 2022-11-05 13:21:09,693 basehttp 161 "POST /detail/visit/115/ HTTP/1.1" 200 29
+INFO 2022-11-05 13:31:41,792 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/celery_tasks/main.py changed, reloading.
+INFO 2022-11-05 13:31:44,213 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:31:51,566 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:32:39,339 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-11-05 13:32:39,424 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-11-05 13:32:39,969 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:32:40,534 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:32:53,220 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:32:55,085 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-11-05 13:32:55,678 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-11-05 13:34:22,041 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-11-05 13:34:23,059 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:34:32,526 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-11-05 13:34:33,566 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:36:23,692 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-11-05 13:36:25,013 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:36:31,554 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-11-05 13:36:32,809 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:36:42,346 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-11-05 13:36:43,581 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:37:04,664 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:37:06,463 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-11-05 13:37:06,859 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-11-05 13:38:39,489 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/celery_tasks/static_file/tasks.py changed, reloading.
+INFO 2022-11-05 13:38:40,724 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:39:05,604 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-11-05 13:39:06,905 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:39:19,612 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:39:21,301 basehttp 161 "GET / HTTP/1.1" 200 125547
+INFO 2022-11-05 13:39:21,874 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-11-05 13:39:25,942 basehttp 161 "DELETE /meiduo_admin/skus/images/56/ HTTP/1.1" 204 0
+INFO 2022-11-05 13:39:25,989 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-11-05 13:39:44,247 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 201 191
+INFO 2022-11-05 13:39:44,279 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-11-05 13:41:27,256 basehttp 161 "GET /detail/4/ HTTP/1.1" 200 94131
+INFO 2022-11-05 13:41:27,356 basehttp 161 "POST /browse_histories/ HTTP/1.1" 200 96
+INFO 2022-11-05 13:41:27,384 basehttp 161 "GET /carts/simple/ HTTP/1.1" 200 46
+INFO 2022-11-05 13:41:27,402 basehttp 161 "GET /hot/115/ HTTP/1.1" 200 576
+INFO 2022-11-05 13:41:27,402 basehttp 161 "GET /comment/4/ HTTP/1.1" 200 55
+INFO 2022-11-05 13:41:27,406 basehttp 161 "POST /detail/visit/115/ HTTP/1.1" 200 29
+INFO 2022-11-05 13:41:32,566 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1598
+INFO 2022-11-05 13:42:03,859 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/serialziers/images.py changed, reloading.
+INFO 2022-11-05 13:42:05,246 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 13:42:35,526 basehttp 161 "POST /meiduo_admin/skus/images/ HTTP/1.1" 201 191
+INFO 2022-11-05 13:42:35,562 basehttp 161 "GET /meiduo_admin/skus/images/?pagesize=10 HTTP/1.1" 200 1972
+INFO 2022-11-05 13:43:12,865 basehttp 161 "OPTIONS /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 0
+INFO 2022-11-05 13:43:12,889 basehttp 161 "GET /meiduo_admin/skus/images/?page=4&pagesize=10 HTTP/1.1" 200 1790
+INFO 2022-11-05 14:02:44,299 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/urls.py changed, reloading.
+INFO 2022-11-05 14:02:45,827 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-11-05 14:02:47,687 basehttp 161 "OPTIONS /meiduo_admin/skus/categories/ HTTP/1.1" 200 0
+INFO 2022-11-05 14:02:47,688 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-11-05 14:02:47,689 basehttp 161 "OPTIONS /meiduo_admin/skus/categories/ HTTP/1.1" 200 0
+INFO 2022-11-05 14:02:47,693 basehttp 161 "OPTIONS /meiduo_admin/goods/simple/ HTTP/1.1" 200 0
+INFO 2022-11-05 14:02:47,697 basehttp 161 "OPTIONS /meiduo_admin/skus/?page=1&pagesize=10&keyword= HTTP/1.1" 200 0
+WARNING 2022-11-05 14:02:47,832 log 224 Not Found: /meiduo_admin/skus/categories/
+WARNING 2022-11-05 14:02:47,834 basehttp 161 "GET /meiduo_admin/skus/categories/ HTTP/1.1" 404 23
+INFO 2022-11-05 14:02:47,857 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 200 138
+WARNING 2022-11-05 14:02:47,864 log 224 Not Found: /meiduo_admin/skus/categories/
+WARNING 2022-11-05 14:02:47,865 basehttp 161 "GET /meiduo_admin/skus/categories/ HTTP/1.1" 404 23
+INFO 2022-11-05 14:02:47,870 basehttp 161 "GET /meiduo_admin/skus/?page=1&pagesize=10&keyword= HTTP/1.1" 200 5181
+INFO 2022-11-05 14:02:47,890 basehttp 161 "GET /meiduo_admin/goods/simple/ HTTP/1.1" 200 138
+INFO 2022-11-05 14:07:51,903 autoreload 251 /home/ryan/learning/python/django/meiduo_admin/meiduo_admin/meiduo_mall/apps/meiduo_admin/views/images.py changed, reloading.
+INFO 2022-11-05 14:07:52,987 autoreload 637 Watching for file changes with StatReloader
