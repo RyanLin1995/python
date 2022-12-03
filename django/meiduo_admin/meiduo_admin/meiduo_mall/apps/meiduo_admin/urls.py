@@ -2,7 +2,7 @@ from django.urls import re_path
 from rest_framework.routers import DefaultRouter
 from rest_framework_jwt.views import obtain_jwt_token
 
-from meiduo_admin.views import users, statistical, specs, images, skus
+from meiduo_admin.views import users, statistical, specs, images, skus, orders
 
 urlpatterns = [
     re_path(r'^authorizations/$', obtain_jwt_token),
@@ -28,6 +28,9 @@ urlpatterns = [
 
     # --------------图片--------------
     re_path(r'^skus/simple/$', images.ImageView.as_view({'get': 'simple'})),
+
+    # --------------sku路由--------------
+    re_path(r'^goods/(?P<pk>\d+)/specs/$', skus.SKUView.as_view({'get': 'specs'})),
 ]
 
 # ------------规格表路由------------
@@ -43,4 +46,9 @@ urlpatterns += router.urls
 # ------------SKU表路由------------
 router = DefaultRouter()
 router.register('skus', skus.SKUView, basename='skus')
+urlpatterns += router.urls
+
+# ------------订单路由------------
+router = DefaultRouter()
+router.register('orders', orders.OrderView, basename='orders')
 urlpatterns += router.urls
