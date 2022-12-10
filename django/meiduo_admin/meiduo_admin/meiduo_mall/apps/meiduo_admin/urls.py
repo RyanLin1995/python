@@ -2,7 +2,7 @@ from django.urls import re_path
 from rest_framework.routers import DefaultRouter
 from rest_framework_jwt.views import obtain_jwt_token
 
-from meiduo_admin.views import users, statistical, specs, images, skus, orders
+from meiduo_admin.views import users, statistical, specs, images, skus, orders, permission
 
 urlpatterns = [
     re_path(r'^authorizations/$', obtain_jwt_token),
@@ -51,4 +51,9 @@ urlpatterns += router.urls
 # ------------订单路由------------
 router = DefaultRouter()
 router.register('orders', orders.OrderView, basename='orders')
+urlpatterns += router.urls
+
+# ------------权限路由------------
+router = DefaultRouter()
+router.register('permission/perms', permission.PermissionView, basename='perms')
 urlpatterns += router.urls
