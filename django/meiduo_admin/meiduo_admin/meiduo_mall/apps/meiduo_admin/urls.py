@@ -2,7 +2,7 @@ from django.urls import re_path
 from rest_framework.routers import DefaultRouter
 from rest_framework_jwt.views import obtain_jwt_token
 
-from meiduo_admin.views import users, statistical, specs, images, skus, orders, permission
+from meiduo_admin.views import users, statistical, specs, images, skus, orders, permission, group, admin
 
 urlpatterns = [
     re_path(r'^authorizations/$', obtain_jwt_token),
@@ -31,29 +31,41 @@ urlpatterns = [
 
     # --------------sku路由--------------
     re_path(r'^goods/(?P<pk>\d+)/specs/$', skus.SKUView.as_view({'get': 'specs'})),
-]
 
-# ------------规格表路由------------
+    # --------------权限类型路由--------------
+    re_path(r'^permission/content_types/$', permission.PermissionView.as_view({'get': 'content_type'})),
+
+    # --------------用户获取权限路由--------------
+    re_path(r'^permission/simple/$', group.GroupView.as_view({'get': 'simple'})),
+
+    # --------------用户组路由--------------
+    re_path(r'^permission/groups/simple/$', admin.AdminView.as_view({'get': 'simple'})),
+]
 router = DefaultRouter()
+# ------------规格表路由------------
 router.register('goods/specs', specs.SpecsView, basename='specs')
 urlpatterns += router.urls
 
 # ------------图片表路由------------
-router = DefaultRouter()
 router.register('skus/images', images.ImageView, basename='images')
 urlpatterns += router.urls
 
 # ------------SKU表路由------------
-router = DefaultRouter()
 router.register('skus', skus.SKUView, basename='skus')
 urlpatterns += router.urls
 
 # ------------订单路由------------
-router = DefaultRouter()
 router.register('orders', orders.OrderView, basename='orders')
 urlpatterns += router.urls
 
 # ------------权限路由------------
-router = DefaultRouter()
 router.register('permission/perms', permission.PermissionView, basename='perms')
+urlpatterns += router.urls
+
+# ------------用户组路由------------
+router.register('permission/groups', group.GroupView, basename='groups')
+urlpatterns += router.urls
+
+# ------------管理员路由------------
+router.register('permission/admins', admin.AdminView, basename='admin')
 urlpatterns += router.urls

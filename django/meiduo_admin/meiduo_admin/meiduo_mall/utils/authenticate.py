@@ -9,7 +9,7 @@ class MeiduoModelBackend(ModelBackend):
             ...
             try:
                 # 判断用户是否为超级用户
-                user = User.objects.get(username=username, is_superuser=True)
+                user = User.objects.get(username=username, is_staff=True)
             except:
                 user = None
 
