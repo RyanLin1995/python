@@ -1,8 +1,5 @@
 from flask import Flask, Blueprint
 
-# 导入目录蓝图
-from goods import goods_bp
-
 app = Flask(__name__)
 
 # 创建一个蓝图
@@ -18,6 +15,9 @@ def get_user():
 app.register_blueprint(user_bp, url_prefix='/profile')
 
 # 注册目录蓝图
+# 导入目录蓝图
+from flask_goods import goods_bp
+
 app.register_blueprint(goods_bp)
 
 print(app.url_map)

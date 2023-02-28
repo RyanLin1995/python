@@ -1,4 +1,4 @@
-from goods import goods_bp
+from flask_goods import goods_bp
 
 
 @goods_bp.route('/goods')
