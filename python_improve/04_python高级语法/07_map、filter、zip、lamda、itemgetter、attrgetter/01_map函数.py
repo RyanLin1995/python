@@ -16,7 +16,6 @@ def square(s):
 
 print(list(map(square, a)))
 
-
 # 3. map 案例
 # 利用map()函数，把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范名字。输入：['adam', 'LISA', 'barT']，输出：['Adam', 'Lisa', 'Bart']
 name = ['adam', 'LISA', 'barT']
@@ -27,6 +26,7 @@ def normalize(name):  # 如果是用于 map 函数，这里的 name 其实不是
 
 
 print(list(map(normalize, name)))
+
 
 # 数字的相加与相乘
 def multiply(x):
