@@ -1,5 +1,5 @@
 from cache import statistic as cache_statistic
-from common import flask_app
+from .common import flask_app
 
 
 def __fix_statistics(cls):
