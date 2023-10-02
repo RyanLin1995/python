@@ -22,7 +22,7 @@ def liner_formal_equation():
         线性回归——正规方程 API 使用
     """
     # 2.数据集划分
-    x_train, x_test, y_train, y_test = train_test_split(data, target, random_state=22, test_size=0.2)
+    x_train, x_test, y_train, y_test = train_test_split(data, target, random_state=22, test_size=0.3)
 
     # 3.特征工程——标准化
     transfer = StandardScaler()
