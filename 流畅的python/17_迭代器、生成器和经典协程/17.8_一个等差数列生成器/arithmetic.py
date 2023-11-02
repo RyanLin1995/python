@@ -17,8 +17,10 @@
     >>> list(ap)
     [Decimal('0'), Decimal('0.1'), Decimal('0.2')]
 """
+import itertools
 
 
+# 类方法实现
 class ArithmeticProgression:
     def __init__(self, begin, step, end=None):
         self.begin = begin
@@ -34,3 +36,23 @@ class ArithmeticProgression:
             yield result
             index += 1
             result = self.begin + self.step * index
+
+
+# 函数实现
+def aritprog_gen(begin, step, end=None):
+    result = type(begin + step)(begin)
+    forever = end is None
+    index = 0
+    while forever or result < end:
+        yield result
+        index += 1
+        result = begin + step * index
+
+
+# itertools 实现
+def new_aritprog_gen(begin, step, end=None):
+    first = type(begin + step)(begin)
+    ap_gen = itertools.count(first, step)  #
+    if end is None:
+        return ap_gen
+    return itertools.takewhile(lambda n: n < 3, ap_gen)
