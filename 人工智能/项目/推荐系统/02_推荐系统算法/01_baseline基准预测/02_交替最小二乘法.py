@@ -94,25 +94,25 @@ def accuray(predict_results, method="all"):
         return rmse_mae(predict_results)
 
 
-class BaselineCFBySGD(object):
+class BaselineCFByALS(object):
 
-    def __init__(self, number_epochs, alpha, reg, columns=None):
+    def __init__(self, number_epochs, reg_bu, reg_bi, columns=None):
         # 梯度下降最高迭代次数
         self.number_epochs = number_epochs
-        # 学习率
-        self.alpha = alpha
-        # 正则参数
-        self.reg = reg
+        # bu的正则参数
+        self.reg_bu = reg_bu
+        # bi的正则参数
+        self.reg_bi = reg_bi
         # 数据集中user-item-rating字段的名称
         if columns is None:
-            columns = ['userId', 'movieId', 'rating']
+            self.columns = ["uid", "iid", "rating"]
         else:
-            columns = columns
-        self.columns = columns
+            self.columns = columns
 
     def fit(self, dataset):
         """
         :param dataset: uid, iid, rating
+        :return:
         """
         self.dataset = dataset
         # 用户评分数据
@@ -122,9 +122,9 @@ class BaselineCFBySGD(object):
         # 计算全局平均分
         self.global_mean = self.dataset[self.columns[2]].mean()
         # 调用sgd方法训练模型参数
-        self.bu, self.bi = self.sgd()
+        self.bu, self.bi = self.als()
 
-    def sgd(self):
+    def als(self):
         """
         利用随机梯度下降，优化bu，bi的值
         :return: bu, bi
@@ -135,12 +135,17 @@ class BaselineCFBySGD(object):
 
         for i in range(self.number_epochs):
             print("iter%d" % i)
-            for uid, iid, real_rating in self.dataset.itertuples(index=False):
-                error = real_rating - (self.global_mean + bu[uid] + bi[iid])
+            for iid, uids, ratings in self.items_ratings.itertuples(index=True):
+                _sum = 0
+                for uid, rating in zip(uids, ratings):
+                    _sum += rating - self.global_mean - bu[uid]
+                bi[iid] = _sum / (self.reg_bi + len(uids))
 
-                bu[uid] += self.alpha * (error - self.reg * bu[uid])
-                bi[iid] += self.alpha * (error - self.reg * bi[iid])
-
+            for uid, iids, ratings in self.users_ratings.itertuples(index=True):
+                _sum = 0
+                for iid, rating in zip(iids, ratings):
+                    _sum += rating - self.global_mean - bi[iid]
+                bu[uid] = _sum / (self.reg_bu + len(iids))
         return bu, bi
 
     def predict(self, uid, iid):
@@ -152,9 +157,9 @@ class BaselineCFBySGD(object):
         predict_rating = self.global_mean + self.bu[uid] + self.bi[iid]
         return predict_rating
 
-    def test(self, testset):
+    def test(self, test_set):
         """预测测试集数据"""
-        for uid, iid, real_rating in testset.itertuples(index=False):
+        for uid, iid, real_rating in test_set.itertuples(index=False):
             try:
                 pred_rating = self.predict(uid, iid)
             except Exception as e:
@@ -164,12 +169,12 @@ class BaselineCFBySGD(object):
 
 
 if __name__ == '__main__':
-    train_set, test_set = data_split("data\\ratings.csv", random=True)
+    train, test = data_split("../data/ratings.csv", random=True)
 
-    bcf = BaselineCFBySGD(20, 0.1, 0.1, ["userId", "movieId", "rating"])
-    bcf.fit(train_set)
+    bcf = BaselineCFByALS(20, 25, 15, ["userId", "movieId", "rating"])
+    bcf.fit(train)
 
-    pred_results = bcf.test(test_set)
+    pred_results = bcf.test(test)
 
     rmse, mae = accuray(pred_results)
 

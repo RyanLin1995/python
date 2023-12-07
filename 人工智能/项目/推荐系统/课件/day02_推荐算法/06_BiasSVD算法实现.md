@@ -5,64 +5,69 @@ BiasSvd其实就是前面提到的Funk SVD矩阵分解基础上加上了偏置�
 #### BiasSvd
 
 利用BiasSvd预测用户对物品的评分，$k$表示隐含特征数量：
+
 $$
-\begin{split}
-\hat {r}_{ui} &=\mu + b_u + b_i + \vec {p_{uk}}\cdot \vec {q_{ki}}
-\\&=\mu + b_u + b_i + {\sum_{k=1}}^k p_{uk}q_{ik}
-\end{split}
+\begin{array}{c}
+\hat {r}_{ui} =\mu + b_u + b_i + \vec {p_{uk}}\cdot \vec {q_{ki}}
+\\=\mu + b_u + b_i + {\sum_{k=1}}^k p_{uk}q_{ik}
+\end{array}
 $$
 
 #### 损失函数
 
 同样对于评分预测我们利用平方差来构建损失函数：
+
 $$
-\begin{split}
-Cost &= \sum_{u,i\in R} (r_{ui}-\hat{r}_{ui})^2
-\\&=\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i -{\sum_{k=1}}^k p_{uk}q_{ik})^2
-\end{split}
+\begin{array}{c}
+Cost = \sum_{u,i\in R} (r_{ui}-\hat{r}_{ui})^2
+\\=\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i -{\sum_{k=1}}^k p_{uk}q_{ik})^2
+\end{array}
 $$
+
 加入L2正则化：
+
 $$
 Cost = \sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})^2 + \lambda(\sum_U{b_u}^2+\sum_I{b_i}^2+\sum_U{p_{uk}}^2+\sum_I{q_{ik}}^2)
 $$
+
 对损失函数求偏导：
+
 $$
-\begin{split}
-\cfrac {\partial}{\partial p_{uk}}Cost &= \cfrac {\partial}{\partial p_{uk}}[\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})^2 + \lambda(\sum_U{b_u}^2+\sum_I{b_i}^2+\sum_U{p_{uk}}^2+\sum_I{q_{ik}}^2)]
-\\&=2\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})(-q_{ik}) + 2\lambda p_{uk}
+\begin{array}{c}
+\cfrac {\partial}{\partial p_{uk}}Cost = \cfrac {\partial}{\partial p_{uk}}[\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})^2 + \lambda(\sum_U{b_u}^2+\sum_I{b_i}^2+\sum_U{p_{uk}}^2+\sum_I{q_{ik}}^2)]
+\\=2\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})(-q_{ik}) + 2\lambda p_{uk}
 \\\\
-\cfrac {\partial}{\partial q_{ik}}Cost &= \cfrac {\partial}{\partial q_{ik}}[\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})^2 + \lambda(\sum_U{b_u}^2+\sum_I{b_i}^2+\sum_U{p_{uk}}^2+\sum_I{q_{ik}}^2)]
-\\&=2\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})(-p_{uk}) + 2\lambda q_{ik}
-\end{split}
+\cfrac {\partial}{\partial q_{ik}}Cost = \cfrac {\partial}{\partial q_{ik}}[\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})^2 + \lambda(\sum_U{b_u}^2+\sum_I{b_i}^2+\sum_U{p_{uk}}^2+\sum_I{q_{ik}}^2)]
+\\=2\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})(-p_{uk}) + 2\lambda q_{ik}
+\end{array}
 $$
 
 $$
-\begin{split}
-\cfrac {\partial}{\partial b_u}Cost &= \cfrac {\partial}{\partial b_u}[\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})^2 + \lambda(\sum_U{b_u}^2+\sum_I{b_i}^2+\sum_U{p_{uk}}^2+\sum_I{q_{ik}}^2)]
-\\&=2\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})(-1) + 2\lambda b_u
+\begin{array}{c}
+\cfrac {\partial}{\partial b_u}Cost = \cfrac {\partial}{\partial b_u}[\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})^2 + \lambda(\sum_U{b_u}^2+\sum_I{b_i}^2+\sum_U{p_{uk}}^2+\sum_I{q_{ik}}^2)]
+\\=2\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})(-1) + 2\lambda b_u
 \\\\
-\cfrac {\partial}{\partial b_i}Cost &= \cfrac {\partial}{\partial b_i}[\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})^2 + \lambda(\sum_U{b_u}^2+\sum_I{b_i}^2+\sum_U{p_{uk}}^2+\sum_I{q_{ik}}^2)]
-\\&=2\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})(-1) + 2\lambda b_i
-\end{split}
+\cfrac {\partial}{\partial b_i}Cost = \cfrac {\partial}{\partial b_i}[\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})^2 + \lambda(\sum_U{b_u}^2+\sum_I{b_i}^2+\sum_U{p_{uk}}^2+\sum_I{q_{ik}}^2)]
+\\=2\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})(-1) + 2\lambda b_i
+\end{array}
 $$
-
-
 
 #### 随机梯度下降法优化
 
 梯度下降更新参数$p_{uk}$：
+
 $$
-\begin{split}
-p_{uk}&:=p_{uk} - \alpha\cfrac {\partial}{\partial p_{uk}}Cost
-\\&:=p_{uk}-\alpha [2\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})(-q_{ik}) + 2\lambda p_{uk}]
-\\&:=p_{uk}+\alpha [\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})q_{ik} - \lambda p_{uk}]
-\end{split}
+\begin{array}{c}
+p_{uk}:=p_{uk} - \alpha\cfrac {\partial}{\partial p_{uk}}Cost
+\\:=p_{uk}-\alpha [2\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})(-q_{ik}) + 2\lambda p_{uk}]
+\\:=p_{uk}+\alpha [\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})q_{ik} - \lambda p_{uk}]
+\end{array}
 $$
- 同理：
+
+同理：
+
 $$
-\begin{split}
-q_{ik}&:=q_{ik} + \alpha[\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})p_{uk} - \lambda q_{ik}]
-\end{split}
+q_{ik}:=q_{ik} + \alpha[\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})p_{uk} - \lambda q_{ik}]
 $$
 
 $$
@@ -74,11 +79,12 @@ b_i:=b_i + \alpha[\sum_{u,i\in R} (r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q
 $$
 
 **随机梯度下降：**
+
 $$
-\begin{split}
+\begin{array}{c}
 &p_{uk}:=p_{uk}+\alpha [(r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})q_{ik} - \lambda_1 p_{uk}]
 \\&q_{ik}:=q_{ik} + \alpha[(r_{ui}-\mu - b_u - b_i-{\sum_{k=1}}^k p_{uk}q_{ik})p_{uk} - \lambda_2 q_{ik}]
-\end{split}
+\end{array}
 $$
 
 $$
@@ -167,10 +173,10 @@ class BiasSvd(object):
 
                 v_pu += self.alpha * (err * v_qi - self.reg_p * v_pu)
                 v_qi += self.alpha * (err * v_pu - self.reg_q * v_qi)
-                
+              
                 P[uid] = v_pu 
                 Q[iid] = v_qi
-                
+              
                 bu[uid] += self.alpha * (err - self.reg_bu * bu[uid])
                 bi[iid] += self.alpha * (err - self.reg_bi * bi[iid])
 
@@ -203,4 +209,3 @@ if __name__ == '__main__':
         print(bsvd.predict(int(uid), int(iid)))
 
 ```
-
