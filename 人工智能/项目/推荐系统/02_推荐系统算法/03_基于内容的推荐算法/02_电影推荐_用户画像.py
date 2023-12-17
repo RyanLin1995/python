@@ -1,15 +1,11 @@
+import collections
+from functools import reduce
 from pathlib import Path
 from pprint import pprint
 
 import numpy as np
 import pandas as pd
 from gensim.models import TfidfModel
-
-'''
-- 利用tags.csv中每部电影的标签作为电影的候选关键词
-- 利用TF·IDF计算每部电影的标签的tfidf值，选取TOP-N个关键词作为电影画像标签
-- 并将电影的分类词直接作为每部电影的画像标签
-'''
 
 
 def get_movie_dataset():
@@ -88,22 +84,41 @@ def create_movie_profile(movie_dataset):
     return movie_profile
 
 
-def create_inverted_table(movie_profile):
+def create_user_profile():
     """
-    建立tag-物品的倒排索引
+    user profile画像建立：
+    1. 提取用户观看列表
+    2. 根据观看列表和物品画像为用户匹配关键词，并统计词频
+    3. 根据词频排序，最多保留TOP-k个词，这里K设为100，作为用户的标签
     """
-    inverted_table = {}
-    for mid, weights in movie_profile["weights"].items():
-        for tag, weight in weights.items():
-            # 到inverted_table dict 用tag作为Key去取值 如果取不到就返回[]
-            _ = inverted_table.get(tag, [])
-            _.append((mid, weight))
-            inverted_table.setdefault(tag, _)
-    return inverted_table
+    if Path("../data/cache/ratings.cache").exists():
+        watch_record = pd.read_pickle("../data/cache/ratings.cache")
+    else:
+        watch_record = pd.read_csv("../data/ratings.csv", usecols=range(2),
+                                   dtype={"userId": np.int32, "movieId": np.int32})
+        watch_record.to_pickle("../data/cache/ratings.cache")
+
+    watch_record = watch_record.groupby("userId").agg(list)
+    # print(watch_record)
+
+    movie_dataset = get_movie_dataset()
+    movie_profile = create_movie_profile(movie_dataset)
+
+    user_profile = {}
+    for uid, mids in watch_record.itertuples():
+        # 从电影关键词权重数据中取出当前用户看过的所有电影
+        record_movie_prifole = movie_profile.loc[list(mids)]
+        counter = collections.Counter(reduce(lambda x, y: list(x) + list(y), record_movie_prifole["profile"].values))
+        # 兴趣词
+        interest_words = counter.most_common(50)
+        maxcount = interest_words[0][1]
+        # 计算权重
+        interest_words = [(w, round(c / maxcount, 4)) for w, c in interest_words]
+        user_profile[uid] = interest_words
+
+    return user_profile
 
 
 if __name__ == '__main__':
-    movie_dataset = get_movie_dataset()
-    movie_profile = create_movie_profile(movie_dataset)
-    inverted_table = create_inverted_table(movie_profile)
-    pprint(inverted_table)
+    user_profile = create_user_profile()
+    pprint(user_profile)
