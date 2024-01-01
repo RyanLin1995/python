@@ -1,11 +1,16 @@
 import collections
 from functools import reduce
 from pathlib import Path
-from pprint import pprint
 
 import numpy as np
 import pandas as pd
 from gensim.models import TfidfModel
+
+'''
+- 利用tags.csv中每部电影的标签作为电影的候选关键词
+- 利用TF·IDF计算每部电影的标签的tfidf值，选取TOP-N个关键词作为电影画像标签
+- 并将电影的分类词直接作为每部电影的画像标签
+'''
 
 
 def get_movie_dataset():
@@ -84,7 +89,21 @@ def create_movie_profile(movie_dataset):
     return movie_profile
 
 
-def create_user_profile():
+def create_inverted_table(movie_profile):
+    """
+    建立tag-物品的倒排索引
+    """
+    inverted_table = {}
+    for mid, weights in movie_profile["weights"].items():
+        for tag, weight in weights.items():
+            # 到inverted_table dict 用tag作为Key去取值 如果取不到就返回[]
+            _ = inverted_table.get(tag, [])
+            _.append((mid, weight))
+            inverted_table.setdefault(tag, _)
+    return inverted_table
+
+
+def create_user_profile(movie_dataset):
     """
     user profile画像建立：
     1. 提取用户观看列表
@@ -101,7 +120,6 @@ def create_user_profile():
     watch_record = watch_record.groupby("userId").agg(list)
     # print(watch_record)
 
-    movie_dataset = get_movie_dataset()
     movie_profile = create_movie_profile(movie_dataset)
 
     user_profile = {}
@@ -120,5 +138,65 @@ def create_user_profile():
 
 
 if __name__ == '__main__':
-    user_profile = create_user_profile()
-    pprint(user_profile)
+    movie_dataset = get_movie_dataset()
+    user_profile = create_user_profile(movie_dataset)
+    movie_profile = create_movie_profile(movie_dataset)
+    inverted_table = create_inverted_table(movie_profile)
+
+    # 为用户产生TOP-N推荐结果
+    # for uid, interest_words in user_profile.items():
+    #     result_table = {}  # 电影id:[0.2,0.5,0.7]
+    #     for interest_word, interest_weight in interest_words:
+    #         related_movies = inverted_table[interest_word]
+    #         for mid, related_weight in related_movies:
+    #             _ = result_table.get(mid, [])  # mid：电影id，列表是评分的列表
+    #             _.append(interest_weight)  # 只考虑用户的兴趣程度
+    #             # _.append(related_weight)    # 只考虑兴趣词与电影的关联程度
+    #             # _.append(interest_weight*related_weight)    # 二者都考虑
+    #             result_table.setdefault(mid, _)
+    #
+    #     rs_result = map(lambda x: (x[0], sum(x[1])), result_table.items())
+    #     rs_result = sorted(rs_result, key=lambda x: x[1], reverse=True)[:100]
+    #     print(uid)
+    #     pprint(rs_result)
+    #     break
+
+    # 历史数据  ==>  历史兴趣程度 ==>  历史推荐结果       离线推荐    离线计算
+    # 在线推荐 ===>    娱乐(王思聪)   ===>   我 ==>  王思聪 100%
+    # 近线：最近1天、3天、7天           实时计算
+
+    # 物品冷启动——Doc2Vec Doc2Vec是建立在Word2Vec上的，用于直接计算以文档为单位的文档向量，这里我们将一部电影的所有标签词，作为整个文档，这样可以计算出每部电影的向量，通过计算向量之间的距离，来判断用于计算电影之间的相似程度。
+    # import logging
+    # from gensim.models.doc2vec import Doc2Vec, TaggedDocument
+    #
+    # logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+    #
+    # documents = [TaggedDocument(words, [movie_id]) for movie_id, words in movie_profile["profile"].items()]
+    #
+    # # 训练模型并保存 Doc2Vec 通过向量来表示一篇文档，一篇文档对应一个电影。向量的相似度代表了电影的相似程度
+    # model = Doc2Vec(documents, vector_size=100, window=3, min_count=1, workers=4, epochs=20)  # window表示一次看多少个词
+    # from gensim.test.utils import get_tmpfile
+    #
+    # fname = get_tmpfile("my_doc2vec_model")
+    # model.save(fname)
+    #
+    # words = movie_profile["profile"].loc[6]
+    # print(words)
+    # inferred_vector = model.infer_vector(words)  # 传入电影的标签找到电影文档所对应的向量
+    # # 通过docvecs找到传入的向量最相似的 n 个向量每一个向量代表了一个电影
+    # sims = model.docvecs.most_similar([inferred_vector], topn=10)
+    # print(sims)
+
+    # 物品冷启动——word2vec word2vec 算法可以计算出每个词语的一个词向量，我们可以用它来表示该词的语义层面的含义
+    import gensim, logging
+
+    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+
+    sentences = movie_profile["profile"].to_list()
+
+    model = gensim.models.Word2Vec(sentences, window=3, min_count=1, epochs=20)
+
+    while True:
+        words = input("words: ")  # action
+        ret = model.wv.most_similar(positive=[words], topn=10)
+        print(ret)
