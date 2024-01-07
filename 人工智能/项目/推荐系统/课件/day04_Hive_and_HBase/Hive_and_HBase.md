@@ -2,7 +2,7 @@
 
 ## 一 Hive基本概念
 
-### 1 Hive简介 ![](/img/hive.jpg)
+### 1 Hive简介 ![](img/hive.jpg)
 
 ```
 学习目标
