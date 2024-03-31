@@ -6,7 +6,7 @@
 
   - pandas的数据分批读取  chunk 厚厚的一块 相当大的数量或部分
 
-  ``` python
+  ```python
   import pandas as pd
   reader = pd.read_csv('behavior_log.csv',chunksize=100,iterator=True)
   count = 0;
@@ -20,7 +20,6 @@
           break
   pd.read_csv('test4.csv')
   ```
-
 
 ### 2.1 预处理behavior_log数据集
 
@@ -299,7 +298,7 @@ Row(userId=1061650, cateId=4520, pv=2326, fav=None, cart=53, buy=None)
 ```python
 def process_row(r):
     # 处理每一行数据：r表示row对象
-    
+  
     # 偏好评分规则：
 	#     m: 用户对应的行为次数
     #     该偏好权重比例，次数上限仅供参考，具体数值应根据产品业务场景权衡
@@ -307,7 +306,7 @@ def process_row(r):
 	#     fav: if m<=20: score=0.4*m; else score=8
 	#     cart: if m<=20: score=0.6*m; else score=12
 	#     buy: if m<=20: score=1*m; else score=20
-    
+  
     # 注意这里要全部设为浮点数，spark运算时对类型比较敏感，要保持数据类型都一致
 	pv_count = r.pv if r.pv else 0.0
 	fav_count = r.fav if r.fav else 0.0
@@ -362,7 +361,7 @@ DataFrame[userId: bigint, cateId: bigint, rating: double]
 
 - 通常如果USER-ITEM打分数据应该是通过一下方式进行处理转换为USER-ITEM-MATRIX
 
-![](/img/CF%E4%BB%8B%E7%BB%8D.png)
+![](img/CF%E4%BB%8B%E7%BB%8D.png)
 
 但这里我们将使用的Spark的ALS模型进行CF推荐，因此注意这里数据输入不需要提前转换为矩阵，直接是 USER-ITEM-RATE的数据
 
@@ -371,9 +370,7 @@ DataFrame[userId: bigint, cateId: bigint, rating: double]
   - ALS的意思是交替最小二乘法（Alternating Least Squares），是Spark2.*中加入的进行基于模型的协同过滤（model-based CF）的推荐系统算法。
 
     同SVD，它也是一种矩阵分解技术，对数据进行降维处理。
-
   - 详细使用方法：[pyspark.ml.recommendation.ALS](https://spark.apache.org/docs/2.2.2/api/python/pyspark.ml.html?highlight=vectors#module-pyspark.ml.recommendation)
-
   - 注意：由于数据量巨大，因此这里也不考虑基于内存的CF算法
 
     参考：[为什么Spark中只有ALS](https://www.cnblogs.com/mooba/p/6539142.html)
@@ -537,7 +534,7 @@ only showing top 20 rows
 ```python
 import redis
 host = "192.168.19.8"
-port = 6379    
+port = 6379  
 # 召回到redis
 def recall_cate_by_cf(partition):
     # 建立redis 连接池
@@ -579,7 +576,7 @@ brand_count_df = spark.read.csv("hdfs://localhost:8020/preprocessing_dataset/bra
 # brand_count_df.show()
 def process_row(r):
     # 处理每一行数据：r表示row对象
-    
+  
     # 偏好评分规则：
 	#     m: 用户对应的行为次数
     #     该偏好权重比例，次数上限仅供参考，具体数值应根据产品业务场景权衡
@@ -587,7 +584,7 @@ def process_row(r):
 	#     fav: if m<=20: score=0.4*m; else score=8
 	#     cart: if m<=20: score=0.6*m; else score=12
 	#     buy: if m<=20: score=1*m; else score=20
-    
+  
     # 注意这里要全部设为浮点数，spark运算时对类型比较敏感，要保持数据类型都一致
 	pv_count = r.pv if r.pv else 0.0
 	fav_count = r.fav if r.fav else 0.0
@@ -618,7 +615,6 @@ brand_rating_df = brand_count_df.rdd.map(process_row).toDF(["userId", "brandId",
     注意：由于数据量巨大，因此这里不考虑基于内存的CF算法
 
     参考：[为什么Spark中只有ALS](https://www.cnblogs.com/mooba/p/6539142.html)
-
 - 使用pyspark中的ALS矩阵分解方法实现CF评分预测
 
 ```python
@@ -642,4 +638,3 @@ my_model
 # model.recommendForAllUsers(N) 给用户推荐TOP-N个物品
 my_model.recommendForAllUsers(3).first()
 ```
-

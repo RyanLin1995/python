@@ -11,7 +11,6 @@
 - 1、什么是spark
 
   - 基于内存的计算引擎，它的计算速度非常快。但是仅仅只涉及到数据的计算，并没有涉及到数据的存储。
-
 - 2、为什么要学习spark
 
   **MapReduce框架局限性**
@@ -36,7 +35,6 @@
   - 使用多线程模型来减少task启动开销，shuffle过程中避免不必要的sort操作以及减少磁盘IO
 
   spark的缺点是：吃内存，不太稳定
-
 - 3、spark特点
 
   - 1、速度快（比mapreduce在内存中快100倍，在磁盘中快10倍）
@@ -53,29 +51,17 @@
   - 在$SPARK_HOME/sbin目录下执行
 
     - ./pyspark
-
-  - ![](/img/pyspark.png)
-
-  - ``` python
+  - ![](img/pyspark.png)
+  - ```python
     sc = spark.sparkContext
     words = sc.textFile('file:///home/hadoop/tmp/word.txt') \
                 .flatMap(lambda line: line.split(" ")) \
                 .map(lambda x: (x, 1)) \
                 .reduceByKey(lambda a, b: a + b).collect()
     ```
-
   - 输出结果：
 
     ```shell
     [('python', 2), ('hadoop', 1), ('bc', 1), ('foo', 4), ('test', 2), ('bar', 2), ('quux', 2), ('abc', 2), ('ab', 1), ('you', 1), ('ac', 1), ('bec', 1), ('by', 1), ('see', 1), ('labs', 2), ('me', 1), ('welcome', 1)]
-    
+
     ```
-
-
-
-
-
-
-
-
-

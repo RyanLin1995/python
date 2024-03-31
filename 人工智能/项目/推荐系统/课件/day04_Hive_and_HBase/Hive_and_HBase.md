@@ -1,4 +1,4 @@
-# Hive 
+# Hive
 
 ## 一 Hive基本概念
 
@@ -10,7 +10,7 @@
 - 了解为什么使用Hive
 ```
 
-####1.1 什么是 Hive   
+####1.1 什么是 Hive
 
 - Hive 由 Facebook 实现并开源，是基于 Hadoop 的一个数据仓库工具，可以将结构化的数据映射为一张数据库表，并提供 HQL(Hive SQL)查询功能，底层数据是存储在 HDFS 上。
 - Hive 本质: 将 SQL 语句转换为 MapReduce 任务运行，使不熟悉 MapReduce 的用户很方便地利用 HQL 处理和计算 HDFS 上的结构化的数据,是一款基于 HDFS 的 MapReduce **计算框架**
@@ -19,12 +19,12 @@
 #### 1.2 为什么使用 Hive
 
 - 直接使用 Hadoop MapReduce 处理数据所面临的问题：
+
   - 人员学习成本太高
   - MapReduce 实现复杂查询逻辑开发难度太大
-
 - 使用 Hive
-  - 操作接口采用类 SQL 语法，提供快速开发的能力
 
+  - 操作接口采用类 SQL 语法，提供快速开发的能力
   - 避免了去写 MapReduce，减少开发人员的学习成本
   - 功能扩展很方便
 
@@ -32,7 +32,7 @@
 
 #### 2.1 Hive 架构图
 
-![](/img/hive2.jpg)
+![](img/hive2.jpg)
 
 #### 2.2 Hive 组件
 
@@ -130,7 +130,7 @@ Hive是数据仓库工具，没有集群的概念，如果想提交Hive作业只
 </table>
 
 - hive支持的数据类型
-  - 原子数据类型  
+  - 原子数据类型
     - TINYINT SMALLINT INT BIGINT BOOLEAN FLOAT DOUBLE STRING BINARY TIMESTAMP DECIMAL CHAR VARCHAR DATE
   - 复杂数据类型
     - ARRAY
@@ -152,14 +152,13 @@ Hive是数据仓库工具，没有集群的概念，如果想提交Hive作业只
   - bucket：在 hdfs 中表现为同一个表目录下根据 hash 散列之后的多个文件
 
 ### 5 Hive 安装部署
-- Hive 安装前需要安装好 JDK 和 Hadoop。配置好环境变量。
 
+- Hive 安装前需要安装好 JDK 和 Hadoop。配置好环境变量。
 - 下载Hive的安装包 http://archive.cloudera.com/cdh5/cdh/5/ 并解压
 
   ```shell
    tar -zxvf hive-1.1.0-cdh5.7.0.tar.gz  -C ~/app/
   ```
-
 - 进入到 解压后的hive目录 找到 conf目录, 修改配置文件
 
   ```shell
@@ -172,34 +171,28 @@ Hive是数据仓库工具，没有集群的概念，如果想提交Hive作业只
   ```shell
   HADOOP_HOME=/home/hadoop/app/hadoop-2.6.0-cdh5.7.0
   ```
-
 - 配置环境变量
 
   - ```shell
     vi ~/.bash_profile
     ```
-
   - ```shell
     export HIVE_HOME=/home/hadoop/app/hive-1.1.0-cdh5.7.0
     export PATH=$HIVE_HOME/bin:$PATH
     ```
-
   - ```shell
     source ~/.bash_profile
     ```
-
 - 根据元数据存储的介质不同，分为下面两个版本，其中 derby 属于内嵌模式。实际生产环境中则使用 mysql 来进行元数据的存储。
 
-  - 内置 derby 版： 
+  - 内置 derby 版：
     bin/hive 启动即可使用
     缺点：不同路径启动 hive，每一个 hive 拥有一套自己的元数据，无法共享
-
-  - mysql 版： 
+  - mysql 版：
 
     - 上传 mysql驱动到 hive安装目录的lib目录下
 
       mysql-connector-java-5.*.jar
-
     - vi conf/hive-site.xml 配置 Mysql 元数据库信息(MySql安装见文档)
 
       ```xml-dtd
@@ -230,27 +223,22 @@ Hive是数据仓库工具，没有集群的概念，如果想提交Hive作业只
           <description/>
         </property>
       </configuration>
-      
-      ```
 
+      ```
 - hive启动
 
-  - 启动docker 
+  - 启动docker
 
     ```service docker start```
-
   - 通过docker 启动mysql
 
     ```docker start mysql```
-
   - 启动 hive的metastore元数据服务
 
     ```hive --service metastore```
-
   - 启动hive
 
     ```hive```
-
   - MySQL root 密码 password         hive用户 密码 hive
 
 ## 二 Hive 基本操作
@@ -259,53 +247,46 @@ Hive是数据仓库工具，没有集群的概念，如果想提交Hive作业只
 
 - 创建数据库
 
-  ``` sql
+  ```sql
   CREATE DATABASE test;
   ```
-
 - 显示所有数据库
 
-   ``` sql
-   SHOW DATABASES;
-   ```
-
+  ```sql
+  SHOW DATABASES;
+  ```
 - 创建表
 
-   ```sql
-   CREATE TABLE student(classNo string, stuNo string, score int) row format delimited fields terminated by ',';
-   ```
+  ```sql
+  CREATE TABLE student(classNo string, stuNo string, score int) row format delimited fields terminated by ',';
+  ```
 
-   - row format delimited fields terminated by ','  指定了字段的分隔符为逗号，所以load数据的时候，load的文本也要为逗号，否则加载后为NULL。hive只支持单个字符的分隔符，hive默认的分隔符是\001
-
+  - row format delimited fields terminated by ','  指定了字段的分隔符为逗号，所以load数据的时候，load的文本也要为逗号，否则加载后为NULL。hive只支持单个字符的分隔符，hive默认的分隔符是\001
 - 将数据load到表中
 
-   - 在本地文件系统创建一个如下的文本文件：/home/hadoop/tmp/student.txt
+  - 在本地文件系统创建一个如下的文本文件：/home/hadoop/tmp/student.txt
 
-      ```
-      C01,N0101,82
-      C01,N0102,59
-      C01,N0103,65
-      C02,N0201,81
-      C02,N0202,82
-      C02,N0203,79
-      C03,N0301,56
-      C03,N0302,92
-      C03,N0306,72
-      ```
-
-   - ``` sql
-      load data local inpath '/home/hadoop/tmp/student.txt'overwrite into table student;
-      ```
-
-   - 这个命令将student.txt文件复制到hive的warehouse目录中，这个目录由hive.metastore.warehouse.dir配置项设置，默认值为/user/hive/warehouse。Overwrite选项将导致Hive事先删除student目录下所有的文件, 并将文件内容映射到表中。
-      Hive不会对student.txt做任何格式处理，因为Hive本身并不强调数据的存储格式。
-
+    ```
+    C01,N0101,82
+    C01,N0102,59
+    C01,N0103,65
+    C02,N0201,81
+    C02,N0202,82
+    C02,N0203,79
+    C03,N0301,56
+    C03,N0302,92
+    C03,N0306,72
+    ```
+  - ```sql
+     load data local inpath '/home/hadoop/tmp/student.txt'overwrite into table student;
+    ```
+  - 这个命令将student.txt文件复制到hive的warehouse目录中，这个目录由hive.metastore.warehouse.dir配置项设置，默认值为/user/hive/warehouse。Overwrite选项将导致Hive事先删除student目录下所有的文件, 并将文件内容映射到表中。
+    Hive不会对student.txt做任何格式处理，因为Hive本身并不强调数据的存储格式。
 - 查询表中的数据 跟SQL类似
 
-   ``` sql
-   hive>select * from student;
-   ```
-
+  ```sql
+  hive>select * from student;
+  ```
 - 分组查询group by和统计 count
 
   ```sql
@@ -359,24 +340,20 @@ Hive是数据仓库工具，没有集群的概念，如果想提交Hive作业只
 
   - 装载数据
 
-       ```sql
-       load data local inpath '/home/hadoop/tmp/student.txt' overwrite into table student2;
-       ```
-
+    ```sql
+    load data local inpath '/home/hadoop/tmp/student.txt' overwrite into table student2;
+    ```
 - 显示表信息
 
-  ``` sql
+  ```sql
   desc formatted table_name;
   ```
-
 - 删除表查看结果
 
   ```sql
   drop table student;
   ```
-
 - 再次创建外部表 student2
-
 - 不插入数据直接查询查看结果
 
   ```sql
@@ -392,10 +369,9 @@ Hive是数据仓库工具，没有集群的概念，如果想提交Hive作业只
   - 分区可以理解为分类，通过分类把不同类型的数据放到不同的目录下。
   - 分类的标准就是分区字段，可以一个，也可以多个。
   - 分区表的意义在于优化查询。查询时尽量利用分区字段。如果不使用分区字段，就会全部扫描。
-
 - 创建分区表
 
-  ``` shell
+  ```shell
   tom,4300
   jerry,12000
   mike,13000
@@ -403,35 +379,28 @@ Hive是数据仓库工具，没有集群的概念，如果想提交Hive作业只
   rob,10000
   ```
 
-  
-
   ```sql
   create table employee (name string,salary bigint) partitioned by (date1 string) row format delimited fields terminated by ',' lines terminated by '\n' stored as textfile;
   ```
-
 - 查看表的分区
 
   ```sql
   show partitions employee;
   ```
-
 - 添加分区
 
   ```
   alter table employee add if not exists partition(date1='2018-12-01');
   ```
-
 - 加载数据到分区
 
   ```
   load data local inpath '/home/hadoop/tmp/employee.txt' into table employee partition(date1='2018-12-01');
   ```
-
 - 如果重复加载同名文件，不会报错，会自动创建一个*_copy_1.txt
-
 - 外部分区表即使有分区的目录结构, 也必须要通过hql添加分区, 才能看到相应的数据
 
-  ``` shell
+  ```shell
   hadoop fs -mkdir /user/hive/warehouse/emp/dt=2018-12-04
   hadoop fs -copyFromLocal /tmp/employee.txt /user/hive/warehouse/test.db/emp/dt=2018-12-04/employee.txt
   ```
@@ -441,10 +410,9 @@ Hive是数据仓库工具，没有集群的概念，如果想提交Hive作业只
     ```
     alter table emp add if not exists partition(dt='2018-12-04');
     ```
-
   - 此时再次查看才能看到新加入的数据
-
 - 总结
+
   - 利用分区表方式减少查询时需要扫描的数据量
     - 分区字段不是表中的列, 数据文件中没有对应的列
     - 分区仅仅是一个目录名
@@ -454,25 +422,21 @@ Hive是数据仓库工具，没有集群的概念，如果想提交Hive作业只
 ### 2.4 动态分区
 
 - 在写入数据时自动创建分区(包括目录结构)
-
 - 创建表
 
   ```
   create table employee2 (name string,salary bigint) partitioned by (date1 string) row format delimited fields terminated by ',' lines terminated by '\n' stored as textfile;
   ```
-
 - 导入数据
 
   ```sql
   insert into table employee2 partition(date1) select name,salary,date1 from employee;
   ```
-
 - 使用动态分区需要设置参数
 
   ```shell
   set hive.exec.dynamic.partition.mode=nonstrict;
   ```
-
 
 ## 三 Hive 函数
 
@@ -481,21 +445,17 @@ Hive是数据仓库工具，没有集群的概念，如果想提交Hive作业只
 在 Hive 有四种类型的运算符：
 
 - 关系运算符
-
 - 算术运算符
-
 - 逻辑运算符
-
 - 复杂运算
 
   (内容较多，见《Hive 官方文档》》)
 
-
-
 ### 3.2 内置函数
+
 https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
 
-- 简单函数: 日期函数 字符串函数 类型转换 
+- 简单函数: 日期函数 字符串函数 类型转换
 - 统计函数: sum avg distinct
 - 集合函数
 - 分析函数
@@ -506,13 +466,13 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
 ### 3.3 Hive 自定义函数和 Transform
 
 - UDF
-  - 当 Hive 提供的内置函数无法满足你的业务处理需要时，此时就可以考虑使用用户自定义函数（UDF：user-defined function）。
 
+  - 当 Hive 提供的内置函数无法满足你的业务处理需要时，此时就可以考虑使用用户自定义函数（UDF：user-defined function）。
   - **TRANSFORM**,and **UDF** and **UDAF**
 
     it is possible to plug in your own custom mappers and reducers
 
-     A UDF is basically only a transformation done by a mapper meaning that each row should be mapped to exactly one row. A UDAF on the other hand allows us to transform a group of rows into one or more rows, meaning that we can reduce the number of input rows to a single output row by some custom aggregation.
+    A UDF is basically only a transformation done by a mapper meaning that each row should be mapped to exactly one row. A UDAF on the other hand allows us to transform a group of rows into one or more rows, meaning that we can reduce the number of input rows to a single output row by some custom aggregation.
 
     **UDF**：就是做一个mapper，对每一条输入数据，映射为一条输出数据。
 
@@ -525,45 +485,38 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     The statements DISTRIBUTE BY and CLUSTER BY allow us to indicate that we want to actually perform an aggregation.
 
     User-Defined Functions (UDFs) for transformations and even aggregations which are therefore called User-Defined Aggregation Functions (UDAFs)
-
 - UDF示例(运行java已经编写好的UDF)
 
   - 在hdfs中创建 /user/hive/lib目录
 
-    ``` shell
+    ```shell
     hadoop fs -mkdir /user/hive/lib
     ```
-
   - 把 hive目录下 lib/hive-contrib-hive-contrib-1.1.0-cdh5.7.0.jar 放到hdfs中
 
     ```shell
     hadoop fs -put hive-contrib-1.1.0-cdh5.7.0.jar /user/hive/lib/
     ```
-
   - 把集群中jar包的位置添加到hive中
 
     ```shell
     hive> add jar hdfs:///user/hive/lib/hive-contrib-1.1.0-cdh5.7.0.jar;
     ```
-
   - 在hive中创建**临时**UDF
 
     ```sql
     hive> CREATE TEMPORARY FUNCTION row_sequence as 'org.apache.hadoop.hive.contrib.udf.UDFRowSequence'
     ```
-
   - 在之前的案例中使用**临时**自定义函数(函数功能: 添加自增长的行号)
 
     ```sql
     Select row_sequence(),* from employee;
     ```
-
   - 创建**非临时**自定义函数
 
     ```
     CREATE FUNCTION row_sequence as 'org.apache.hadoop.hive.contrib.udf.UDFRowSequence' using jar 'hdfs:///user/hive/lib/hive-contrib-1.1.0-cdh5.7.0.jar';
     ```
-
 - Python UDF
 
   - 准备案例环境
@@ -573,7 +526,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
       ```sql
       CREATE table u(fname STRING,lname STRING);
       ```
-
     - 向表中插入数据
 
       ```sql
@@ -582,7 +534,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
       insert into table u2 values('Bill','clinton');
       insert into table u2 values('Bill','gates');
       ```
-
   - 编写map风格脚本
 
     ```python
@@ -593,7 +544,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
         l_name = lname.upper()
         print '\t'.join([fname, str(l_name)])
     ```
-
   - 通过hdfs向hive中ADD file
 
     - 加载文件到hdfs
@@ -601,36 +551,32 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
       ```shell
       hadoop fs -put udf.py /user/hive/lib/
       ```
-
     - hive从hdfs中加载python脚本
 
       ```shell
       ADD FILE hdfs:///user/hive/lib/udf.py;
       ADD FILE /root/tmp/udf1.py;
       ```
-
   - Transform
 
-    ``` sql
+    ```sql
     SELECT TRANSFORM(fname, lname) USING 'python udf1.py' AS (fname, l_name) FROM u;
     ```
-
-
 - Python UDAF
-
 
 ## 四 hive综合案例
 
 - 内容推荐数据处理
 
-  ![](/img/hive3.png)
+  ![](img/hive3.png)
 
   - 需求
     - 根据用户行为以及文章标签筛选出用户最感兴趣(阅读最多)的标签
-
 - 相关数据
 
-  ​    user_id article_id event_time
+  ```
+  user_id article_id event_time
+  ```
 
   ```
   11,101,2018-12-01 06:01:10
@@ -650,7 +596,7 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
   22,103,2018-12-05 12:11:12
   77,104,2018-12-05 18:02:02
   99,105,2018-12-05 20:09:11
-  
+
   ```
 
   - 文章数据
@@ -663,14 +609,12 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
   104,http://www.itcast.cn/4.html,kw5|kw1|kw4|kw9
   105,http://www.itcast.cn/5.html,
   ```
-
 - 数据上传hdfs
 
   ```shell
   hadoop fs -mkdir /tmp/demo
   hadoop fs -mkdir /tmp/demo/user_action
   ```
-
 - 创建外部表
 
   - 用户行为表
@@ -685,6 +629,7 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
   ROW FORMAT delimited fields terminated by ','
   LOCATION '/tmp/demo/user_action';
   ```
+
   - 文章表
 
   ```sql
@@ -733,30 +678,30 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
 
     - collect_list
 
-    ``` sql
+    ```sql
     select user_id,collect_list(article_id) 
     from user_actions group by user_id;
     ```
 
-    ``` shell
-    
+    ```shell
+
     11      ["101","104","101","101"]
     22      ["102","103","104","103"]
     33      ["103","102","101"]
     35      ["105","102"]
     77      ["103","104"]
     99      ["102","105"]
-    
+
     ```
 
     - sort_array: 对数组排序
 
-    ``` sql
+    ```sql
     select user_id,sort_array(collect_list(article_id)) as contents 
     from user_actions group by user_id;
     ```
 
-    ``` shell
+    ```shell
     11      ["101","101","101","104"]
     22      ["102","103","103","104"]
     33      ["101","102","103"]
@@ -764,10 +709,9 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     77      ["103","104"]
     99      ["102","105"]
     ```
-
   - 查看每一篇文章的关键字 lateral view explode
 
-      - explode函数 将array 拆分
+    - explode函数 将array 拆分
 
     ```sql
     select explode(key_words) from articles;
@@ -775,7 +719,7 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
 
     - lateral view 和 explode 配合使用,将一行数据拆分成多行数据，在此基础上可以对拆分的数据进行聚合
 
-    ``` sql
+    ```sql
     select article_id,kw from articles lateral view explode(key_words) t as kw;
     ```
 
@@ -795,7 +739,7 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     select article_id,kw from articles lateral view outer explode(key_words) t as kw;
     ```
 
-    ``` shell
+    ```shell
     101     kw8
     101     kw1
     102     kw6
@@ -808,9 +752,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     105     NULL
     #含有outer
     ```
-
-    
-
   - 根据文章id找到用户查看文章的关键字
 
     - 原始数据
@@ -867,7 +808,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     99      kw6
     99      NULL
     ```
-
   - 根据文章id找到用户查看文章的关键字并统计频率
 
     ```sql
@@ -910,13 +850,12 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     99      kw3     1
     99      kw6     1
     ```
-
   - CONCAT：
-    CONCAT(str1,str2,…)  
+    CONCAT(str1,str2,…)
 
     返回结果为连接参数产生的字符串。如有任何一个参数为NULL ，则返回值为 NULL。
 
-    ``` sql
+    ```sql
     select concat(user_id,article_id) from user_actions;
     ```
 
@@ -929,7 +868,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     ```sql
     select concat_ws(':',user_id,article_id) from user_actions;
     ```
-
   - 将用户查看的关键字和频率合并成 key:value形式
 
     ```sql
@@ -971,7 +909,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     99      kw3:1
     99      kw6:1
     ```
-
   - 将用户查看的关键字和频率合并成 key:value形式并按用户聚合
 
     ```sql
@@ -995,7 +932,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     77      kw1:1,kw4:1,kw5:1,kw7:1,kw9:1
     99      1,kw3:1,kw6:1
     ```
-
   - 将上面聚合结果转换成map
 
     ```sql
@@ -1019,7 +955,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     77      {"kw1":"1","kw4":"1","kw5":"1","kw7":"1","kw9":"1"}
     99      {"1":null,"kw3":"1","kw6":"1"}
     ```
-
   - 将用户的阅读偏好结果保存到表中
 
     ```sql
@@ -1035,7 +970,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     ) as cc 
     group by cc.user_id;
     ```
-
   - 从表中通过key查询map中的值
 
     ```sql
@@ -1050,7 +984,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     77      1
     99      NULL
     ```
-
   - 从表中获取map中所有的key 和 所有的value
 
     ```sql
@@ -1065,7 +998,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     77      ["kw1","kw4","kw5","kw7","kw9"] ["1","1","1","1","1"]
     99      ["1","kw3","kw6"]       [null,"1","1"]
     ```
-
   - 用lateral view explode把map中的数据转换成多列
 
     ```sql
@@ -1102,7 +1034,6 @@ https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
     99      kw3     1
     99      kw6     1
     ```
-
 
 ## 五 HBase简介与环境部署
 
@@ -1216,11 +1147,9 @@ creator:Tom</td>
 </tr>
 </table>
 
-
-
 - 行数据库&列数据库存储方式比较
 
-![](C:/Users/beibei/Desktop/%E8%AE%B2%E4%B9%89/day04_hive&hbase/img/hbase4.png)
+![](img/hbase4.png)
 
 #### 5.1.4 什么是非结构化数据存储
 
@@ -1235,12 +1164,10 @@ creator:Tom</td>
 #### 5.1.5 HBase在Hadoop生态中的地位
 
 - HBase是Apache基金会顶级项目
-
 - HBase基于HDFS进行数据存储
-
 - HBase可以存储超大数据并适合用来进行大数据的实时查询
 
-  ![](C:/Users/beibei/Desktop/%E8%AE%B2%E4%B9%89/day04_hive&hbase/img/hbase&hive.png)
+  ![](img/hbase&hive.png)
 
 #### 5.1.6 HBase与HDFS
 
@@ -1254,7 +1181,7 @@ creator:Tom</td>
 - 大量数据需要长期保存, 且数量会持续增长
 - HBase不适合有join, 多级索引, 表关系复杂的数据模型
 
-##六 HBase的数据模型
+## 六 HBase的数据模型
 
 - NameSpace: 关系型数据库的"数据库"(database)
 - 表(table)：用于存储管理数据，具有稀疏的、面向列的特点。HBase中的每一张表，就是所谓的大表(Bigtable)，可以有上亿行，上百万列。对于为值为空的列，并不占用存储空间，因此表可以设计的非常稀疏。
@@ -1265,9 +1192,7 @@ creator:Tom</td>
 - 列修饰符(*Column* *Qualifier*) : 列族中的数据通过列标识来进行映射, 可以理解为一个键值对(key-value), 列修饰符(*Column* *Qualifier*) 就是key 对应关系型数据库的列
 - 时间戳(TimeStamp)：是列的一个属性，是一个64位整数。由行键和列确定的单元格，可以存储多个数据，每个数据含有时间戳属性，数据具有版本特性。可根据版本(VERSIONS)或时间戳来指定查询历史版本数据，如果都不指定，则默认返回最新版本的数据。
 - 区域(Region)：HBase自动把表水平划分成的多个区域，划分的区域随着数据的增大而增多。
-
 - HBase 支持特定场景下的 ACID，即对行级别的 操作保证完全的 ACID
-
 - #### cap定理
 
   - 分布式系统的最大难点，就是各个节点的状态如何同步。CAP 定理是这方面的基本定理，也是理解分布式系统的起点。
@@ -1275,9 +1200,7 @@ creator:Tom</td>
     - 一致性(所有节点在同一时间具有相同的数据)
 
       ![img](img/Consistency.png)
-
     - 可用性(保证每个请求不管成功或失败都有响应,但不保证获取的数据的正确性)
-
     - 分区容错性(系统中任意信息的丢失或失败不会影响系统的运行,系统如果不能在某个时限内达成数据一致性,就必须在上面两个操作之间做出选择)
 
     ![img](img/cap.jpg)
@@ -1289,7 +1212,6 @@ creator:Tom</td>
 ### 7.1 HBase的安装
 
 - 下载安装包 http://archive.cloudera.com/cdh5/cdh/5/hbase-1.2.0-cdh5.7.0.tar.gz
-
 - 配置伪分布式环境
 
   - 环境变量配置
@@ -1298,14 +1220,12 @@ creator:Tom</td>
     export HBASE_HOME=/usr/local/development/hbase-1.2.4
     export PATH=$HBASE_HOME/bin:$PATH
     ```
-
   - 配置hbase-env.sh
 
     ```shell
     export JAVA_HOME=/usr/local/development/jdk1.7.0_15
     export HBASE_MANAGES_ZK=false  --如果你是使用hbase自带的zk就是true，如果使用自己的zk就是false
     ```
-
   - 配置hbase-site.xml
 
     ```xml
@@ -1317,21 +1237,19 @@ creator:Tom</td>
           <name>hbase.cluster.distributed</name>  --是否是分布式
           <value>true</value>
     </property>
-    <property>     
+    <property>   
               <name>hbase.zookeeper.property.clientPort</name>    --指定要连接zk的端口
-              <value>2181</value>    
-    </property>    
-    <property>        
-              <name>hbase.zookeeper.property.dataDir</name>            <value>/home/hadoop/app/hbase/zkData</value>    
-    </property>          
+              <value>2181</value>  
+    </property>  
+    <property>    
+              <name>hbase.zookeeper.property.dataDir</name>            <value>/home/hadoop/app/hbase/zkData</value>  
+    </property>      
     ```
-
   - 启动hbase（启动的hbase的时候要保证hadoop集群已经启动）
 
     ```shell
     /hbase/bin/start-hbase.sh
     ```
-
   - 输入hbase shell（进入shell命令行）
 
 ### 7.2 HBase shell
@@ -1524,9 +1442,6 @@ alter 'user', 'delete' => 'f2'
   ```shell
   alter 'user',NAME=>'base_info',VERSIONS=>10
   ```
-
-  
-
 - 命令表
 
 ![](img/2017-12-27_230420.jpg)
@@ -1547,20 +1462,15 @@ alter 'user', 'delete' => 'f2'
 - 什么是HappyBase
 
   - **HappyBase** is a developer-friendly [Python](http://python.org/) library to interact with [Apache HBase](http://hbase.apache.org/). HappyBase is designed for use in standard HBase setups, and offers application developers a Pythonic API to interact with HBase. Below the surface, HappyBase uses the [Python Thrift library](http://pypi.python.org/pypi/thrift) to connect to HBase using its [Thrift](http://thrift.apache.org/) gateway, which is included in the standard HBase 0.9x releases.
-
 - HappyBase 是FaceBook员工开发的操作HBase的python库, 其基于Python Thrift, 但使用方式比Thrift简单, 已被广泛应用
-
 - 启动hbase thrift server : hbase-daemon.sh start thrift
-
 - 安装happy base
 
   - pip install happybase
-
 - 使用happy base时可能出现的问题(windows系统)
 
   - happybase1.0在win下不支持绝对路径
   - 解决方案：将488行的url_scheme == ”改为url_scheme in (‘代码盘符’, ”)
-
 - 如何使用HappyBase
 
   - 建立连接
@@ -1596,7 +1506,6 @@ alter 'user', 'delete' => 'f2'
     ```
     table = connection.table('mytable')
     ```
-
   - 查询操作
 
   ```python
@@ -1628,7 +1537,7 @@ alter 'user', 'delete' => 'f2'
       #put 'user','rowkey_10','base_info:username','Tom'
       #{'cf:cq':’数据‘}
       table.put(row_key, {'%s:name' % column_family:'name_%s' % value})
-  
+
   def put_rows(table, column_family, row_lines=30):
       print('insert rows to hbase now')
       for i in range(row_lines):
@@ -1640,8 +1549,8 @@ alter 'user', 'delete' => 'f2'
   ```python
   #api
   table.delete(row_key, cf_list)
-      
-  #函数封装    
+
+  #函数封装  
   def delete_row(table, row_key, column_family=None, keys=None):
       if keys:
           print('delete keys:%s from row_key:%s' % (keys, row_key))
@@ -1662,9 +1571,6 @@ alter 'user', 'delete' => 'f2'
       pretty_print('delete table %s now.' % table_name)
       conn.delete_table(table_name, True)
   ```
-
-
-
 - 完整代码
 
 ```python
@@ -1778,7 +1684,7 @@ alter 'user', 'delete' => 'f2'
 - DDI  目的是为了克服HBase架构上的缺陷(join繁琐 只有row key索引等)
   - Denormalization (反规范化, 解决join麻烦的问题)
   - Duplication (数据冗余)
-  - Intelligent keys(通过row key设计实现 索引 排序对读写优化) 
+  - Intelligent keys(通过row key设计实现 索引 排序对读写优化)
 
 ### 8.2 HBase表设计案例: 社交应用互粉信息表
 
@@ -1791,25 +1697,21 @@ alter 'user', 'delete' => 'f2'
   - 写场景
     - 用户关注了某个用户
     - 用户取消关注了某个用户
-
 - 设计1:
 
   - colunm qulifier(列名)  1:  2:
 
   ![](img/table1.png)
-
 - 设计2
 
   - 添加了一个 count 记录当前的最后一个记录的列名
 
   ![](img/table2.png)
-
 - 设计3
 
   - 列名 user_id
 
   ![](img/table3.png)
-
 - 最终设计(DDI)
 
   - 解决谁关注了用户A问题
@@ -1818,13 +1720,12 @@ alter 'user', 'delete' => 'f2'
       - 01_userid: 用户关注列表
       - 02_userid: 粉丝列表
     - 上两种设计方案的问题(事务)
-
 - 案例总结
 
   - Rowkey是HBase表结构设计中很重要的环节, 直接影响到HBase的效率和性能
   - HBase的表结构比传统关系型数据库更灵活, 能存储任何二进制数据,无需考虑数据类型
   - 利用列标识(Column Qualifier)来存储数据
-  - 衡量设计好坏的简单标准 是否会全表查询 
+  - 衡量设计好坏的简单标准 是否会全表查询
 
 ## 九 HBase组件
 
@@ -1898,6 +1799,3 @@ HBase中最核心的模块，主要负责响应用户I/O请求，向HDFS文件�
 - HMaster失效
   - 处于Backup状态的其他HMaster节点推选出一个转为Active状态
   - 数据能正常读写, 但是不能创建删除表, 也不能更改表结构
-
-
-

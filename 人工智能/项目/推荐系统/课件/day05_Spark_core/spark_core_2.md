@@ -28,11 +28,10 @@
   - SparkContext, Spark程序的入口. SparkContext代表了和Spark集群的链接, 在Spark集群中通过SparkContext来创建RDD
   - SparkConf  创建SparkContext的时候需要一个SparkConf， 用来传递Spark应用的基本信息
 
-  ``` python
+  ```python
   conf = SparkConf().setAppName(appName).setMaster(master)
   sc = SparkContext(conf=conf)
   ```
-
 - 创建RDD
 
   - 进入pyspark环境
@@ -51,17 +50,17 @@
       _\ \/ _ \/ _ `/ __/  '_/
      /__ / .__/\_,_/_/ /_/\_\   version 2.3.0
         /_/
-  
+
   Using Python version 3.5.0 (default, Nov 13 2018 15:43:53)
   SparkSession available as 'spark'.
   >>> sc
   <SparkContext master=local[*] appName=PySparkShell>
   ```
-
   - 在spark shell中 已经为我们创建好了 SparkContext 通过sc直接使用
   - 可以在spark UI中看到当前的Spark作业 在浏览器访问当前centos的4040端口
 
-  ![](/img/sparkui.png)
+  ![](img/sparkui.png)
+
   - Parallelized Collections方式创建RDD
 
     - 调用`SparkContext`的 `parallelize` 方法并且传入已有的可迭代对象或者集合
@@ -70,8 +69,7 @@
     data = [1, 2, 3, 4, 5]
     distData = sc.parallelize(data)
     ```
-
-    ``` shell
+    ```shell
     >>> data = [1, 2, 3, 4, 5]
     >>> distData = sc.parallelize(data)
     >>> data
@@ -79,10 +77,9 @@
     >>> distData
     ParallelCollectionRDD[0] at parallelize at PythonRDD.scala:175
     ```
-
     - 在spark ui中观察执行情况
 
-    ![createrdd](/img/createrdd.png)
+    ![createrdd](img/createrdd.png)
 
     - 在通过`parallelize`方法创建RDD 的时候可以指定分区数量
 
@@ -91,13 +88,11 @@
     >>> distData.reduce(lambda a, b: a + b)
     15
     ```
-
     - 在spark ui中观察执行情况
 
-    ![](/img/createrdd2.png)
+    ![](img/createrdd2.png)
 
-    -  Spark将为群集的每个分区（partition）运行一个任务（task）。 通常，可以根据CPU核心数量指定分区数量（每个CPU有2-4个分区）如未指定分区数量，Spark会自动设置分区数。
-
+    - Spark将为群集的每个分区（partition）运行一个任务（task）。 通常，可以根据CPU核心数量指定分区数量（每个CPU有2-4个分区）如未指定分区数量，Spark会自动设置分区数。
   - 通过外部数据创建RDD
 
     - PySpark可以从Hadoop支持的任何存储源创建RDD，包括本地文件系统，HDFS，Cassandra，HBase，Amazon S3等
@@ -109,5 +104,3 @@
     >>> rdd1.collect()
     ['foo foo quux labs foo bar quux abc bar see you by test welcome test', 'abc labs foo me python hadoop ab ac bc bec python']
     ```
-
-    
