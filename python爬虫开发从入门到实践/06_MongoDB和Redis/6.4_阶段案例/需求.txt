@@ -1,0 +1,6 @@
+目标网站:https://www.ziwushuwu.com/dongyeguiwuzuopinji/5525/。
+目标内容:小说《白夜行》第一章到第十三章的正文内容。
+任务要求:
+    编写两个爬虫：
+    爬虫1从 https://www.ziwushuwu.com/dongyeguiwuzuopinji/5525/ 获取小说《白夜行》第一章到第十三章的网址,并将网址添加到 Redis 里名为 url queue 的列表中。
+    爬虫2从 Redis 里名为 url queue 的列表中读出网址，进入网址爬取每一章的具体内容，再将内容保存到 MongoDB 中。
