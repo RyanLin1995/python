@@ -1,9 +1,5 @@
-import uuid
-from pathlib import Path
-
 import requests
 import lxml.html
-from PIL import Image
 
 # 获取用户名跟密码
 username = str(input("请输入用户名："))
