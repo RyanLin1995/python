@@ -1,58 +1,14 @@
-import os
-import re
+"""
+准备数据
+"""
 
-import torch
 from torch.utils.data import DataLoader, Dataset
-
-
-def tokenize(text):
-    # filters = '!"#$%&()*+,-./:;<=>?@[\\]^_`{|}~\t\n'
-    filters = [
-        "!",
-        '"',
-        "#",
-        "$",
-        "%",
-        "&",
-        "\(",
-        "\)",
-        "\*",
-        "\+",
-        ",",
-        "-",
-        "\.",
-        "/",
-        ":",
-        ";",
-        "<",
-        "=",
-        ">",
-        "\?",
-        "@",
-        "\[",
-        "\\",
-        "\]",
-        "^",
-        "_",
-        "`",
-        "\{",
-        "\|",
-        "\}",
-        "~",
-        "\t",
-        "\n",
-        "\x97",
-        "\x96",
-        "”",
-        "“",
-    ]
-    text = re.sub("<.*?>", " ", text, flags=re.S)
-    text = re.sub("|".join(filters), " ", text, flags=re.S)
-    return [i.strip().lower() for i in text.split()]
+import os
+import config
+import utils
 
 
 class ImdbDataset(Dataset):
-
     def __init__(self, train=True):
         self.train_data_path = "data\\aclImdb\\train"
         self.test_data_path = "data\\aclImdb\\test"
@@ -60,7 +16,7 @@ class ImdbDataset(Dataset):
 
         # 把所有的文件名放入列表中
         temp_data_path = [data_path + "\\pos", data_path + "\\neg"]
-        self.total_file_path = []  # 所有评论的文件路劲
+        self.total_file_path = []  # 所有评论的文件路径
         for i in temp_data_path:
             file_name_list = os.listdir(i)
             file_path_list = [os.path.join(i, j) for j in file_name_list]
@@ -78,7 +34,7 @@ class ImdbDataset(Dataset):
 
         # 读取文件
         with open(file_path, "r", encoding="utf-8") as f:
-            file_data = tokenize(f.read())
+            file_data = utils.tokenize(f.read())
 
         return label, file_data
 
@@ -87,21 +43,25 @@ class ImdbDataset(Dataset):
 
 
 def collate_fn(batch):
-    texts, label = list(zip(*batch))
+    # 修改返回值顺序，确保 texts 是文本数据，label 是标签数据
+    label, texts = list(zip(*batch))
+    # texts = config.ws.transform(texts, max_len=config.max_len)
+    # texts = torch.LongTensor(texts)
+    # label = torch.LongTensor(label)
     return texts, label
 
 
 def get_dataloader(is_train=True):
-    imdb_dataset = ImdbDataset(train=is_train)
-    data_loader = DataLoader(
-        imdb_dataset, batch_size=2, shuffle=True, collate_fn=collate_fn
+    dataset = ImdbDataset(train=is_train)
+    batch_size = config.train_batch_size if is_train else config.test_batch_size
+    return DataLoader(
+        dataset, batch_size=batch_size, shuffle=is_train, collate_fn=collate_fn
     )
-    return data_loader
 
 
 if __name__ == "__main__":
-    for idx, (data_label, data) in enumerate(get_dataloader()):
-        print(data_label)
-        print(data)
-        if idx > 10:
-            break
+    for idx, (review, label) in enumerate(get_dataloader(is_train=True)):
+        print(idx)
+        print(review)
+        print(label)
+        break
